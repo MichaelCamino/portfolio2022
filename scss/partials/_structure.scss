@@ -5,8 +5,6 @@
     position: absolute;
     padding: 1em;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
         a {
             color: black;
@@ -26,6 +24,26 @@
         .logo {
             max-width: 50px;
         }
+}
+
+/* HERO SECTION */
+
+.hero {
+    background: black;
+    min-height: 100vh;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding: 6em;
+    color: white;
+    h1 {
+        margin-bottom: .25em;
+        color: white;
+    }
+
+    p {
+        margin: 1em auto;
+    }
 }
 
 /* SITE-FOOTER */
@@ -56,22 +74,3 @@ section {
     align-items: center;
 }
 
-/* HERO SECTION */
-
-.hero {
-    background: black;
-    min-height: 100vh;
-    text-align: center;
-    display: grid;
-    place-items: center;
-    padding: 6em;
-    color: white;
-    h1 {
-        margin-bottom: .25em;
-        color: white;
-    }
-
-    p {
-        margin: 1em auto;
-    }
-}
