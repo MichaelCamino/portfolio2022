@@ -1,0 +1,108 @@
+/* BASE TEXT COLORS */
+body {color: $color-text-body;}
+h1, h2, h3, h4, h5, h6 {color: $color-text-headings;}
+
+/* BASE TEXT FONTS */
+body {font-family: $font-family-sans;}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* BASE TYPOGRAPHY */
+
+body {
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6, p {margin: 0 0 .5em 0;}
+
+/* TRADITIONAL TYPOGRAPHIC SCALE */
+
+h1 {
+    font-size: 3em;
+    line-height: 1;
+} /* 48 / 16 = 3em */
+
+h2 {
+    font-size: 2.25em;
+    line-height: 1.1;
+} /* 36 / 16 = 2.25em */
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+} /* 24 / 16 = 1.5em */
+
+h4 {
+    font-size: 1.3125em;
+    line-height: 1.3;
+} /* 21 / 16 = 1.3125em */
+
+h5 {
+    font-size: 11.125em;
+    line-height: 1.4;
+} /* 18 / 16 = 1.125em */
+
+h6 {
+    font-size: 1em;
+    line-height: 1.5;
+} /* 16 / 16 = 1em */
+
+/* LIMIT NUMBER OF CHARACTERS PER LINE */
+
+p {max-width: 30em;}
+
+/* LINKS */
+
+a {
+    color: $color-link;
+    transition: 250ms ease;
+    &:hover {
+        color: $color-link-dark;
+    }
+}
+
+
+/* HORIZONTAL LINE */
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .1);
+    margin: 3em 0;
+}
+
+/* TYPE SPECIMEN */
+
+.headline {
+    font-size: 4em;
+    font-weight: 900l; 
+    line-height: 1;
+    margin: 0;
+    color: $color-accent;
+}
+
+.subheadline {
+    font-weight: normal; font-size: 2.5em;
+    color: $color-lightgrey;
+    margin: .25 0;
+    line-height: 1.1;
+}
+
+/* SECTION HEADING */
+
+.section-heading {
+    font-size: 1em;
+    font-family: $font-family-sans;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 3em 0;
+}
+
+
+
+

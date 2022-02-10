@@ -1,0 +1,36 @@
+@import "partials/toc";
+
+/* GLOBAL RESETS */
+
+* { box-sizing: border-box;}
+
+// VARIABLES
+
+$color-text-body: rgba(0, 0, 0, .8);
+$color-text-headings: rgba(0, 0, 0, 1);
+$color-accent: rgba(255, 0, 0, 1);
+$color-accent-dark: rgba(185, 0, 0, 1);
+$color-accent-light: rgb(255, 121, 203);
+$color-link: rgb(56, 114, 221);
+$color-link-dark: rgb(38, 77, 148);
+$color-lightgrey: rgba(0, 0, 0, .4);
+$font-family-sans: 'acumin-pro', helvetica, arial;
+$font-family-serif: 'playfair-display', georgia, times;
+
+// BREAKPOINTS 
+
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
+// IMPORTS
+
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/media";  
+@import "partials/layout";
+@import "partials/grid";
+@import "partials/structure";
+@import "partials/helpers";
+@import "partials/sitenav";
+@import "partials/animations"; 

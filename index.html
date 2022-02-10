@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Framework</title>
+
+    <!-- ADOBE FONTS -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/iuo8lfs.css">
+
+    <!-- MAIN CSS STYLES -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="site-id">
+            <div class="logo">
+                <a href="index.html"><img src="img/site-logo.png" alt="Site Logo"></a>
+            </div>
+            <h1 class="hide-visually"><a href="#">My Framework</a></h1>
+        </div>
+        <nav class="site-nav" data-navstate="closed">
+            <button class="menu-button">
+                <span class="hide-visually">Menu</span>
+                <svg width="30" height="30">
+                    <title>Menu</title>
+                    <rect class="menubar-top" y="0" width="30" height="3"></rect>
+                    <rect class="menubar-middle" y="8" width="30" height="3"></rect>
+                    <rect class="menubar-bottom " y="16" width="30" height="3"></rect>
+                </svg>
+            </button>
+            <ul>
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="about"><a href="#section-1">About</a></li>
+                <li class="menu"><a href="subpage.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="site-main">
+    <section class="hero animate-on-scroll">
+            <div class="container">
+            <h1>Framey McFramework</h1>
+            <p>This is a simple, single page website framework, built with SASS</p>
+            <a href="#section-1" class="button">SECTION 1</a>
+            <a href="#section-2" class="button">SECTION 2</a>
+            <a href="#section-3" class="button">SECTION 3</a>
+            </div>
+    </section>
+    <section id="section-1" class="animate-on-scroll">
+        <div class="container">
+        <div class="row">
+        <div class="one-half">
+        <img src="http://via.placeholder.com/1600x1200" alt="placeholder">
+    </div>
+    <div class="one-half">
+        <h3>Heading 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio amet, sunt, ipsam laudantium, quidem ad recusandae ex quibusdam enim nostrum ipsum explicabo ullam. Quam voluptatum in error, ut neque unde maxime mollitia quos eveniet nemo fuga itaque molestiae eligendi tempora? Ducimus voluptatum quidem tempora minima! Perferendis porro corporis praesentium quidem.</p>
+        <a href="#" class="button animate-scale-in">Button</a>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section id="section-2" class="animate-on-scroll">
+        <div class="container">
+        <div class="row swapped">
+        <div class="one-half">
+        <img src="http://via.placeholder.com/1600x1200" alt="placeholder">
+        </div>
+        <div class="one-half animate-drop-in-with-delay">
+        <h3>Heading 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio amet, sunt, ipsam laudantium, quidem ad recusandae ex quibusdam enim nostrum ipsum explicabo ullam. Quam voluptatum in error, ut neque unde maxime mollitia quos eveniet nemo fuga itaque molestiae eligendi tempora? Ducimus voluptatum quidem tempora minima! Perferendis porro corporis praesentium quidem.</p>
+        <a href="#" class="button">Button</a>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="section-3" class="animate-on-scroll">
+    <div class="container">
+<div class="row stacked">
+    <div class="one-half animate-scale-in">
+        <img src="http://via.placeholder.com/1600x1200" alt="placeholder">
+    </div>
+    <div class="one-half animate-slide-up">
+        <h3>Heading 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio amet, sunt, ipsam laudantium, quidem ad recusandae ex quibusdam enim nostrum ipsum explicabo ullam. Quam voluptatum in error, ut neque unde maxime mollitia quos eveniet nemo fuga itaque molestiae eligendi tempora? Ducimus voluptatum quidem tempora minima! Perferendis porro corporis praesentium quidem.</p>
+        <a href="#" class="button">Button</a>
+    </div>
+</div>
+</div>
+</section>
+    </main>
+
+    <footer class="site-footer">
+        <ul>
+            <li><a href="#">Home</a></li>
+                <li><a href="subpage.html">Subpage</a></li>
+        </ul>
+    </footer>
+
+    <!-- SMOOTH SCROLL BY CHRIS FERDINAND -->
+    <script src="js/smooth-scroll.polyfills.min.js"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 800,
+            speedAsDuration: true
+        });
+    </script>
+
+    <!-- MAIN JS-->
+
+    <script src="js/script.js"></script>
+
+
+
+
+</body>
+</html>
