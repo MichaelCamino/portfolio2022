@@ -1,7 +1,6 @@
 /* SITE STRUCTURE */
 
 .site-header {
-    // background: $color-accent-dark;
     position: absolute;
     padding: 1em;
     width: 100%;
@@ -26,7 +25,7 @@
         }
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero {
     background: black;
@@ -44,6 +43,15 @@
     p {
         margin: 1em auto;
     }
+}
+
+/* SECTIONS */
+
+section {
+    padding: 4em 0;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
 }
 
 /* SITE-FOOTER */
