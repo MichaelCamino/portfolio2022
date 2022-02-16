@@ -1,7 +1,41 @@
 /* SITE-HEADER SITE-NAV */
 
 .site-header {
-    position: fixed;
+    span {
+        position: relative;
+        display: block;
+      }
+      
+      span:before, span:after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        top: 50%;
+        margin-top: -0.5px;
+        background: #fff;
+      }
+      
+      span:before {
+        left: -2.5px;
+      }
+      span:after {
+        right: 2.5px;
+        background: #fff;
+        transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      
+      span:hover:before {
+        background: #fff;
+        width: 100%;
+        transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      
+      span:hover:after {
+        background: transparent;
+        width: 100%;
+        transition: 0s;
+      }
     .site-id {
         position: absolute;
         top: 10px;
@@ -14,6 +48,9 @@
             margin-top: 3px;
             padding: 0;
             list-style: none;
+            font-family: $font-family-sans;
+            letter-spacing: 4px;
+            font-weight: 300;
         }
         ul {
             display: flex;
