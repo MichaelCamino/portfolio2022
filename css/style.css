@@ -519,7 +519,7 @@ section {
   content: "";
   position: absolute;
   width: 0%;
-  height: 1px;
+  height: 2px;
   top: 50%;
   margin-top: -0.5px;
   background: #fff;
@@ -529,12 +529,12 @@ section {
 }
 .site-header span:after {
   right: 2.5px;
-  background: #fff;
+  background: #ffce53;
   -webkit-transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .site-header span:hover:before {
-  background: #fff;
+  background: #ffce53;
   width: 100%;
   -webkit-transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);

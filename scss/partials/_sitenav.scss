@@ -10,7 +10,7 @@
         content: '';
         position: absolute;
         width: 0%;
-        height: 1px;
+        height: 2px;
         top: 50%;
         margin-top: -0.5px;
         background: #fff;
@@ -21,12 +21,12 @@
       }
       span:after {
         right: 2.5px;
-        background: #fff;
+        background: rgb(255, 206, 83);
         transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
       }
       
       span:hover:before {
-        background: #fff;
+        background: rgb(255, 206, 83);
         width: 100%;
         transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
       }
