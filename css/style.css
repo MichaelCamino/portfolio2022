@@ -322,7 +322,8 @@ body {
 /* HERO */
 .hero {
   background: black;
-  background-image: radial-gradient(circle, #79b4d6, #3d5a80);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3d5a80), to(#79b4d6));
+  background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
   min-height: 100vh;
   text-align: center;
   display: -ms-grid;
@@ -356,12 +357,14 @@ section {
 
 #section-1 {
   text-align: center;
+  background-color: #79b4d6;
 }
 #section-1 img {
   border-radius: 50%;
 }
 #section-1 h4 {
   font-family: europa, sans-serif;
+  color: #fff;
   font-weight: 300;
   text-align: center;
 }
@@ -369,7 +372,7 @@ section {
   border: 1px solid #3d5a80;
   letter-spacing: 3px;
   font-size: 0.6em;
-  color: #3d5a80;
+  color: #fff;
 }
 
 #section-2 {
@@ -504,6 +507,33 @@ section {
   padding: 0;
 }
 
+.aboot_subpage {
+  text-align: center;
+}
+.aboot_subpage img {
+  border-radius: 50%;
+  margin-top: 3em;
+}
+.aboot_subpage h1 {
+  font-family: europa, sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+.aboot_subpage h4 {
+  font-family: europa, sans-serif;
+  color: white;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.5em;
+}
+.aboot_subpage P {
+  font-weight: 300;
+}
+
 .hide-visually {
   position: absolute;
   top: -9999px;
@@ -530,14 +560,14 @@ section {
 .site-header span:after {
   right: 2.5px;
   background: #ffce53;
-  -webkit-transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -webkit-transition: width 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: width 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .site-header span:hover:before {
   background: #ffce53;
   width: 100%;
-  -webkit-transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+  -webkit-transition: width 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: width 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .site-header span:hover:after {
   background: transparent;

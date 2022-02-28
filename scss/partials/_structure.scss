@@ -29,7 +29,7 @@
 
 .hero {
     background: black;
-    background-image: radial-gradient(circle, #79b4d6, #3d5a80);
+    background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
     min-height: 100vh;
     text-align: center;
     display: grid;
@@ -61,11 +61,13 @@ section {
 
 #section-1 {
     text-align: center;
+    background-color: #79b4d6;
     img {
         border-radius: 50%;
     }
     h4 {
         font-family: $font-family-sans;
+        color: #fff;
         font-weight: 300;
         text-align: center;
     }
@@ -73,7 +75,7 @@ section {
         border: 1px solid #3d5a80;
         letter-spacing: 3px;
         font-size: .6em;
-        color: #3d5a80;
+        color: #fff
     }
 }
 
@@ -168,3 +170,32 @@ section {
         }    
 }
 
+// ABOUT SUBPAGE
+
+.aboot_subpage {
+    text-align: center;
+    img {
+        border-radius: 50%;
+        margin-top: 3em;
+    }
+    h1 {
+        font-family: $font-family-sans;
+        font-weight: 300;
+        text-align: center;
+        }
+        h4 {
+            font-family: $font-family-sans;
+            color: white;
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            font-size: 1.5em;
+        }
+        P {
+            font-weight: 300;
+
+        }
+}

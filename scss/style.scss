@@ -1,4 +1,4 @@
-@import "partials/toc";
+@import "./partials/toc";
 
 /* GLOBAL RESETS */
 
@@ -25,12 +25,12 @@ $breakpoint-large: 1250px;
 
 // IMPORTS
 
-@import "partials/typography";
-@import "partials/buttons";
-@import "partials/media";  
-@import "partials/layout";
-@import "partials/grid";
-@import "partials/structure";
-@import "partials/helpers";
-@import "partials/sitenav";
-@import "partials/animations"; 
+@import "./partials/typography";
+@import "./partials/buttons";
+@import "./partials/media";  
+@import "./partials/layout";
+@import "./partials/grid";
+@import "./partials/structure";
+@import "./partials/helpers";
+@import "./partials/sitenav";
+@import "./partials/animations"; 
