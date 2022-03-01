@@ -170,7 +170,7 @@ section {
         }    
 }
 
-// ABOUT SUBPAGE
+// ABOOT SUBPAGE
 
 .aboot_subpage {
     text-align: center;
@@ -198,4 +198,33 @@ section {
             font-weight: 300;
 
         }
+}
+
+// WERKS SUBPAGE
+
+.werks_subpage {
+    
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        font-size: 3em;
+        letter-spacing: 2px;
+        text-decoration: none;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        li:nth-child(2) {
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+
+
+    }
+    
 }
