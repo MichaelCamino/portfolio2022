@@ -79,31 +79,41 @@ section {
     }
 }
 
-#section-2 {
+.overlap_container {
+    background-color: pink;
     position: relative;
     img {
-        border: 1px solid black;
+        display: block;
     }
-    .small_pic {
+}
+
+#section-2 {
+   
+   .large {
+       width: 75%;
+       padding-bottom: 15%;
+    }
+    .small {
         position: absolute;
-        bottom: 4em;
-        right: 7em;
-        max-width: 30%;
-        z-index: -1;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        border: 1px solid black;
     }
 }
 
 #section-3 {
-    position: relative;
-    img {
-        border: 1px solid black;
-    }
-    .small_pic {
+    .large {
+        width: 75%;
+        padding-top: 15%;
+        margin-left: auto;
+         }
+    .small {
         position: absolute;
-        bottom: 22em;
-        left: 10em;
-        max-width: 30%;
-        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 50%;
+        border: 1px solid black;
     }
 }
 
