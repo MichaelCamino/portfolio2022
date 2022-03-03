@@ -80,7 +80,6 @@ section {
 }
 
 .overlap_container {
-    background-color: pink;
     position: relative;
     img {
         display: block;
@@ -88,7 +87,7 @@ section {
 }
 
 #section-2 {
-   
+    background-image: linear-gradient(to bottom, #79b4d6, #3d5a80);
    .large {
        width: 75%;
        padding-bottom: 15%;
@@ -97,12 +96,13 @@ section {
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 50%;
+        width: 40%;
         border: 1px solid black;
     }
 }
 
 #section-3 {
+    background-color: #3d5a80;
     .large {
         width: 75%;
         padding-top: 15%;
@@ -112,22 +112,23 @@ section {
         position: absolute;
         top: 0;
         left: 0;
-        width: 50%;
+        width: 40%;
         border: 1px solid black;
     }
 }
 
 #section-4 {
-    position: relative;
-    img {
-        border: 1px solid black;
-    }
-    .small_pic {
+    background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
+   .large {
+       width: 75%;
+       padding-bottom: 14%;
+        }
+    .small {
         position: absolute;
-        bottom: 4em;
-        right: 7em;
-        max-width: 30%;
-        z-index: -1;
+        bottom: 0;
+        right: 0;
+        width: 40%;
+        border: 1px solid black;
     }
 }
 
@@ -138,11 +139,13 @@ section {
 }
 
 #section-5 {
+    background-color: #79b4d6;
     text-align: center;
     h2 {
         text-align: center;
         font-family: $font-family-sans;
         font-weight: 300;
+        color: #fff;
     }
     .button {
         text-align: center;
