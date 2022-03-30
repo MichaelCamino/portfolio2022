@@ -192,9 +192,27 @@ section {
         margin-top: 3em;
     }
     h1 {
+        @media (min-width: $breakpoint-small) {
+            max-width: 68%;
+            font-size: 2em;
+        }
         font-family: $font-family-sans;
-        font-weight: 300;
+        font-weight: 700;
+        font-size: 1.5em;
         text-align: center;
+        // border-bottom: 2px solid rgb(255, 206, 83);
+        max-width: 100%;
+        margin: auto;
+        padding-bottom: 2%;
+        &::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 5px;
+            color: rgb(255, 206, 83);
+            padding-top: 2%;
+            margin: auto;
+        }
         }
         h4 {
             font-family: $font-family-sans;
@@ -228,6 +246,7 @@ section {
         font-size: 3em;
         letter-spacing: 2px;
         text-decoration: none;
+       
 
         a {
             text-decoration: none;
@@ -261,11 +280,19 @@ section {
         border-radius: 0;
         max-width: 80%;
     }
-    .bold {
+    h4 {
         font-weight: 700;
         border-bottom: 2px solid rgb(255, 206, 83);
         margin-bottom: .6em;
-        font-size: 2em;
+        font-size: 4em;
+        text-align: right;
+        &::after {
+            content: '';
+            display: block;
+            color: red;
+            height: 3px;
+            width: 100%;
+        }
     }
 }
 
@@ -288,11 +315,21 @@ section {
         max-width: 80%;
         margin-left: 9%;
     }
-    .bold {
+    h4 {
         font-weight: 700;
         border-bottom: 2px solid rgb(255, 206, 83);
         margin-bottom: .6em;
-        font-size: 2em;
+        font-size: 4em;
+        color: white;
+        font-family: $font-family-sans;
+        text-align: left;
+        &::after {
+            content: '';
+            display: block;
+            color: red;
+            height: 3px;
+            width: 100%;
+        }
     }
     a {
         text-decoration: none;
@@ -323,12 +360,21 @@ section {
         max-width: 80%;
         margin-left: 10%;
     }
-    .bold {
+    h4 {
         font-weight: 700;
-        color: white;
         border-bottom: 2px solid rgb(255, 206, 83);
         margin-bottom: .6em;
-        font-size: 2em;
+        font-size: 4em;
+        color: white;
+        font-family: $font-family-sans;
+        text-align: right;
+        &::after {
+            content: '';
+            display: block;
+            color: red;
+            height: 3px;
+            width: 100%;
+        }
     }
     a {
         text-decoration: none;

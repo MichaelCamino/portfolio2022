@@ -531,8 +531,27 @@ section {
 }
 .aboot_subpage h1 {
   font-family: europa, sans-serif;
-  font-weight: 300;
+  font-weight: 700;
+  font-size: 1.5em;
   text-align: center;
+  max-width: 100%;
+  margin: auto;
+  padding-bottom: 2%;
+}
+@media (min-width: 768px) {
+  .aboot_subpage h1 {
+    max-width: 68%;
+    font-size: 2em;
+  }
+}
+.aboot_subpage h1::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 5px;
+  color: #ffce53;
+  padding-top: 2%;
+  margin: auto;
 }
 .aboot_subpage h4 {
   font-family: europa, sans-serif;
@@ -588,11 +607,19 @@ section {
   border-radius: 0;
   max-width: 80%;
 }
-.werks_subpage #section-1 .bold {
+.werks_subpage #section-1 h4 {
   font-weight: 700;
   border-bottom: 2px solid #ffce53;
   margin-bottom: 0.6em;
-  font-size: 2em;
+  font-size: 4em;
+  text-align: right;
+}
+.werks_subpage #section-1 h4::after {
+  content: "";
+  display: block;
+  color: red;
+  height: 3px;
+  width: 100%;
 }
 .werks_subpage #section-2 ul {
   list-style: none;
@@ -612,11 +639,21 @@ section {
   max-width: 80%;
   margin-left: 9%;
 }
-.werks_subpage #section-2 .bold {
+.werks_subpage #section-2 h4 {
   font-weight: 700;
   border-bottom: 2px solid #ffce53;
   margin-bottom: 0.6em;
-  font-size: 2em;
+  font-size: 4em;
+  color: white;
+  font-family: europa, sans-serif;
+  text-align: left;
+}
+.werks_subpage #section-2 h4::after {
+  content: "";
+  display: block;
+  color: red;
+  height: 3px;
+  width: 100%;
 }
 .werks_subpage #section-2 a {
   text-decoration: none;
@@ -645,12 +682,21 @@ section {
   max-width: 80%;
   margin-left: 10%;
 }
-.werks_subpage #section-3 .bold {
+.werks_subpage #section-3 h4 {
   font-weight: 700;
-  color: white;
   border-bottom: 2px solid #ffce53;
   margin-bottom: 0.6em;
-  font-size: 2em;
+  font-size: 4em;
+  color: white;
+  font-family: europa, sans-serif;
+  text-align: right;
+}
+.werks_subpage #section-3 h4::after {
+  content: "";
+  display: block;
+  color: red;
+  height: 3px;
+  width: 100%;
 }
 .werks_subpage #section-3 a {
   text-decoration: none;
