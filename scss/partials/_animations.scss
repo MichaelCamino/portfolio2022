@@ -124,6 +124,19 @@
     transform: translate(0, 0)
 }
 
+// SLIDE LEFT
+.animate-slide-left,
+[data-sectionstate="inactive"] .animate-slide-left {
+    transition: all .8s ease-in-out;
+    opacity: 0;
+    transform: translate(60px, 0)
+}
+
+[data-sectionstate="active"] .animate-slide-left {
+    opacity: 1;
+    transform: translate(0, 0)
+}
+
 // DROP IN CHILDREN WITH DELAYS
 .animate-drop-in-with-delay,
 [data-sectionstate="inactive"] .animate-drop-in-with-delay {
@@ -149,12 +162,12 @@
 
 // HORIZONTAL LINE ANIMATION FOR WERKS SUBPAGE
 
-// .animate-line-out,
-// [data-sectionstate="inactive"] .animate-line-out {
-//     opacity: 0;
-//     transition: all .5s ease-in-out;
-// }
+.animate-line-out,
+[data-sectionstate="inactive"] .animate-line-out {
+    max-width: 0;
+    transition: all .8s ease-in-out;
+}
 
-// [data-sectionstate="active"] .animate-line-out {
-//     opacity: 1;
-// }
+[data-sectionstate="active"] .animate-line-out {
+    max-width: 100%;
+}

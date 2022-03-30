@@ -282,15 +282,14 @@ section {
     }
     h4 {
         font-weight: 700;
-        border-bottom: 2px solid rgb(255, 206, 83);
         margin-bottom: .6em;
-        font-size: 4em;
+        font-size: 3em;
         text-align: right;
         &::after {
             content: '';
             display: block;
-            color: red;
-            height: 3px;
+            background-color: rgb(255, 206, 83);
+            height: 2px;
             width: 100%;
         }
     }
@@ -317,17 +316,17 @@ section {
     }
     h4 {
         font-weight: 700;
-        border-bottom: 2px solid rgb(255, 206, 83);
+        
         margin-bottom: .6em;
-        font-size: 4em;
+        font-size: 3em;
         color: white;
         font-family: $font-family-sans;
         text-align: left;
         &::after {
             content: '';
             display: block;
-            color: red;
-            height: 3px;
+            background-color: rgb(255, 206, 83);
+            height: 2px;
             width: 100%;
         }
     }
@@ -362,17 +361,16 @@ section {
     }
     h4 {
         font-weight: 700;
-        border-bottom: 2px solid rgb(255, 206, 83);
         margin-bottom: .6em;
-        font-size: 4em;
+        font-size: 3em;
         color: white;
         font-family: $font-family-sans;
         text-align: right;
         &::after {
             content: '';
             display: block;
-            color: red;
-            height: 3px;
+            background-color: rgb(255, 206, 83);
+            height: 2px;
             width: 100%;
         }
     }

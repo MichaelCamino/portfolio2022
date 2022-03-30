@@ -609,16 +609,15 @@ section {
 }
 .werks_subpage #section-1 h4 {
   font-weight: 700;
-  border-bottom: 2px solid #ffce53;
   margin-bottom: 0.6em;
-  font-size: 4em;
+  font-size: 3em;
   text-align: right;
 }
 .werks_subpage #section-1 h4::after {
   content: "";
   display: block;
-  color: red;
-  height: 3px;
+  background-color: #ffce53;
+  height: 2px;
   width: 100%;
 }
 .werks_subpage #section-2 ul {
@@ -641,9 +640,8 @@ section {
 }
 .werks_subpage #section-2 h4 {
   font-weight: 700;
-  border-bottom: 2px solid #ffce53;
   margin-bottom: 0.6em;
-  font-size: 4em;
+  font-size: 3em;
   color: white;
   font-family: europa, sans-serif;
   text-align: left;
@@ -651,8 +649,8 @@ section {
 .werks_subpage #section-2 h4::after {
   content: "";
   display: block;
-  color: red;
-  height: 3px;
+  background-color: #ffce53;
+  height: 2px;
   width: 100%;
 }
 .werks_subpage #section-2 a {
@@ -684,9 +682,8 @@ section {
 }
 .werks_subpage #section-3 h4 {
   font-weight: 700;
-  border-bottom: 2px solid #ffce53;
   margin-bottom: 0.6em;
-  font-size: 4em;
+  font-size: 3em;
   color: white;
   font-family: europa, sans-serif;
   text-align: right;
@@ -694,8 +691,8 @@ section {
 .werks_subpage #section-3 h4::after {
   content: "";
   display: block;
-  color: red;
-  height: 3px;
+  background-color: #ffce53;
+  height: 2px;
   width: 100%;
 }
 .werks_subpage #section-3 a {
@@ -946,6 +943,21 @@ section {
           transform: translate(0, 0);
 }
 
+.animate-slide-left,
+[data-sectionstate=inactive] .animate-slide-left {
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  opacity: 0;
+  -webkit-transform: translate(60px, 0);
+          transform: translate(60px, 0);
+}
+
+[data-sectionstate=active] .animate-slide-left {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
 .animate-drop-in-with-delay *,
 [data-sectionstate=inactive] .animate-drop-in-with-delay * {
   -webkit-transition: all 0.4s ease-out;
@@ -984,4 +996,15 @@ section {
   opacity: 1;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+
+.animate-line-out,
+[data-sectionstate=inactive] .animate-line-out {
+  max-width: 0;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+[data-sectionstate=active] .animate-line-out {
+  max-width: 100%;
 }
