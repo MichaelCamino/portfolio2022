@@ -50,7 +50,7 @@
     }
 }
 
-/* SECTIONS */
+/* MAIN PAGE */
 
 section {
     padding: 4em 0;
@@ -87,22 +87,21 @@ section {
 }
 
 #section-2 {
-    background-image: linear-gradient(to bottom, #79b4d6, #3d5a80);
+    background-color: #79b4d6;
    .large {
        width: 75%;
-       padding-bottom: 15%;
+       padding-bottom: 10%;
     }
     .small {
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 40%;
-        border: 1px solid black;
+        width: 45%;
     }
 }
 
 #section-3 {
-    background-color: #3d5a80;
+    background-color: #79b4d6;
     .large {
         width: 75%;
         padding-top: 15%;
@@ -118,7 +117,7 @@ section {
 }
 
 #section-4 {
-    background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
+    background-color: #79b4d6;
    .large {
        width: 75%;
        padding-bottom: 14%;
@@ -236,7 +235,6 @@ section {
 .werks_subpage {
 
     .hero {
-    
     ul {
         list-style: none;
         display: flex;
@@ -270,10 +268,18 @@ section {
         font-size: 1.45em;
         letter-spacing: 2px;
         text-decoration: none;
-        text-align: right;
+        text-align: left;
         color: white;
         li {
             margin-bottom: 2%;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            transition: .5s ease;
+            &:hover {
+                color: #3d5a80;
+            }
         }
     }
     img {
@@ -284,7 +290,7 @@ section {
         font-weight: 700;
         margin-bottom: .6em;
         font-size: 3em;
-        text-align: right;
+        text-align: left;
         &::after {
             content: '';
             display: block;
@@ -335,7 +341,7 @@ section {
         color: white;
         transition: .5s ease;
         &:hover {
-            color: grey;
+            color: #3d5a80;
         }
     }
 }
@@ -379,7 +385,7 @@ section {
         color: white;
         transition: .5s ease;
         &:hover {
-            color: grey;
+            color: #3d5a80;
         }
     }
 }
@@ -414,4 +420,69 @@ section {
     }
 }
 
+// TOOLS OF THE TIRADE SUBPAGE
 
+.tott_subpage {
+    #section-1 {
+        background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
+        .video-wrapper iframe {
+            margin: auto;
+            max-width: 100%;
+            margin-top: 1em;
+            }
+    }
+    #section-2 {
+        background-color: #79b4d6;
+        h1 {
+            font-family: $font-family-sans;
+            color: #fff;
+            letter-spacing: 2px;
+           .large {
+                font-size: 1.5em;
+            }
+            .color {
+                color: rgb(255, 206, 83);
+            }
+        }
+        h4 {
+            font-family: $font-family-sans;
+            color: #fff;
+            letter-spacing: 2px;
+            .top_margin {
+                padding-top: 2em;
+                background: red;
+            }
+        }
+    }
+}
+
+// COHORT SUBPAGE
+
+.cohort_subpage {
+    #section-1 {
+        background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
+        video {
+            margin-top: 1em;
+            width: 100%;
+            height: auto;
+          }
+    }
+    #section-2 {
+        background-color: #79b4d6;
+        padding-top: 0;
+        h1 {
+            font-family: $font-family-sans;
+            color: #fff;
+            letter-spacing: 2px;
+            span {
+                color: rgb(255, 206, 83);
+            }
+        }
+        h4 {
+            font-family: $font-family-sans;
+            color: #fff;
+            letter-spacing: 2px;
+            
+        }
+    }
+}

@@ -10,7 +10,7 @@
         content: '';
         position: absolute;
         width: 0%;
-        height: 2px;
+        height: 1px;
         top: 50%;
         margin-top: -0.5px;
         background: #fff;
@@ -41,6 +41,7 @@
         top: 10px;
         left: 50%;
         transform: translatex(-50%);
+        margin-top: 5px;
     }
     .site-nav {
         ul, li {
