@@ -372,7 +372,7 @@ body {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-.hero h1 {
+.hero h3 {
   margin-bottom: 0.25em;
   color: white;
   font-family: europa, sans-serif;
