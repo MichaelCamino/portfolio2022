@@ -27,6 +27,12 @@
 
 /* HERO */
 
+@keyframes mustache-rotate {
+    0% {transform: rotate(-5deg);}
+    50% {transform: rotate(5deg);}
+    100% {transform: rotate(-5deg);}
+}
+
 .hero {
     background: black;
     background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
@@ -36,6 +42,15 @@
     place-items: center;
     padding: 6em;
     color: white;
+    .mustache {
+        position: absolute;
+        top: 42%;
+        left: 40%;
+        max-width: 20%;
+        animation-name: mustache-rotate;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
     h1 {
         margin-bottom: .25em;
         color: white;
@@ -132,14 +147,42 @@ section {
 }
 
 @keyframes red-button {
-    0% {transform: scale(1); box-shadow: inset 0 -8px 6px rgb(97, 32, 32);}
-    50% {transform: scale(1.05); box-shadow:  inset 0 -2px 6px rgb(97, 32, 32);}
-    100% {transform: scale(1); box-shadow: inset 0 -8px 6px rgb(97, 32, 32);}
+    0% {transform: scale(1.05); box-shadow: inset 0 -8px 6px rgb(97, 32, 32);}
+    50% {transform: scale(1); box-shadow:  inset 0 -2px 6px rgb(97, 32, 32);}
+    100% {transform: scale(1.05); box-shadow: inset 0 -8px 6px rgb(97, 32, 32);}
+}
+
+@keyframes left-moving {
+    0% {transform: translate(0,0);}
+    50% {transform: translate(50px,0);}
+    100% {transform: translate(0,0);}
+}
+
+@keyframes right-moving {
+    0% {transform: translate(0,0);}
+    50% {transform: translate(-50px,0);}
+    100% {transform: translate(0,0);}
+}
+
+@keyframes left-finger-lightning {
+    
+    0% {transform: rotate(0); }
+    50% {transform: rotate(10deg);}
+    100% {transform: rotate(0);}
+    
+}
+
+@keyframes right-finger-lightning {
+    
+    0% {transform: rotate(0); }
+    50% {transform: rotate(-10deg);}
+    100% {transform: rotate(0);}
 }
 
 #section-5 {
     background-color: #79b4d6;
     text-align: center;
+    position: relative;
     h2 {
         text-align: center;
         font-family: $font-family-sans;
@@ -157,8 +200,42 @@ section {
         animation-name: red-button;
         animation-duration: 3s;
         animation-iteration-count: infinite;
-        
-    }
+        }
+
+        .left-hand {
+            animation-name: left-moving;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            margin-top: 30%;
+        }
+
+        .right-hand {
+            animation-name: right-moving;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            margin-top: 30%;
+        }
+
+        .lightning-one {
+            position: absolute;
+            top: 35%;
+            left: 35%;
+            
+            transform: scale(1);
+            animation-name: left-finger-lightning;
+            animation-duration: .2s;
+            animation-iteration-count: infinite;
+        }
+        .lightning-two {
+            position: absolute;
+            top: 35%;
+            right: 34%;
+            
+            transform: scale(1);
+            animation-name: right-finger-lightning;
+            animation-duration: .2s;
+            animation-iteration-count: infinite;
+        }
 }
 
 /* SITE-FOOTER */
