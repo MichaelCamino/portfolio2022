@@ -362,8 +362,8 @@ body {
 }
 .hero .mustache {
   position: absolute;
-  top: 42%;
-  left: 40%;
+  top: 43%;
+  left: 39%;
   max-width: 20%;
   -webkit-animation-name: mustache-rotate;
           animation-name: mustache-rotate;
