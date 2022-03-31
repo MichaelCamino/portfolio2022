@@ -40,24 +40,54 @@
     text-align: center;
     display: grid;
     place-items: center;
-    padding: 6em;
     color: white;
-    .mustache {
+    overflow-x: hidden;
+    .hero-container {
+        display: block;
+        align-items: center;
+        position: relative;
+    }
+    
+    .statue-wrapper {
+        position: relative;
+        max-width: 90%;
+    }
+    .mustache-wrapper {
         position: absolute;
-        top: 43%;
-        left: 39%;
-        max-width: 20%;
+        top: 51%;
+        left: 50%;
+        margin-left: 1.5%;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    .mustache {
+        display: block;
         animation-name: mustache-rotate;
         animation-duration: 3s;
         animation-iteration-count: infinite;
+        transform-origin: center;
     }
     h3 {
-        margin-bottom: .25em;
+        position: fixed;
+        
+        text-align: center;
+        width: 120%;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 1.5%;
+        margin-left: 0;
+        margin-right: 0;
         color: white;
-        font-family: $font-family-sans;
-        font-weight: 300;
-        font-size: 2em;
+        font-family: ff-carina, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18.6vw;
+        line-height: .9;
         letter-spacing: 1px;
+        span {
+            padding-right: 0;
+        }
     }
 
     p {
@@ -77,6 +107,7 @@ section {
 #section-1 {
     text-align: center;
     background-color: #79b4d6;
+    position: relative;
     img {
         border-radius: 50%;
     }
@@ -126,8 +157,8 @@ section {
         position: absolute;
         top: 0;
         left: 0;
-        width: 40%;
-        border: 1px solid black;
+        width: 45%;
+        
     }
 }
 
@@ -142,7 +173,6 @@ section {
         bottom: 0;
         right: 0;
         width: 40%;
-        border: 1px solid black;
     }
 }
 
@@ -185,8 +215,8 @@ section {
     position: relative;
     h2 {
         text-align: center;
-        font-family: $font-family-sans;
-        font-weight: 300;
+        font-family: $font-family-serif;
+        font-weight: 400;
         color: #fff;
     }
     .button {
@@ -318,14 +348,18 @@ section {
         justify-content: center;
         margin: 0;
         padding: 0;
-        font-size: 3em;
-        letter-spacing: 2px;
+        font-size: 4em;
+        letter-spacing: 5px;
         text-decoration: none;
-       
+        font-family: $font-family-serif;
 
         a {
             text-decoration: none;
             color: #fff;
+            transition: .5s ease;
+            &:hover {
+                color: #3d5a80;
+            }
         }
 
         li:nth-child(2) {
@@ -364,10 +398,12 @@ section {
         max-width: 80%;
     }
     h4 {
-        font-weight: 700;
+        font-weight: 400;
+        letter-spacing: 5px;
         margin-bottom: .6em;
         font-size: 3em;
         text-align: left;
+        font-family: $font-family-serif;
         &::after {
             content: '';
             display: block;
@@ -398,12 +434,12 @@ section {
         margin-left: 9%;
     }
     h4 {
-        font-weight: 700;
-        
+        font-weight: 400;
         margin-bottom: .6em;
         font-size: 3em;
         color: white;
-        font-family: $font-family-sans;
+        font-family: $font-family-serif;
+        letter-spacing: 5px;
         text-align: left;
         &::after {
             content: '';
@@ -443,11 +479,12 @@ section {
         margin-left: 10%;
     }
     h4 {
-        font-weight: 700;
+        font-weight: 400;
         margin-bottom: .6em;
         font-size: 3em;
         color: white;
-        font-family: $font-family-sans;
+        font-family: $font-family-serif;
+        letter-spacing: 5px;
         text-align: left;
         &::after {
             content: '';
