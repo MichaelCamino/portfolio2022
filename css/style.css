@@ -675,7 +675,7 @@ section {
   font-size: 1.45em;
   letter-spacing: 2px;
   text-decoration: none;
-  text-align: right;
+  text-align: left;
   color: white;
 }
 .werks_subpage #section-3 ul li {
@@ -692,7 +692,7 @@ section {
   font-size: 3em;
   color: white;
   font-family: europa, sans-serif;
-  text-align: right;
+  text-align: left;
 }
 .werks_subpage #section-3 h4::after {
   content: "";
@@ -712,6 +712,8 @@ section {
 }
 
 .sharkseek_subpage #section-1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3d5a80), to(#79b4d6));
+  background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
   text-align: left;
 }
 .sharkseek_subpage #section-1 iframe {
@@ -738,10 +740,10 @@ section {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#3d5a80), to(#79b4d6));
   background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
 }
-.tott_subpage #section-1 .video-wrapper iframe {
-  margin: auto;
-  max-width: 100%;
+.tott_subpage #section-1 video {
   margin-top: 1em;
+  width: 100%;
+  height: auto;
 }
 .tott_subpage #section-2 {
   background-color: #79b4d6;
@@ -1023,6 +1025,19 @@ section {
   opacity: 1;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+
+.animate-opacity,
+[data-sectionstate=inactive] .animate-opacity {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+[data-sectionstate=active] .animate-opacity {
+  opacity: 1;
 }
 
 .animate-drop-in-with-delay *,

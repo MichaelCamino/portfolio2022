@@ -354,7 +354,7 @@ section {
         font-size: 1.45em;
         letter-spacing: 2px;
         text-decoration: none;
-        text-align: right;
+        text-align: left;
         color: white;
         li {
             margin-bottom: 2%;
@@ -371,7 +371,7 @@ section {
         font-size: 3em;
         color: white;
         font-family: $font-family-sans;
-        text-align: right;
+        text-align: left;
         &::after {
             content: '';
             display: block;
@@ -398,6 +398,7 @@ section {
 .sharkseek_subpage {
     
     #section-1 {
+        background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
        text-align: left;
             iframe { 
                 @media (min-width: $breakpoint-small) {
@@ -425,11 +426,11 @@ section {
 .tott_subpage {
     #section-1 {
         background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
-        .video-wrapper iframe {
-            margin: auto;
-            max-width: 100%;
+        video {
             margin-top: 1em;
-            }
+            width: 100%;
+            height: auto;
+          }
     }
     #section-2 {
         background-color: #79b4d6;

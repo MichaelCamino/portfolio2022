@@ -137,6 +137,18 @@
     transform: translate(0, 0)
 }
 
+// OPACITY
+.animate-opacity,
+[data-sectionstate="inactive"] .animate-opacity {
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    transition-delay: 1s;
+}
+
+[data-sectionstate="active"] .animate-opacity {
+    opacity: 1;
+}
+
 // DROP IN CHILDREN WITH DELAYS
 .animate-drop-in-with-delay,
 [data-sectionstate="inactive"] .animate-drop-in-with-delay {
