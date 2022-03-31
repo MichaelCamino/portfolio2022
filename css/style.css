@@ -481,10 +481,10 @@ section {
 #section-5 .button {
   text-align: center;
   background-image: radial-gradient(circle, #ff3300, #d10000);
-  font-size: 2em;
+  font-size: 5em;
   font-weight: 300;
-  padding-top: 1.6em;
-  padding-bottom: 1.6em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   border-radius: 50%;
   -webkit-animation-name: red-button;
           animation-name: red-button;
