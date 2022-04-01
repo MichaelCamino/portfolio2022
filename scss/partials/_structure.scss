@@ -51,6 +51,9 @@
     .statue-wrapper {
         position: relative;
         max-width: 90%;
+        img {
+            opacity: .95;
+        }
     }
     .mustache-wrapper {
         position: absolute;
@@ -87,6 +90,7 @@
         letter-spacing: 1px;
         span {
             padding-right: 0;
+            color: rgb(255, 206, 83);
         }
     }
 
@@ -102,6 +106,19 @@ section {
     min-height: 100vh;
     display: grid;
     align-items: center;
+}
+
+#featured {
+    position: relative;
+    background-color: #79b4d6;
+    h1 {
+    text-align: center;
+    font-family: $font-family-sans;
+    font-weight: 300;
+    font-size: 5em;
+    letter-spacing: 5px;
+    color: #fff;
+    }
 }
 
 #section-1 {
@@ -133,6 +150,7 @@ section {
 }
 
 #section-2 {
+    position: relative;
     background-color: #79b4d6;
    .large {
        width: 75%;
@@ -148,6 +166,7 @@ section {
 
 #section-3 {
     background-color: #79b4d6;
+    position: relative;
     .large {
         width: 75%;
         padding-top: 15%;
@@ -162,8 +181,13 @@ section {
     }
 }
 
+#section-pad {
+    background-color: #79b4d6;
+}
+
 #section-4 {
     background-color: #79b4d6;
+    position: relative;
    .large {
        width: 75%;
        padding-bottom: 14%;
@@ -215,8 +239,8 @@ section {
     position: relative;
     h2 {
         text-align: center;
-        font-family: $font-family-serif;
-        font-weight: 400;
+        font-family: $font-family-sans;
+        font-weight: 300;
         color: #fff;
     }
     .button {
@@ -271,7 +295,7 @@ section {
 /* SITE-FOOTER */
 
 .site-footer {
-    background-color: black;
+    background-color: #79b4d6;
     display: flex;
     justify-content: center;
     padding: 1em;
@@ -303,13 +327,14 @@ section {
             font-size: 2em;
         }
         font-family: $font-family-sans;
-        font-weight: 700;
+        font-weight: 300;
         font-size: 1.5em;
         text-align: center;
         // border-bottom: 2px solid rgb(255, 206, 83);
         max-width: 100%;
         margin: auto;
         padding-bottom: 2%;
+        color: #fff;
         &::after {
             content: '';
             display: block;
@@ -329,7 +354,7 @@ section {
             font-weight: 300;
             padding-top: 1em;
             padding-bottom: 1em;
-            font-size: 1.5em;
+            font-size: 1.4em;
         }
         P {
             font-weight: 300;
@@ -351,7 +376,7 @@ section {
         font-size: 4em;
         letter-spacing: 5px;
         text-decoration: none;
-        font-family: $font-family-serif;
+        font-family: $font-family-sans;
 
         a {
             text-decoration: none;
@@ -403,7 +428,7 @@ section {
         margin-bottom: .6em;
         font-size: 3em;
         text-align: left;
-        font-family: $font-family-serif;
+        font-family: $font-family-sans;
         &::after {
             content: '';
             display: block;
@@ -438,7 +463,7 @@ section {
         margin-bottom: .6em;
         font-size: 3em;
         color: white;
-        font-family: $font-family-serif;
+        font-family: $font-family-sans;
         letter-spacing: 5px;
         text-align: left;
         &::after {
@@ -483,7 +508,7 @@ section {
         margin-bottom: .6em;
         font-size: 3em;
         color: white;
-        font-family: $font-family-serif;
+        font-family: $font-family-sans;
         letter-spacing: 5px;
         text-align: left;
         &::after {
@@ -523,6 +548,7 @@ section {
         
         h1 {
             font-family: $font-family-sans;
+            letter-spacing: 5px;
             color: white;
             border-bottom: 2px solid rgb(255, 206, 83);
             padding-bottom: 2%;

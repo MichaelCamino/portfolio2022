@@ -371,6 +371,9 @@ body {
   position: relative;
   max-width: 90%;
 }
+.hero .statue-wrapper img {
+  opacity: 0.95;
+}
 .hero .mustache-wrapper {
   position: absolute;
   top: 51%;
@@ -412,6 +415,7 @@ body {
 }
 .hero h3 span {
   padding-right: 0;
+  color: #ffce53;
 }
 .hero p {
   margin: 1em auto;
@@ -426,6 +430,19 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#featured {
+  position: relative;
+  background-color: #79b4d6;
+}
+#featured h1 {
+  text-align: center;
+  font-family: europa, sans-serif;
+  font-weight: 300;
+  font-size: 5em;
+  letter-spacing: 5px;
+  color: #fff;
 }
 
 #section-1 {
@@ -457,6 +474,7 @@ section {
 }
 
 #section-2 {
+  position: relative;
   background-color: #79b4d6;
 }
 #section-2 .large {
@@ -472,6 +490,7 @@ section {
 
 #section-3 {
   background-color: #79b4d6;
+  position: relative;
 }
 #section-3 .large {
   width: 75%;
@@ -485,8 +504,13 @@ section {
   width: 45%;
 }
 
+#section-pad {
+  background-color: #79b4d6;
+}
+
 #section-4 {
   background-color: #79b4d6;
+  position: relative;
 }
 #section-4 .large {
   width: 75%;
@@ -659,8 +683,8 @@ section {
 }
 #section-5 h2 {
   text-align: center;
-  font-family: ff-carina, serif;
-  font-weight: 400;
+  font-family: europa, sans-serif;
+  font-weight: 300;
   color: #fff;
 }
 #section-5 .button {
@@ -725,7 +749,7 @@ section {
 
 /* SITE-FOOTER */
 .site-footer {
-  background-color: black;
+  background-color: #79b4d6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -757,12 +781,13 @@ section {
 }
 .aboot_subpage h1 {
   font-family: europa, sans-serif;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 1.5em;
   text-align: center;
   max-width: 100%;
   margin: auto;
   padding-bottom: 2%;
+  color: #fff;
 }
 @media (min-width: 768px) {
   .aboot_subpage h1 {
@@ -788,7 +813,7 @@ section {
   font-weight: 300;
   padding-top: 1em;
   padding-bottom: 1em;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 .aboot_subpage P {
   font-weight: 300;
@@ -807,7 +832,7 @@ section {
   font-size: 4em;
   letter-spacing: 5px;
   text-decoration: none;
-  font-family: ff-carina, serif;
+  font-family: europa, sans-serif;
 }
 .werks_subpage .hero ul a {
   text-decoration: none;
@@ -854,7 +879,7 @@ section {
   margin-bottom: 0.6em;
   font-size: 3em;
   text-align: left;
-  font-family: ff-carina, serif;
+  font-family: europa, sans-serif;
 }
 .werks_subpage #section-1 h4::after {
   content: "";
@@ -886,7 +911,7 @@ section {
   margin-bottom: 0.6em;
   font-size: 3em;
   color: white;
-  font-family: ff-carina, serif;
+  font-family: europa, sans-serif;
   letter-spacing: 5px;
   text-align: left;
 }
@@ -929,7 +954,7 @@ section {
   margin-bottom: 0.6em;
   font-size: 3em;
   color: white;
-  font-family: ff-carina, serif;
+  font-family: europa, sans-serif;
   letter-spacing: 5px;
   text-align: left;
 }
@@ -965,6 +990,7 @@ section {
 }
 .sharkseek_subpage #section-1 h1 {
   font-family: europa, sans-serif;
+  letter-spacing: 5px;
   color: white;
   border-bottom: 2px solid #ffce53;
   padding-bottom: 2%;
