@@ -349,7 +349,6 @@ body {
   }
 }
 .hero {
-  background: black;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#3d5a80), to(#79b4d6));
   background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
   min-height: 100vh;
@@ -366,6 +365,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+}
+.hero #heroanimation {
+  position: absolute;
+  z-index: 100;
 }
 .hero .statue-wrapper {
   position: relative;

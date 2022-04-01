@@ -34,7 +34,6 @@
 }
 
 .hero {
-    background: black;
     background-image: linear-gradient(to bottom, #3d5a80, #79b4d6);
     min-height: 100vh;
     text-align: center;
@@ -46,6 +45,11 @@
         display: block;
         align-items: center;
         position: relative;
+    }
+
+    #heroanimation {
+        position: absolute;
+        z-index: 100;
     }
     
     .statue-wrapper {
