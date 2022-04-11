@@ -21,7 +21,7 @@
     <header class="site-header">
         <div class="site-id">
             <div class="logo">
-                <a href="index.html"><img src="img/mylogo.svg" alt="Site Logo" height="100px" width="100px"></a>
+                <a href="#top"><img src="img/mylogo.svg" alt="Site Logo" height="100px" width="100px"></a>
             </div>
             <h1 class="hide-visually"><a href="#">My Framework</a></h1>
         </div>
@@ -29,7 +29,7 @@
 
             <ul>
                 <li class="werks"><span><a href="werks/index.html">WERKS</a></span></li>
-                <li class="about"><span><a href="aboot/index.html">ABOOT</a></span></li>
+                <li class="about"><span class="black_aboot"><a href="aboot/index.html">ABOOT</a></span></li>
             </ul>
         </nav>
     </header>
@@ -38,54 +38,61 @@
         <section class="hero animate-on-scroll">
             <div class="hero-container">
                 <div id="heroanimation"></div>
-                <h3>BE <span>WHO</span> YOU<br/>WANT <span>TO</span> BE</span></h3>
-                    <div class="statue-wrapper">
+                <h3>BE <span class="yellow">WHO</span> <span class="black">YOU</span><br />WANT
+                    <span class="yellow">TO</span> <span class="black"> BE</span>
+                </h3>
+                <div class="statue-wrapper">
                     <img src="img/head.png" alt="statue head">
                     <div class="mustache-wrapper">
                         <img src="img/mustache.png" class="mustache" alt="">
-                    </div> 
+                    </div>
                 </div>
                 <!-- <h3>WANT TO BE</h3> -->
-            
+
             </div>
         </section>
         <section id="section-1" class="animate-on-scroll">
             <div class="container">
                 <div class="row">
-                    <!-- <div class="one-half">
-                        <img src="img/bio_pic.png" height="500" width="500" alt="picture of michael">
-                    </div> -->
-                    <div class="one-whole">
+                    <div class="one-half">
                         <h4>I'm Michael, a designer, programmer<br>and filmmaker living in Honolulu.</h4>
-                        <a href="./aboot/index.html" class="button animate-scale-in">DEEP DIVE</a>
+                    </div>
+                    <div class="one-half"> <a href="./aboot/index.html" class="button animate-scale-in">DEEP DIVE</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="featured">
-            <h1>FEATURED WORKS</h1>
-        </section>
-        <section id="section-2" class="animate-on-scroll">
-            <div class="container">
-                <div class="overlap_container">
-                    <div class="large">
-                        <img src="img/cohort_pic.png" alt="placeholder">
-                    </div>
-                    <div class="small">
-                        <img src="img/cohort_title.png" alt="placeholder">
-                    </div>
-                </div>
+        <section id="section-2" class="hero animate-on-scroll">
+            <div class="container animate-drop-in-with-delay">
+                <ul>
+                    <li><a href="#section-3">FILM</a></li>
+                    <li><a href="#section-4">DES<span>IGN</span></a></li>
+                    <li><a href="#section-5" class="black_web">WEB</a></li>
+                </ul>
             </div>
         </section>
 
         <section id="section-3" class="animate-on-scroll">
             <div class="container">
-                <div class="overlap_container">
-                    <div class="small">
-                        <img src="img/amman_Logo.png" class="small_pic" alt="placeholder">
+                <div class="row">
+                    <div class="one-third">
+                        <h4 class="animate-line-out">FILM</h4>
+                        <ul class="animate-slide-left">
+                            <li class="top"><a href="../cohort/index.html">COHORT</a></li>
+                            <li><a href="../tott/index.html">TOOLS OF THE TIRADE</a></li>
+                            <li>KAHUKU FARMS</li>
+                            <li>CROOK COVERS</li>
+                        </ul>
                     </div>
-                    <div class="large">
-                        <img src="img/amman_mockup.png" alt="placeholder">
+                    <div class="two-thirds">
+                        <div class="slide-wrapper">
+                            <div class="slide-one slide">
+                                <img src="../img/cohort_pic.png" alt="placeholder">
+                            </div>
+                            <div class="slide-two slide">
+                                <img src="../img/cohort_title.png" alt="placeholder">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,31 +100,53 @@
         </section>
         <section id="section-4" class="animate-on-scroll">
             <div class="container">
-                <div class="overlap_container">
-                    <div class="large">
-                        <img src="img/EP_stamp_mockup.jpg" alt="placeholder">
+                <div class="row">
+                    <div class="two-thirds">
+                        <img src="../img/amman_Logo.png" alt="placeholder">
                     </div>
-                    <div class="small">
-                        <img src="img/EP_hero.png" class="small_pic" alt="placeholder">
+                    <div class="one-third">
+                        <h4 class="animate-line-out">DESIGN</h4>
+                        <ul class="animate-slide-left">
+                            <li class="top">AMMAN</li>
+                            <li>CROOK COVERS</li>
+                            <li>KO&#699;OLAU M + M</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-5" class="animate-on-scroll">
+            <div class="container">
+                <div class="row">
+                    <div class="one-third">
+                        <h4 class="animate-line-out">WEB</h4>
+                        <ul class="animate-slide-left">
+                            <li><a href="https://michaelcamino.github.io/extendedplay/" target="_blank"
+                                    rel="noopener noreferrer">EXTENDED PLAY</a></li>
+                            <li><a href="../sharkseek/index.html">SHARK SEEK</a></li>
+                        </ul>
+                    </div>
+                    <div class="two-thirds">
+                        <img src="../img/EP_hero.png" alt="placeholder">
                     </div>
                 </div>
             </div>
         </section>
         <section id="section-pad"></section>
-        <section id="section-5" class="animate-on-scroll">
+        <section id="section-6" class="animate-on-scroll">
             <div class="container">
                 <div class="row">
                     <div class="one-whole centered animate-slide-dwon">
-                        <h2>WANT TO SEE MORE?</h2>
+                        <h2>WANT TO <span>SEE MORE?</span></h2>
                     </div>
                 </div>
                 <div class="row">
-                   <div class="lightning-one">
-                       <img src="img/lightning_one.svg" alt="">
-                   </div>
-                   <div class="lightning-two">
-                    <img src="img/lightning_two.svg" alt="">
-                </div>
+                    <div class="lightning-one">
+                        <img src="img/lightning_one.svg" alt="">
+                    </div>
+                    <div class="lightning-two">
+                        <img src="img/lightning_two.svg" alt="">
+                    </div>
                     <div class="one-third">
                         <img src="img/left_hand.png" class="left-hand" alt="Left Hand Pointing">
                     </div>
@@ -125,9 +154,9 @@
                         <a href="./werks/index.html" class="button"></a>
                     </div>
                     <div class="one-third">
-                       <img src="img/right_hand.png" class="right-hand" alt="Right Hand Pointing">
+                        <img src="img/right_hand.png" class="right-hand" alt="Right Hand Pointing">
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -156,7 +185,9 @@
 
     <!-- LOTTIE JS-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.0/lottie.min.js" integrity="sha512-mdyZsdRAVdjUM6dKsRxu03wcxXMtt1UDkkQSDs+hZCtGoO0NsIgPHpYPoD7VzrlB/auvVFQlWP+w/6Co+SGi3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.0/lottie.min.js"
+        integrity="sha512-mdyZsdRAVdjUM6dKsRxu03wcxXMtt1UDkkQSDs+hZCtGoO0NsIgPHpYPoD7VzrlB/auvVFQlWP+w/6Co+SGi3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 

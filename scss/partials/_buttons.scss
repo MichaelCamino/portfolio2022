@@ -1,6 +1,7 @@
 /* BUTTONS */
 
-.button, button {
+.button,
+button {
     color: white;
     text-decoration: none;
     padding: 1em;
@@ -8,10 +9,4 @@
     transition: 250ms ease;
     border-radius: .5em;
     margin: 1em 0;
-
-    &:hover {
-        background-color: $color-link-dark;
-        color: white;
-    }
 }
-
