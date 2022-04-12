@@ -32,3 +32,22 @@ const myobserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.animate-on-scroll').forEach((section) => {
     myobserver.observe(section);
 });
+
+// SLIDE RIDE
+
+const slideBox = document.querySelectorAll('.slide-box');
+for (let i = 0, len = slideBox.length; i < len; i++) {
+
+    let slideNavItems = slideBox[i].querySelectorAll('.slide-nav a');
+    for (let j = 0, len = slideNavItems.length; j < len; j++) {
+        console.log(slideNavItems[j]);
+        console.log(this);
+        slideNavItems[j].addEventListener('click', function (e) {
+            let currentSlideNum = "slide" + (j + 1);
+            slideBox[i].setAttribute('data-currentslide', currentSlideNum);
+            e.preventDefault();
+        });
+    };
+
+};
+
