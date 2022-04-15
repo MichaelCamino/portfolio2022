@@ -14,6 +14,9 @@
     <!-- MAIN CSS STYLES -->
     <link rel="stylesheet" href="../css/style.css">
 
+    <!-- FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/32613632b2.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -21,7 +24,7 @@
     <header class="site-header">
         <div class="site-id">
             <div class="logo">
-                <a href="index.html"><img src="../img/mylogo.svg" alt="Site Logo" height="100px" width="100px"></a>
+                <a href="index.html"><img src="../img/mylogo2.svg" alt="Site Logo" height="100px" width="100px"></a>
             </div>
             <h1 class="hide-visually"><a href="#">My Framework</a></h1>
         </div>
@@ -34,35 +37,36 @@
         </nav>
     </header>
 
-    <main class="site-main">
-        <section class="hero aboot_subpage animate-on-scroll">
+    <main class="aboot_subpage">
+        <section class="animate-on-scroll">
             <div class="container">
                 <div class="row">
-                    <div class="one-whole">
+                    <div class="one-half animate-scale-in">
                         <img src="../img/bio_pic.png" width="400" height="400" alt="picture of michael">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="one-whole">
-                        <h1>YES, THIS IS THE "ABOUT ME" PAGE</h1>
+                    <div class="one-half">
+                        <h1>YES, THIS IS THE<br /> "<span>ABOUT ME</span>" PAGE</h1>
                         <h4>But, since this website is more for you then it is for me, I'll just give you the bullet
                             points</h4>
-                        <p>I grew up in Hawaii</p>
-                        <p>I was in the Coast Guard for 10 years</p>
-                        <p>I lived in the U.K. for 5 years</p>
-                        <p>I have a pet hedgehog named Jezebel</p>
-                        <p>One of these statements is false</p>
+                        <ul class="animate-drop-in-with-delay">
+                            <li>I grew up in Hawaii</li>
+                            <li>I was in the Coast Guard for 10 years</li>
+                            <li>I lived in the U.K. for 5 years</li>
+                            <li>I have a pet hedgehog named Jezebel</li>
+                            <li>One of these statements is false</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
         </section>
 
     </main>
 
     <footer class="site-footer">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="subpage.html">Subpage</a></li>
+            <li><a href="https://github.com/michaelcamino" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://codepen.io/michaelcamino" class="black_icon" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-codepen" aria-hidden="true"></i></a></li>
         </ul>
     </footer>
 

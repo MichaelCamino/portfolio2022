@@ -257,10 +257,14 @@ section {
 
         h4 {
             font-family: $font-family-sans;
-            color: #fff;
+            color: rgb(245, 245, 245);
             font-weight: 300;
             text-align: right;
             margin-right: 20%;
+
+            span {
+                color: $color-accent;
+            }
         }
 
         .button {
@@ -323,7 +327,7 @@ section {
                 color: rgb(10, 10, 10);
 
                 &:hover {
-                    color: gray;
+                    color: $color-accent;
                 }
 
             }
@@ -334,11 +338,11 @@ section {
 
             a {
                 text-decoration: none;
-                color: #fff;
+                color: rgb(245, 245, 245);
                 transition: .5s ease;
 
                 &:hover {
-                    color: grey;
+                    color: $color-accent;
                 }
             }
 
@@ -351,7 +355,7 @@ section {
         }
     }
 
-    #section-3 {
+    #film {
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         position: relative;
 
@@ -359,11 +363,11 @@ section {
             list-style: none;
             margin: 0;
             padding: 0;
-            font-size: 1.45em;
+            font-size: 1.40em;
             letter-spacing: 2px;
             text-decoration: none;
             text-align: left;
-            color: white;
+
 
             li {
                 margin-bottom: 2%;
@@ -372,6 +376,11 @@ section {
             a {
                 text-decoration: none;
                 transition: .5s ease;
+
+                &:hover {
+                    letter-spacing: 4px;
+                    color: $color-accent;
+                }
             }
         }
 
@@ -403,7 +412,7 @@ section {
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
     }
 
-    #section-4 {
+    #design {
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         position: relative;
 
@@ -419,6 +428,14 @@ section {
 
             li {
                 margin-bottom: 2%;
+
+                a {
+                    color: rgb(10, 10, 10);
+
+                    &:hover {
+                        color: $color-accent;
+                    }
+                }
             }
         }
 
@@ -447,7 +464,7 @@ section {
         }
     }
 
-    #section-5 {
+    #web {
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         position: relative;
 
@@ -471,7 +488,7 @@ section {
                 transition: 250ms ease;
 
                 &:hover {
-                    color: gray;
+                    color: $color-accent;
                 }
             }
         }
@@ -588,6 +605,10 @@ section {
         text-decoration: none;
         padding: 1em;
         font-size: 2em;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     .black_icon {
@@ -599,6 +620,14 @@ section {
         list-style: none;
         display: flex;
         padding: .5em;
+
+        li {
+            transition: 300ms ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 
 
@@ -607,7 +636,12 @@ section {
 // ABOOT SUBPAGE
 
 .aboot_subpage {
-    text-align: center;
+    text-align: left;
+    background-color: rgb(10, 10, 10);
+
+    @media (min-width: $breakpoint-small) {
+        background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+    }
 
     img {
         border-radius: 50%;
@@ -615,36 +649,33 @@ section {
     }
 
     h1 {
+        color: rgb(245, 245, 245);
+
         @media (min-width: $breakpoint-small) {
-            max-width: 68%;
+            max-width: 90%;
             font-size: 2em;
+            color: rgb(10, 10, 10);
         }
 
         font-family: $font-family-sans;
         font-weight: 300;
         font-size: 1.5em;
-        text-align: center;
         // border-bottom: 2px solid rgb(255, 206, 83);
         max-width: 100%;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         padding-bottom: 2%;
-        color: #fff;
+        color: rgb(10, 10, 10);
 
-        &::after {
-            content: '';
-            display: block;
-            width: 50%;
-            height: 5px;
-            color: rgb(255, 206, 83);
-            padding-top: 2%;
-            margin: auto;
+        span {
+            color: $color-accent;
         }
     }
 
     h4 {
         font-family: $font-family-sans;
-        color: white;
-        max-width: 50%;
+        color: rgb(10, 10, 10);
+        max-width: 90%;
         margin-left: auto;
         margin-right: auto;
         font-weight: 300;
@@ -653,9 +684,10 @@ section {
         font-size: 1.4em;
     }
 
-    P {
+    li {
         font-weight: 300;
-
+        color: rgb(10, 10, 10);
+        list-style: inside;
     }
 }
 
@@ -910,11 +942,15 @@ section {
         text-align: center;
 
         .row {
-            margin-right: .0001%;
             font-family: $font-family-sans;
 
             h4 {
                 font-family: $font-family-sans;
+
+                span {
+                    color: rgb(245, 245, 245);
+                    margin-left: 60%;
+                }
             }
         }
 
@@ -926,7 +962,12 @@ section {
         }
 
         video {
-            margin-top: 3%;
+
+            @media (min-width: $breakpoint-small) {
+                margin-top: 3%;
+            }
+
+            margin-top: 30%;
             width: 100%;
             height: auto;
         }
@@ -934,6 +975,7 @@ section {
         .yellow_arrow {
             margin-bottom: -10%;
             margin-top: 1%;
+            margin-right: 1%;
 
             img {
                 @media (max-width: $breakpoint-small) {
@@ -955,9 +997,23 @@ section {
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         }
 
+        li {
+            color: rgb(245, 245, 245);
+            list-style: none;
+
+            &::before {
+                content: "\2022";
+                color: orange;
+                display: inline-block;
+                font-weight: bold;
+                width: 1em;
+                margin-left: -1em;
+            }
+        }
+
         h1 {
             font-family: $font-family-sans;
-            color: #fff;
+            color: rgb(245, 245, 245);
             letter-spacing: 2px;
 
             .large {
@@ -965,14 +1021,18 @@ section {
             }
 
             .color {
-                color: rgb(255, 206, 83);
+                color: orange;
             }
         }
 
         h4 {
             font-family: $font-family-sans;
-            color: rgb(255, 206, 83);
+            color: orange;
             letter-spacing: 2px;
+        }
+
+        .separate {
+            margin-top: 10%;
         }
 
         p {
@@ -1078,18 +1138,34 @@ section {
 // SLIDE STYLING 
 
 .slide-box {
-    background-color: rgba(209, 0, 0, .3);
-    border: 1px solid rgb(209, 0, 0);
+    // background-color: rgba(209, 0, 0, .3);
+    // border: 1px solid rgb(209, 0, 0);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.swap {
+        flex-direction: row-reverse;
+    }
 }
 
 .slide-nav {
-    min-width: 25%;
+    max-width: 25%;
+
+    li {
+        line-height: 1;
+        margin: .5em 0;
+
+        a {
+            text-decoration: none;
+
+        }
+    }
 }
 
 .slide-wrapper {
     position: relative;
-    min-width: 75%;
+    max-width: 70%;
     height: 100%;
 }
 
@@ -1114,6 +1190,8 @@ section {
 
 [data-currentslide="slide1"] .slide-nav li:nth-child(1) a,
 [data-currentslide="slide2"] .slide-nav li:nth-child(2) a,
-[data-currentslide="slide3"] .slide-nav li:nth-child(3) a {
-    color: $color-accent;
+[data-currentslide="slide3"] .slide-nav li:nth-child(3) a,
+[data-currentslide="slide4"] .slide-nav li:nth-child(4) a {
+    color: rgb(255, 206, 83, .5);
+
 }

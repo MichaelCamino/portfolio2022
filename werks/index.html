@@ -14,119 +14,37 @@
     <!-- MAIN CSS STYLES -->
     <link rel="stylesheet" href="../css/style.css">
 
+    <!-- FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/32613632b2.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
-    <header class="site-header">
-        <div class="site-id">
-            <div class="logo">
-                <a href="index.html"><img src="../img/mylogo.svg" alt="Site Logo" height="100px" width="100px"></a>
-            </div>
-            <h1 class="hide-visually"><a href="#">My Framework</a></h1>
-        </div>
-        <nav class="site-nav">
 
-            <ul>
-                <li class="home"><span><a href="../index.html">HOME</a></span></li>
-                <li class="aboot"><span class="black_aboot"><a href="../aboot/index.html">ABOOT</a></span></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="werks_subpage">
-        <section class="hero animate-on-scroll">
-            <div class="container animate-drop-in-with-delay">
-                <ul>
-                    <li><a href="#section-1">FILM</a></li>
-                    <li><a href="#section-2">DESIGN</a></li>
-                    <li><a href="#section-3">WEB</a></li>
-                </ul>
-            </div>
-        </section>
-        <section id="section-1" class="animate-on-scroll list">
+    <main class="tott_subpage">
+        <section id="section-1" class="animate-on-scroll">
             <div class="container">
-                <div class="slide-box">
-                    <div class="slide-nav">
-                        <h4 class="animate-line-out">FILM</h4>
-                        <ul class="animate-slide-left">
-                            <li class="top"><a href="../cohort/index.html">COHORT</a></li>
-                            <li><a href="../tott/index.html">TOOLS OF THE TIRADE</a></li>
-                            <li>KAHUKU FARMS</li>
-                            <li>CROOK COVERS</li>
-                        </ul>
-                    </div>
-
-                    <div class="slide-wrapper">
-                        <div class="slide-one slide">
-                            <img src="../img/cohort_pic.png" alt="placeholder">
-                        </div>
-                        <div class="slide-two slide">
-                            <img src="../img/cohort_title.png" alt="placeholder">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section id="section-2" class="animate-on-scroll">
-            <div class="container">
-                <div class="row">
-                    <div class="two-thirds">
-                        <img src="../img/amman_Logo.png" alt="placeholder">
-                    </div>
-                    <div class="one-third">
-                        <h4 class="animate-line-out">DESIGN</h4>
-                        <ul class="animate-slide-left">
-                            <li class="top">AMMAN</li>
-                            <li>CROOK COVERS</li>
-                            <li>KO&#699;OLAU M + M</li>
-                        </ul>
-                    </div>
-                </div>
+                <video width="854" height="480" autoplay controls>
+                    <source src="../video/samstour.webmhd.webm">
+                </video>
             </div>
         </section>
 
-        <section id="section-3" class="animate-on-scroll">
-            <div class="container">
-                <div class="row">
-                    <div class="one-third">
-                        <h4 class="animate-line-out">WEB</h4>
-                        <ul class="animate-slide-left">
-                            <li><a href="https://michaelcamino.github.io/extendedplay/" target="_blank"
-                                    rel="noopener noreferrer">EXTENDED PLAY</a></li>
-                            <li><a href="../sharkseek/index.html">SHARK SEEK</a></li>
-                        </ul>
-                    </div>
-                    <div class="two-thirds">
-                        <img src="../img/EP_hero.png" alt="placeholder">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- SMOOTH SCROLL BY CHRIS FERDINAND -->
+        <script src="../js/smooth-scroll.polyfills.min.js"></script>
 
-    </main>
+        <script>
+            var scroll = new SmoothScroll('a[href*="#"]', {
+                speed: 800,
+                speedAsDuration: true
+            });
+        </script>
 
-    <footer class="site-footer">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="subpage.html">Subpage</a></li>
-        </ul>
-    </footer>
+        <!-- MAIN JS-->
 
-    <!-- SMOOTH SCROLL BY CHRIS FERDINAND -->
-    <script src="../js/smooth-scroll.polyfills.min.js"></script>
-
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 800,
-            speedAsDuration: true
-        });
-    </script>
-
-    <!-- MAIN JS-->
-
-    <script src="../js/script.js"></script>
+        <script src="../js/script.js"></script>
 
 
 
