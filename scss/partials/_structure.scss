@@ -12,7 +12,7 @@ body {
     align-items: center;
 
     a {
-        color: black;
+        color: rgb(10, 10, 10);
         text-decoration: none;
     }
 
@@ -147,7 +147,6 @@ body {
     text-align: center;
     display: grid;
     place-items: center;
-    color: white;
     overflow-x: hidden;
 
     .hero-container {
@@ -200,17 +199,17 @@ body {
         margin-top: 1.5%;
         margin-left: 0;
         margin-right: 0;
-        color: white;
-        font-family: ff-carina, sans-serif;
-        font-weight: 400;
+        color: rgb(245, 245, 245);
+        font-family: $font-family-serif;
+        font-weight: 300;
         font-style: normal;
-        font-size: 18.6vw;
+        font-size: 25vw;
         line-height: .9;
-        letter-spacing: 1px;
+        letter-spacing: 3px;
 
         span {
             padding-right: 0;
-            color: rgb(255, 206, 83);
+            color: $color-accent;
         }
 
         .black {
@@ -234,22 +233,6 @@ section {
 
 .site-main {
 
-
-
-    #featured {
-        position: relative;
-        background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
-
-        h1 {
-            text-align: center;
-            font-family: $font-family-sans;
-            font-weight: 300;
-            font-size: 5em;
-            letter-spacing: 5px;
-            color: #fff;
-        }
-    }
-
     #section-1 {
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         position: relative;
@@ -258,17 +241,20 @@ section {
         h4 {
             font-family: $font-family-sans;
             color: rgb(245, 245, 245);
-            font-weight: 300;
+            font-weight: 200;
             text-align: right;
             margin-right: 20%;
 
             span {
                 color: $color-accent;
+                font-family: $font-family-serif;
+                font-weight: 300;
             }
         }
 
         .button {
             border: 1px solid rgb(10, 10, 10);
+            font-family: $font-family-sans;
             letter-spacing: 3px;
             font-size: .6em;
             color: rgb(10, 10, 10);
@@ -311,16 +297,15 @@ section {
         position: relative;
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
 
-        ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-            font-size: 4em;
-            letter-spacing: 5px;
-            text-decoration: none;
-            font-family: $font-family-sans;
+        h1 {
+            color: rgb(245, 245, 245);
+            padding: 2;
+            font-family: $font-family-serif;
+            font-weight: 300;
+            font-size: 2em;
+            letter-spacing: 3px;
+
+
 
             span {
                 transition: .5s ease;
@@ -396,12 +381,13 @@ section {
             margin-bottom: .6em;
             font-size: 3em;
             text-align: left;
-            font-family: $font-family-sans;
+            font-family: $font-family-serif;
+            font-weight: 300;
 
             &::after {
                 content: '';
                 display: block;
-                background-color: rgb(255, 206, 83);
+                background-color: $color-accent;
                 height: 2px;
                 width: 100%;
             }
@@ -450,14 +436,15 @@ section {
             margin-bottom: .6em;
             font-size: 3em;
             color: rgb(10, 10, 10);
-            font-family: $font-family-sans;
+            font-family: $font-family-serif;
+            font-weight: 300;
             letter-spacing: 5px;
             text-align: left;
 
             &::after {
                 content: '';
                 display: block;
-                background-color: rgb(255, 206, 83);
+                background-color: $color-accent;
                 height: 2px;
                 width: 100%;
             }
@@ -511,7 +498,7 @@ section {
             &::after {
                 content: '';
                 display: block;
-                background-color: rgb(255, 206, 83);
+                background-color: $color-accent;
                 height: 2px;
                 width: 100%;
             }
@@ -531,7 +518,7 @@ section {
             text-align: center;
             font-family: $font-family-sans;
             font-weight: 300;
-            color: #fff;
+            color: rgb(245, 245, 245);
             margin-left: 1.5%;
 
             span {
@@ -636,20 +623,26 @@ section {
 // ABOOT SUBPAGE
 
 .aboot_subpage {
-    text-align: left;
+    text-align: center;
     background-color: rgb(10, 10, 10);
 
     @media (min-width: $breakpoint-small) {
+        text-align: left;
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+    }
+
+    span {
+        color: rgb(245, 245, 245);
     }
 
     img {
         border-radius: 50%;
         margin-top: 3em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     h1 {
-        color: rgb(245, 245, 245);
 
         @media (min-width: $breakpoint-small) {
             max-width: 90%;
@@ -657,15 +650,15 @@ section {
             color: rgb(10, 10, 10);
         }
 
-        font-family: $font-family-sans;
+        font-family: $font-family-serif;
         font-weight: 300;
         font-size: 1.5em;
-        // border-bottom: 2px solid rgb(255, 206, 83);
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
         padding-bottom: 2%;
-        color: rgb(10, 10, 10);
+        margin-top: 5%;
+        color: rgb(245, 245, 245);
 
         span {
             color: $color-accent;
@@ -674,7 +667,7 @@ section {
 
     h4 {
         font-family: $font-family-sans;
-        color: rgb(10, 10, 10);
+        color: rgb(245, 245, 245);
         max-width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -682,214 +675,51 @@ section {
         padding-top: 1em;
         padding-bottom: 1em;
         font-size: 1.4em;
+
+        @media (min-width: $breakpoint-small) {
+            color: rgb(10, 10, 10);
+        }
     }
 
     li {
+        color: rgb(245, 245, 245);
         font-weight: 300;
-        color: rgb(10, 10, 10);
-        list-style: inside;
+        list-style: none;
+        margin-left: auto;
+        margin-right: 13%;
+        padding-bottom: 2%;
+
+        @media (min-width: $breakpoint-small) {
+            color: rgb(10, 10, 10);
+            margin-right: auto;
+        }
+
+        &::before {
+            display: none;
+
+            @media (min-width: $breakpoint-small) {
+                content: "\2022";
+                color: $color-accent;
+                display: inline-block;
+                font-weight: bold;
+                width: 1em;
+                margin-left: -1em;
+            }
+        }
     }
 }
 
-// WERKS SUBPAGE
-
-// .werks_subpage {
-
-//     .hero {
-//         ul {
-//             list-style: none;
-//             display: flex;
-//             justify-content: center;
-//             margin: 0;
-//             padding: 0;
-//             font-size: 4em;
-//             letter-spacing: 5px;
-//             text-decoration: none;
-//             font-family: $font-family-sans;
-
-//             a {
-//                 text-decoration: none;
-//                 color: #fff;
-//                 transition: .5s ease;
-
-//                 &:hover {
-//                     color: #3d5a80;
-//                 }
-//             }
-
-//             li:nth-child(2) {
-//                 margin-left: 150px;
-//                 margin-right: 150px;
-//             }
-
-
-//         }
-
-//     }
-
-//     #section-1 {
-//         ul {
-//             list-style: none;
-//             margin: 0;
-//             padding: 0;
-//             font-size: 1.45em;
-//             letter-spacing: 2px;
-//             text-decoration: none;
-//             text-align: left;
-//             color: white;
-
-//             li {
-//                 margin-bottom: 2%;
-//             }
-
-//             a {
-//                 text-decoration: none;
-//                 color: white;
-//                 transition: .5s ease;
-
-//                 &:hover {
-//                     color: #3d5a80;
-//                 }
-//             }
-//         }
-
-//         img {
-//             border-radius: 0;
-//             max-width: 80%;
-//         }
-
-//         h4 {
-//             font-weight: 400;
-//             letter-spacing: 5px;
-//             margin-bottom: .6em;
-//             font-size: 3em;
-//             text-align: left;
-//             font-family: $font-family-sans;
-
-//             &::after {
-//                 content: '';
-//                 display: block;
-//                 background-color: rgb(255, 206, 83);
-//                 height: 2px;
-//                 width: 100%;
-//             }
-//         }
-//     }
-
-//     #section-2 {
-//         ul {
-//             list-style: none;
-//             margin: 0;
-//             padding: 0;
-//             font-size: 1.45em;
-//             letter-spacing: 2px;
-//             text-decoration: none;
-//             text-align: left;
-//             color: #fff;
-
-//             li {
-//                 margin-bottom: 2%;
-//             }
-//         }
-
-//         img {
-//             border-radius: 0;
-//             max-width: 80%;
-//             margin-left: 9%;
-//         }
-
-//         h4 {
-//             font-weight: 400;
-//             margin-bottom: .6em;
-//             font-size: 3em;
-//             color: white;
-//             font-family: $font-family-sans;
-//             letter-spacing: 5px;
-//             text-align: left;
-
-//             &::after {
-//                 content: '';
-//                 display: block;
-//                 background-color: rgb(255, 206, 83);
-//                 height: 2px;
-//                 width: 100%;
-//             }
-//         }
-
-//         a {
-//             text-decoration: none;
-//             color: white;
-//             transition: .5s ease;
-
-//             &:hover {
-//                 color: #3d5a80;
-//             }
-//         }
-//     }
-
-//     #section-3 {
-//         ul {
-//             list-style: none;
-//             margin: 0;
-//             padding: 0;
-//             font-size: 1.45em;
-//             letter-spacing: 2px;
-//             text-decoration: none;
-//             text-align: left;
-//             color: white;
-
-//             li {
-//                 margin-bottom: 2%;
-//             }
-//         }
-
-//         img {
-//             border-radius: 0;
-//             max-width: 80%;
-//             margin-left: 10%;
-//         }
-
-//         h4 {
-//             font-weight: 400;
-//             margin-bottom: .6em;
-//             font-size: 3em;
-//             color: white;
-//             font-family: $font-family-sans;
-//             letter-spacing: 5px;
-//             text-align: left;
-
-//             &::after {
-//                 content: '';
-//                 display: block;
-//                 background-color: rgb(255, 206, 83);
-//                 height: 2px;
-//                 width: 100%;
-//             }
-//         }
-
-//         a {
-//             text-decoration: none;
-//             color: white;
-//             transition: .5s ease;
-
-//             &:hover {
-//                 color: #3d5a80;
-//             }
-//         }
-//     }
-
-// }
 
 
 // SHARK SEEK SUBPAGE
 
 .sharkseek_subpage {
 
-    #section-1 {
+    #mockup {
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         text-align: left;
 
-        img {
+        img.sharkmockup {
             padding-right: 0;
             padding-top: 3em;
 
@@ -908,25 +738,79 @@ section {
         }
 
         h1 {
-            font-family: $font-family-sans;
+            font-family: $font-family-serif;
+            font-weight: 300;
             letter-spacing: 5px;
             color: rgb(10, 10, 10);
             // border-bottom: 2px solid rgb(255, 206, 83);
-            padding-top: 2%;
+            padding-top: 0;
             margin: auto;
             margin-left: 30px;
+            line-height: .6;
+
+            span {
+                color: $color-accent;
+            }
         }
 
         h4 {
             font-family: $font-family-sans;
+            font-weight: 300;
             color: $color-accent;
             text-align: left;
             margin-top: 6%;
             margin-left: 30px;
         }
 
+        h6 {
+            font-family: $font-family-sans;
+            font-weight: 300;
+            color: $color-accent;
+            margin-left: 30px;
+            margin-bottom: 0;
+            margin-top: 15%;
+        }
+
         p {
             margin-left: 30px;
+        }
+
+        .yellow_arrow {
+            margin-bottom: -10%;
+            margin-top: 1%;
+            margin-left: 3em;
+
+            img {
+                @media (max-width: $breakpoint-small) {
+                    display: none;
+                }
+
+                animation-name: arrow-scale;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+
+
+            }
+        }
+    }
+
+    #demo {
+        text-align: left;
+
+        iframe {
+            @media (min-width: $breakpoint-small) {
+                max-width: 80%;
+                margin-left: 30px;
+            }
+
+            max-width: 100%;
+        }
+
+        p {
+            margin-right: 30px;
+            color: rgb(245, 245, 245);
+            font-family: $font-family-sans;
+            font-weight: 300;
         }
     }
 }
@@ -1003,7 +887,7 @@ section {
 
             &::before {
                 content: "\2022";
-                color: orange;
+                color: $color-accent;
                 display: inline-block;
                 font-weight: bold;
                 width: 1em;
@@ -1021,13 +905,141 @@ section {
             }
 
             .color {
-                color: orange;
+                color: $color-accent;
             }
         }
 
         h4 {
             font-family: $font-family-sans;
-            color: orange;
+            color: $color-accent;
+            letter-spacing: 2px;
+        }
+
+        .separate {
+            margin-top: 10%;
+        }
+
+        p {
+            color: rgb(245, 245, 245);
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+            }
+        }
+
+        .margin-left {
+            padding-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                padding-left: 20px;
+
+            }
+        }
+    }
+}
+
+// CRIME CAST SUBPAGE
+
+.crimecast_subpage {
+
+    #section-1 {
+        min-height: 50vh;
+        place-items: center;
+        display: grid;
+        text-align: center;
+
+        .row {
+            font-family: $font-family-sans;
+
+            h4 {
+                font-family: $font-family-sans;
+
+                span {
+                    color: rgb(245, 245, 245);
+                    margin-left: 60%;
+                }
+            }
+        }
+
+
+
+        @media (min-width: $breakpoint-small) {
+            min-height: 100vh;
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        video {
+
+            @media (min-width: $breakpoint-small) {
+                margin-top: 3%;
+            }
+
+            margin-top: 10%;
+            width: 100%;
+            height: auto;
+        }
+
+        .yellow_arrow {
+            margin-bottom: -10%;
+            margin-top: 1%;
+            margin-right: auto;
+            margin-left: auto;
+
+            img {
+                @media (max-width: $breakpoint-small) {
+                    display: none;
+                }
+
+                animation-name: arrow-scale;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+
+            }
+        }
+    }
+
+    #section-2 {
+        background-color: rgb(10, 10, 10);
+
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        img {
+            margin-top: 5%;
+        }
+
+        li {
+            color: rgb(245, 245, 245);
+            list-style: none;
+
+            &::before {
+                content: "\2022";
+                color: $color-accent;
+                display: inline-block;
+                font-weight: bold;
+                width: 1em;
+                margin-left: -1em;
+            }
+        }
+
+        h1 {
+            font-family: $font-family-sans;
+            color: rgb(245, 245, 245);
+            letter-spacing: 2px;
+
+            .large {
+                font-size: 1.5em;
+            }
+
+            .color {
+                color: $color-accent;
+            }
+        }
+
+        h4 {
+            font-family: $font-family-sans;
+            color: $color-accent;
             letter-spacing: 2px;
         }
 
@@ -1104,7 +1116,7 @@ section {
             letter-spacing: 2px;
 
             span {
-                color: rgb(255, 206, 83);
+                color: $color-accent;
             }
         }
 
@@ -1192,6 +1204,6 @@ section {
 [data-currentslide="slide2"] .slide-nav li:nth-child(2) a,
 [data-currentslide="slide3"] .slide-nav li:nth-child(3) a,
 [data-currentslide="slide4"] .slide-nav li:nth-child(4) a {
-    color: rgb(255, 206, 83, .5);
-
+    color: $color-accent;
+    opacity: .5;
 }

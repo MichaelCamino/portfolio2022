@@ -1,6 +1,8 @@
 /* SITE-HEADER SITE-NAV */
 
 .site-header {
+  background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+
   span {
     position: relative;
     display: block;
@@ -83,7 +85,7 @@
     }
 
     a {
-      color: white;
+      color: rgb(245, 245, 245);
     }
 
 
