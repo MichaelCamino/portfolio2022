@@ -124,6 +124,44 @@ body {
     }
 }
 
+@keyframes camera {
+    0% {
+        transform: translatey(-5px);
+    }
+
+    50% {
+        transform: translatey(5px);
+    }
+
+    100% {
+        transform: translatey(-5px);
+    }
+}
+
+@keyframes computer {
+    0% {
+        transform: translatey(5px);
+    }
+
+    50% {
+        transform: translatey(-5px);
+    }
+
+    100% {
+        transform: translatey(5px);
+    }
+}
+
+@keyframes shapes {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* HERO */
 
 @keyframes mustache-rotate {
@@ -141,23 +179,23 @@ body {
 }
 
 .hero {
+    @media (min-width: $breakpoint-small) {
+        min-height: 100vh;
+        margin-left: 0;
+    }
+
     background-repeat: no-repeat;
     background-size: contain;
-    min-height: 100vh;
     text-align: center;
     display: grid;
     place-items: center;
     overflow-x: hidden;
+    margin-left: 15%;
 
     .hero-container {
         display: block;
         align-items: center;
         position: relative;
-    }
-
-    #heroanimation {
-        position: absolute;
-        z-index: 100;
     }
 
     .statue-wrapper {
@@ -177,6 +215,7 @@ body {
         left: 50%;
         margin-left: 1.5%;
         transform: translate(-50%, -50%) scale(1.2);
+        overflow: hidden;
     }
 
     .mustache {
@@ -201,9 +240,9 @@ body {
         margin-right: 0;
         color: rgb(245, 245, 245);
         font-family: $font-family-serif;
-        font-weight: 300;
+        font-weight: 100;
         font-style: normal;
-        font-size: 25vw;
+        font-size: 18vw;
         line-height: .9;
         letter-spacing: 3px;
 
@@ -234,14 +273,18 @@ section {
 .site-main {
 
     #section-1 {
-        background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        background-color: rgb(10, 10, 10);
         position: relative;
 
 
         h4 {
             font-family: $font-family-sans;
             color: rgb(245, 245, 245);
-            font-weight: 200;
+            font-weight: 100;
             text-align: right;
             margin-right: 20%;
 
@@ -296,6 +339,26 @@ section {
     #section-2 {
         position: relative;
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+
+        .oldcamera {
+            animation-name: camera;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+        }
+
+        .oldcomputer {
+            animation-name: computer;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+        }
+
+        .shapes {
+            animation-name: shapes;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
 
         h1 {
             color: rgb(245, 245, 245);
@@ -356,6 +419,15 @@ section {
 
             li {
                 margin-bottom: 2%;
+
+                &:hover::before {
+                    content: "\2022";
+                    color: $color-accent;
+                    display: inline-block;
+                    font-weight: bold;
+                    width: 1em;
+                    margin-left: -1em;
+                }
             }
 
             a {
@@ -363,7 +435,6 @@ section {
                 transition: .5s ease;
 
                 &:hover {
-                    letter-spacing: 4px;
                     color: $color-accent;
                 }
             }
@@ -516,7 +587,8 @@ section {
 
         h2 {
             text-align: center;
-            font-family: $font-family-sans;
+            font-size: 3em;
+            font-family: $font-family-serif;
             font-weight: 300;
             color: rgb(245, 245, 245);
             margin-left: 1.5%;
@@ -576,6 +648,27 @@ section {
             animation-duration: .2s;
             animation-iteration-count: infinite;
         }
+
+        .lightning-three {
+            position: absolute;
+            bottom: 20%;
+            left: 35%;
+
+            transform: rotate(45deg);
+            animation-name: left-finger-lightning;
+            animation-duration: .2s;
+            animation-iteration-count: infinite;
+        }
+
+        .lightning-four {
+            position: absolute;
+            bottom: 20%;
+            right: 34%;
+            transform: scale(1);
+            animation-name: right-finger-lightning;
+            animation-duration: .2s;
+            animation-iteration-count: infinite;
+        }
     }
 }
 
@@ -583,6 +676,7 @@ section {
 
 .site-footer {
     background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 1em;
@@ -720,6 +814,110 @@ section {
         text-align: left;
 
         img.sharkmockup {
+            padding-right: 0;
+            padding-top: 3em;
+
+            @media (min-width: $breakpoint-small) {
+                padding-right: 3em;
+            }
+
+        }
+
+        iframe {
+            @media (min-width: $breakpoint-small) {
+                max-width: 80%;
+            }
+
+            max-width: 100%;
+        }
+
+        h1 {
+            font-family: $font-family-serif;
+            font-weight: 300;
+            letter-spacing: 5px;
+            color: rgb(10, 10, 10);
+            // border-bottom: 2px solid rgb(255, 206, 83);
+            padding-top: 0;
+            margin: auto;
+            margin-left: 30px;
+            line-height: .6;
+
+            span {
+                color: $color-accent;
+            }
+        }
+
+        h4 {
+            font-family: $font-family-sans;
+            font-weight: 300;
+            color: $color-accent;
+            text-align: left;
+            margin-top: 6%;
+            margin-left: 30px;
+        }
+
+        h6 {
+            font-family: $font-family-sans;
+            font-weight: 300;
+            color: $color-accent;
+            margin-left: 30px;
+            margin-bottom: 0;
+            margin-top: 15%;
+        }
+
+        p {
+            margin-left: 30px;
+        }
+
+        .yellow_arrow {
+            margin-bottom: -10%;
+            margin-top: 1%;
+            margin-left: 3em;
+
+            img {
+                @media (max-width: $breakpoint-small) {
+                    display: none;
+                }
+
+                animation-name: arrow-scale;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+
+
+            }
+        }
+    }
+
+    #demo {
+        text-align: left;
+
+        iframe {
+            @media (min-width: $breakpoint-small) {
+                max-width: 80%;
+                margin-left: 30px;
+            }
+
+            max-width: 100%;
+        }
+
+        p {
+            margin-right: 30px;
+            color: rgb(245, 245, 245);
+            font-family: $font-family-sans;
+            font-weight: 300;
+        }
+    }
+}
+
+// AMMAN SUBPAGE
+
+.amman_subpage {
+
+    #logo {
+        background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        text-align: left;
+
+        img.ammanlogo {
             padding-right: 0;
             padding-top: 3em;
 
