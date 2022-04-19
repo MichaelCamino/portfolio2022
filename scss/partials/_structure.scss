@@ -111,16 +111,16 @@ body {
 
 @keyframes arrow-scale {
     0% {
-        transform: scale(1.2);
+        transform: scale(1);
     }
 
     50% {
-        transform: scale(.8);
+        transform: scale(.6);
 
     }
 
     100% {
-        transform: scale(1.2);
+        transform: scale(1);
     }
 }
 
@@ -207,6 +207,49 @@ body {
         &:hover {
             transform: scale(1.05);
         }
+
+        .lightning-one {
+            position: absolute;
+            top: -15%;
+            left: -10%;
+
+            transform: scale(1);
+            animation-name: left-finger-lightning;
+            animation-duration: .2s;
+            animation-iteration-count: infinite;
+        }
+
+        .lightning-two {
+            position: absolute;
+            top: -15%;
+            right: -10%;
+
+            transform: scale(1);
+            animation-name: right-finger-lightning;
+            animation-duration: .2s;
+            animation-iteration-count: infinite;
+        }
+
+        .lightning-three {
+            position: absolute;
+            bottom: -17%;
+            left: -15%;
+
+            transform: rotate(45deg);
+            animation-name: left-finger-lightning;
+            animation-duration: .2s;
+            animation-iteration-count: infinite;
+        }
+
+        .lightning-four {
+            position: absolute;
+            bottom: -17%;
+            right: -10%;
+            transform: scale(1);
+            animation-name: right-finger-lightning;
+            animation-duration: .2s;
+            animation-iteration-count: infinite;
+        }
     }
 
     .mustache-wrapper {
@@ -271,6 +314,7 @@ section {
 /* MAIN PAGE */
 
 .site-main {
+    overflow: hidden;
 
     #section-1 {
         @media (min-width: $breakpoint-small) {
@@ -284,26 +328,28 @@ section {
         h4 {
             font-family: $font-family-sans;
             color: rgb(245, 245, 245);
-            font-weight: 100;
+            font-weight: 300;
             text-align: right;
             margin-right: 20%;
 
             span {
                 color: $color-accent;
                 font-family: $font-family-serif;
-                font-weight: 300;
+                font-weight: 100;
             }
         }
 
         .button {
             border: 1px solid rgb(10, 10, 10);
             font-family: $font-family-sans;
+            font-weight: 300;
             letter-spacing: 3px;
             font-size: .6em;
             color: rgb(10, 10, 10);
             overflow: hidden;
             position: relative;
             margin-left: 20%;
+            padding-top: 15px;
 
             &:hover {
                 color: rgb(245, 245, 245);
@@ -364,7 +410,7 @@ section {
             color: rgb(245, 245, 245);
             padding: 2;
             font-family: $font-family-serif;
-            font-weight: 300;
+            font-weight: 100;
             font-size: 2em;
             letter-spacing: 3px;
 
@@ -446,14 +492,13 @@ section {
         }
 
         h4 {
-            font-weight: 400;
             color: rgb(245, 245, 245);
             letter-spacing: 5px;
             margin-bottom: .6em;
             font-size: 3em;
             text-align: left;
             font-family: $font-family-serif;
-            font-weight: 300;
+            font-weight: 100;
 
             &::after {
                 content: '';
@@ -473,44 +518,56 @@ section {
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         position: relative;
 
+        .black {
+            color: rgb(10, 10, 10);
+        }
+
         ul {
             list-style: none;
             margin: 0;
             padding: 0;
-            font-size: 1.45em;
+            font-size: 1.40em;
             letter-spacing: 2px;
             text-decoration: none;
             text-align: left;
-            color: rgb(10, 10, 10);
 
             li {
                 margin-bottom: 2%;
 
-                a {
-                    color: rgb(10, 10, 10);
+                &:hover::before {
+                    content: "\2022";
+                    color: $color-accent;
+                    display: inline-block;
+                    font-weight: bold;
+                    width: 1em;
+                    margin-left: -1em;
+                }
+            }
 
-                    &:hover {
-                        color: $color-accent;
-                    }
+            a {
+                text-decoration: none;
+                transition: .5s ease;
+
+                &:hover {
+                    color: $color-accent;
                 }
             }
         }
 
         img {
             border-radius: 0;
-            max-width: 80%;
-            margin-left: 9%;
+
         }
 
         h4 {
             font-weight: 400;
+            color: rgb(10, 10, 10);
+            letter-spacing: 5px;
             margin-bottom: .6em;
             font-size: 3em;
-            color: rgb(10, 10, 10);
+            text-align: left;
             font-family: $font-family-serif;
             font-weight: 300;
-            letter-spacing: 5px;
-            text-align: left;
 
             &::after {
                 content: '';
@@ -520,6 +577,7 @@ section {
                 width: 100%;
             }
         }
+
     }
 
     #web {
@@ -530,20 +588,28 @@ section {
             list-style: none;
             margin: 0;
             padding: 0;
-            font-size: 1.45em;
+            font-size: 1.40em;
             letter-spacing: 2px;
             text-decoration: none;
             text-align: left;
-            color: rgb(245, 245, 245);
+
 
             li {
                 margin-bottom: 2%;
+
+                &:hover::before {
+                    content: "\2022";
+                    color: $color-accent;
+                    display: inline-block;
+                    font-weight: bold;
+                    width: 1em;
+                    margin-left: -1em;
+                }
             }
 
             a {
-                color: rgb(245, 245, 245);
                 text-decoration: none;
-                transition: 250ms ease;
+                transition: .5s ease;
 
                 &:hover {
                     color: $color-accent;
@@ -553,18 +619,18 @@ section {
 
         img {
             border-radius: 0;
-            max-width: 80%;
-            margin-left: 9%;
+
         }
 
         h4 {
             font-weight: 400;
+            color: rgb(245, 245, 245);
+            letter-spacing: 5px;
             margin-bottom: .6em;
             font-size: 3em;
-            color: rgb(245, 245, 245);
-            font-family: $font-family-sans;
-            letter-spacing: 5px;
             text-align: left;
+            font-family: $font-family-serif;
+            font-weight: 300;
 
             &::after {
                 content: '';
@@ -574,7 +640,6 @@ section {
                 width: 100%;
             }
         }
-
     }
 
 
@@ -601,16 +666,54 @@ section {
         }
 
         .button {
-            text-align: center;
+            position: relative;
             background-image: radial-gradient(circle, rgb(255, 51, 0), rgb(209, 0, 0));
-            font-size: 5em;
+            font-size: 4em;
             font-weight: 300;
-            padding-top: 1em;
-            padding-bottom: 1em;
             border-radius: 50%;
             animation-name: red-button;
             animation-duration: 3s;
             animation-iteration-count: infinite;
+            z-index: 100;
+
+            .lightning-one {
+                position: absolute;
+                top: -70%;
+                left: -50%;
+                animation-name: left-finger-lightning;
+                animation-duration: .2s;
+                animation-iteration-count: infinite;
+            }
+
+            .lightning-two {
+                position: absolute;
+                top: -70%;
+                right: -50%;
+                animation-name: right-finger-lightning;
+                animation-duration: .2s;
+                animation-iteration-count: infinite;
+            }
+
+            .lightning-three {
+                position: absolute;
+                bottom: -95%;
+                left: -50%;
+
+                transform: rotate(45deg);
+                animation-name: left-finger-lightning;
+                animation-duration: .2s;
+                animation-iteration-count: infinite;
+            }
+
+            .lightning-four {
+                position: absolute;
+                bottom: -95%;
+                right: -50%;
+                transform: scale(1);
+                animation-name: right-finger-lightning;
+                animation-duration: .2s;
+                animation-iteration-count: infinite;
+            }
         }
 
         .left-hand {
@@ -627,48 +730,7 @@ section {
             margin-top: 30%;
         }
 
-        .lightning-one {
-            position: absolute;
-            top: 35%;
-            left: 35%;
 
-            transform: scale(1);
-            animation-name: left-finger-lightning;
-            animation-duration: .2s;
-            animation-iteration-count: infinite;
-        }
-
-        .lightning-two {
-            position: absolute;
-            top: 35%;
-            right: 34%;
-
-            transform: scale(1);
-            animation-name: right-finger-lightning;
-            animation-duration: .2s;
-            animation-iteration-count: infinite;
-        }
-
-        .lightning-three {
-            position: absolute;
-            bottom: 20%;
-            left: 35%;
-
-            transform: rotate(45deg);
-            animation-name: left-finger-lightning;
-            animation-duration: .2s;
-            animation-iteration-count: infinite;
-        }
-
-        .lightning-four {
-            position: absolute;
-            bottom: 20%;
-            right: 34%;
-            transform: scale(1);
-            animation-name: right-finger-lightning;
-            animation-duration: .2s;
-            animation-iteration-count: infinite;
-        }
     }
 }
 
@@ -810,8 +872,13 @@ section {
 .sharkseek_subpage {
 
     #mockup {
-        background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        background-color: rgb(10, 10, 10);
         text-align: left;
+
 
         img.sharkmockup {
             padding-right: 0;
@@ -819,6 +886,11 @@ section {
 
             @media (min-width: $breakpoint-small) {
                 padding-right: 3em;
+                transition: 250ms ease;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
             }
 
         }
@@ -832,14 +904,18 @@ section {
         }
 
         h1 {
+            @media (min-width: $breakpoint-small) {
+                margin-left: 30px;
+                color: rgb(10, 10, 10);
+            }
+
             font-family: $font-family-serif;
             font-weight: 300;
             letter-spacing: 5px;
-            color: rgb(10, 10, 10);
-            // border-bottom: 2px solid rgb(255, 206, 83);
+            color: rgb(245, 245, 245);
             padding-top: 0;
             margin: auto;
-            margin-left: 30px;
+            margin-left: 0;
             line-height: .6;
 
             span {
@@ -848,31 +924,46 @@ section {
         }
 
         h4 {
+            @media (min-width: $breakpoint-small) {
+                margin-left: 30px;
+            }
+
             font-family: $font-family-sans;
             font-weight: 300;
             color: $color-accent;
             text-align: left;
             margin-top: 6%;
-            margin-left: 30px;
+            margin-left: 0;
         }
 
         h6 {
+            @media (min-width: $breakpoint-small) {
+                margin-left: 30px;
+            }
+
             font-family: $font-family-sans;
             font-weight: 300;
             color: $color-accent;
-            margin-left: 30px;
+            margin-left: 0;
             margin-bottom: 0;
             margin-top: 15%;
         }
 
         p {
-            margin-left: 30px;
+            margin-left: 0;
+            color: rgb(245, 245, 245);
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 30px;
+            }
         }
 
         .yellow_arrow {
-            margin-bottom: -10%;
-            margin-top: 1%;
-            margin-left: 3em;
+            position: absolute;
+            left: 50%;
+            bottom: 1%;
+            transform: translate(-50%);
 
             img {
                 @media (max-width: $breakpoint-small) {
@@ -889,7 +980,27 @@ section {
     }
 
     #demo {
-        text-align: left;
+        background-color: rgb(10, 10, 10);
+
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        h2 {
+            @media (min-width: $breakpoint-small) {
+                text-align: center;
+            }
+
+            text-align: left;
+            color: rgb(245, 245, 245);
+            font-family: $font-family-serif;
+            font-weight: 100;
+            margin-right: 10%;
+
+            span {
+                color: $color-accent;
+            }
+        }
 
         iframe {
             @media (min-width: $breakpoint-small) {
@@ -899,23 +1010,21 @@ section {
 
             max-width: 100%;
         }
-
-        p {
-            margin-right: 30px;
-            color: rgb(245, 245, 245);
-            font-family: $font-family-sans;
-            font-weight: 300;
-        }
     }
 }
 
 // AMMAN SUBPAGE
 
 .amman_subpage {
+    overflow: hidden;
 
     #logo {
-        background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
-        text-align: left;
+        background-color: rgb(10, 10, 10);
+
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+            text-align: left;
+        }
 
         img.ammanlogo {
             padding-right: 0;
@@ -939,12 +1048,18 @@ section {
             font-family: $font-family-serif;
             font-weight: 300;
             letter-spacing: 5px;
-            color: rgb(10, 10, 10);
+            color: rgb(245, 245, 245);
             // border-bottom: 2px solid rgb(255, 206, 83);
             padding-top: 0;
             margin: auto;
-            margin-left: 30px;
+            margin-left: 0;
             line-height: .6;
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 30px;
+            }
+
 
             span {
                 color: $color-accent;
@@ -957,26 +1072,41 @@ section {
             color: $color-accent;
             text-align: left;
             margin-top: 6%;
-            margin-left: 30px;
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 30px;
+            }
         }
 
         h6 {
             font-family: $font-family-sans;
             font-weight: 300;
             color: $color-accent;
-            margin-left: 30px;
+            margin-left: 0;
             margin-bottom: 0;
             margin-top: 15%;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 30px;
+            }
         }
 
         p {
-            margin-left: 30px;
+            margin-left: 0;
+            color: rgb(245, 245, 245);
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 30px;
+            }
         }
 
         .yellow_arrow {
-            margin-bottom: -10%;
-            margin-top: 1%;
-            margin-left: 3em;
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+            bottom: 1%;
 
             img {
                 @media (max-width: $breakpoint-small) {
@@ -986,29 +1116,216 @@ section {
                 animation-name: arrow-scale;
                 animation-duration: 2s;
                 animation-iteration-count: infinite;
-
-
             }
         }
     }
 
-    #demo {
-        text-align: left;
+    #process {
+        background-color: rgb(10, 10, 10);
+
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        h2 {
+            color: rgb(245, 245, 245);
+            font-family: $font-family-serif;
+            font-weight: 100;
+            text-align: left;
+            margin-right: 10%;
+
+            span {
+                color: $color-accent;
+            }
+
+            @media (min-width: $breakpoint-small) {
+                text-align: right;
+            }
+        }
+
+        .amman_sketch {
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 7%;
+            }
+        }
+
+        .black {
+            margin-right: 0;
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 7%;
+                text-align: left;
+            }
+        }
+
+        .textiles {
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: -10%;
+            }
+        }
+    }
+}
+
+// OLYMPIC PICTOGRAM SUBPAGE
+
+.olympic_subpage {
+    overflow: hidden;
+
+    #logo {
+        background-color: rgb(10, 10, 10);
+
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+            text-align: left;
+        }
+
+        img.ammanlogo {
+            padding-right: 0;
+            padding-top: 3em;
+
+            @media (min-width: $breakpoint-small) {
+                padding-right: 3em;
+                transition: 250ms ease;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+
+        }
 
         iframe {
             @media (min-width: $breakpoint-small) {
                 max-width: 80%;
-                margin-left: 30px;
             }
 
             max-width: 100%;
         }
 
-        p {
-            margin-right: 30px;
+        h1 {
+            font-family: $font-family-serif;
+            font-weight: 300;
+            letter-spacing: 5px;
             color: rgb(245, 245, 245);
+            // border-bottom: 2px solid rgb(255, 206, 83);
+            padding-top: 0;
+            margin: auto;
+            margin-left: 0;
+            line-height: .9;
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 30px;
+            }
+
+
+            span {
+                color: $color-accent;
+            }
+        }
+
+        h4 {
             font-family: $font-family-sans;
             font-weight: 300;
+            color: $color-accent;
+            text-align: left;
+            margin-top: 6%;
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 30px;
+            }
+        }
+
+        h6 {
+            font-family: $font-family-sans;
+            font-weight: 300;
+            color: $color-accent;
+            margin-left: 0;
+            margin-bottom: -2%;
+            margin-top: 15%;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 30px;
+            }
+        }
+
+        p {
+            margin-left: 0;
+            color: rgb(245, 245, 245);
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 30px;
+            }
+        }
+
+        .yellow_arrow {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+            bottom: 1%;
+
+            img {
+                @media (max-width: $breakpoint-small) {
+                    display: none;
+                }
+
+                animation-name: arrow-scale;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+
+    #process {
+        background-color: rgb(10, 10, 10);
+
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        h2 {
+            color: rgb(245, 245, 245);
+            font-family: $font-family-serif;
+            font-weight: 100;
+            text-align: left;
+            margin-right: 10%;
+
+            @media (min-width: $breakpoint-small) {
+                text-align: right;
+            }
+        }
+
+        .amman_sketch {
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 7%;
+            }
+        }
+
+        .black {
+            margin-right: 0;
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 7%;
+                text-align: left;
+            }
+        }
+
+        .textiles {
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: -10%;
+            }
         }
     }
 }
@@ -1028,6 +1345,7 @@ section {
 
             h4 {
                 font-family: $font-family-sans;
+
 
                 span {
                     color: rgb(245, 245, 245);
@@ -1055,9 +1373,10 @@ section {
         }
 
         .yellow_arrow {
-            margin-bottom: -10%;
-            margin-top: 1%;
-            margin-right: 1%;
+            position: absolute;
+            bottom: 1%;
+            left: 50%;
+            transform: translate(-50%);
 
             img {
                 @media (max-width: $breakpoint-small) {
@@ -1094,7 +1413,8 @@ section {
         }
 
         h1 {
-            font-family: $font-family-sans;
+            font-family: $font-family-serif;
+            font-weight: 100;
             color: rgb(245, 245, 245);
             letter-spacing: 2px;
 
@@ -1109,6 +1429,7 @@ section {
 
         h4 {
             font-family: $font-family-sans;
+            font-weight: 300;
             color: $color-accent;
             letter-spacing: 2px;
         }
@@ -1178,10 +1499,10 @@ section {
         }
 
         .yellow_arrow {
-            margin-bottom: -10%;
-            margin-top: 1%;
-            margin-right: auto;
-            margin-left: auto;
+            position: absolute;
+            bottom: 1%;
+            left: 50%;
+            transform: translateX(-50%);
 
             img {
                 @media (max-width: $breakpoint-small) {
@@ -1222,7 +1543,8 @@ section {
         }
 
         h1 {
-            font-family: $font-family-sans;
+            font-family: $font-family-serif;
+            font-weight: 100;
             color: rgb(245, 245, 245);
             letter-spacing: 2px;
 
@@ -1237,6 +1559,7 @@ section {
 
         h4 {
             font-family: $font-family-sans;
+            font-weight: 300;
             color: $color-accent;
             letter-spacing: 2px;
         }
@@ -1285,8 +1608,10 @@ section {
         }
 
         .yellow_arrow {
-            margin-bottom: -10%;
-            margin-top: 1%;
+            position: absolute;
+            bottom: 1%;
+            left: 50%;
+            transform: translateX(-50%);
 
             img {
                 @media (max-width: $breakpoint-small) {
@@ -1308,14 +1633,52 @@ section {
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         }
 
+        img {
+            margin-top: 5%;
+        }
+
+        li {
+            color: rgb(245, 245, 245);
+            list-style: none;
+
+            &::before {
+                content: "\2022";
+                color: $color-accent;
+                display: inline-block;
+                font-weight: bold;
+                width: 1em;
+                margin-left: -1em;
+            }
+        }
+
         h1 {
-            font-family: $font-family-sans;
+            font-family: $font-family-serif;
+            font-weight: 100;
             color: rgb(245, 245, 245);
             letter-spacing: 2px;
 
             span {
                 color: $color-accent;
             }
+
+            .large {
+                font-size: 1.5em;
+            }
+
+            .color {
+                color: $color-accent;
+            }
+        }
+
+        h4 {
+            font-family: $font-family-sans;
+            font-weight: 300;
+            color: $color-accent;
+            letter-spacing: 2px;
+        }
+
+        .separate {
+            margin-top: 10%;
         }
 
         p {
@@ -1333,13 +1696,6 @@ section {
                 padding-left: 20px;
 
             }
-        }
-
-        h4 {
-            font-family: $font-family-sans;
-            color: $color-accent;
-            letter-spacing: 2px;
-
         }
     }
 }
@@ -1403,5 +1759,4 @@ section {
 [data-currentslide="slide3"] .slide-nav li:nth-child(3) a,
 [data-currentslide="slide4"] .slide-nav li:nth-child(4) a {
     color: $color-accent;
-    opacity: .5;
 }

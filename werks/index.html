@@ -21,30 +21,55 @@
 
 <body>
 
-
-
-    <main class="tott_subpage">
-        <section id="section-1" class="animate-on-scroll">
-            <div class="container">
-                <video width="854" height="480" autoplay controls>
-                    <source src="../video/samstour.webmhd.webm">
-                </video>
+    <header class="site-header">
+        <div class="site-id">
+            <div class="logo">
+                <a href="#top"><img src="../img/mylogo2.svg" alt="Site Logo" height="100px" width="100px"></a>
             </div>
+            <h1 class="hide-visually"><a href="#">My Framework</a></h1>
+        </div>
+        <nav class="site-nav">
+
+            <ul>
+                <li class="home"><span><a href="../index.html">HOME</a></span></li>
+                <li class="aboot"><span class="black_aboot"><a href="../aboot/index.html">ABOOT</a></span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="werks_subpage">
+
+        <section id="logo" class="animate-on-scroll list">
+
+        </section>
+        <section id="process" class="animate-on-scroll">
+
         </section>
 
-        <!-- SMOOTH SCROLL BY CHRIS FERDINAND -->
-        <script src="../js/smooth-scroll.polyfills.min.js"></script>
+    </main>
 
-        <script>
-            var scroll = new SmoothScroll('a[href*="#"]', {
-                speed: 800,
-                speedAsDuration: true
-            });
-        </script>
+    <footer class="site-footer">
+        <ul>
+            <li><a href="https://github.com/michaelcamino" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://codepen.io/michaelcamino" class="black_icon" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-codepen" aria-hidden="true"></i></a></li>
+        </ul>
+    </footer>
 
-        <!-- MAIN JS-->
+    <!-- SMOOTH SCROLL BY CHRIS FERDINAND -->
+    <script src="../js/smooth-scroll.polyfills.min.js"></script>
 
-        <script src="../js/script.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 800,
+            speedAsDuration: true
+        });
+    </script>
+
+    <!-- MAIN JS-->
+
+    <script src="../js/script.js"></script>
 
 
 
