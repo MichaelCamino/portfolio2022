@@ -11,8 +11,8 @@ body {
 .container {
     margin: 0 auto;
     max-width: 1000px;
-    padding: 0 1em
-} 
+    padding: 0 1em;
+}
 
 /* MEDIA QUERIES */
 
@@ -20,14 +20,22 @@ body {
 
 // SMALL 
 
-body { font-size: 87.5%; }
+body {
+    font-size: 87.5%;
+}
 
 @media (min-width: $breakpoint-small) {
-    body { font-size: 100%;
+    body {
+        font-size: 100%;
     }
 }
 
 @media (min-width: $breakpoint-large) {
-    body { font-size: 112.5%;
+    body {
+        font-size: 112.5%;
+    }
+
+    .container {
+        max-width: 1200px;
     }
 }

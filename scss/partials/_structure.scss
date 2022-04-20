@@ -189,7 +189,7 @@ body {
     text-align: center;
     display: grid;
     place-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
     margin-left: 15%;
 
     .hero-container {
@@ -199,18 +199,60 @@ body {
     }
 
     .statue-wrapper {
+
         position: relative;
-        z-index: 2;
-        max-width: 90%;
+        z-index: 20;
+        // max-width: 90%;
+        // min-width: 50vw;
         transition: 200ms ease;
+        margin-top: 20%;
+
+        .bolt {
+            display: none;
+        }
+
 
         &:hover {
             transform: scale(1.05);
+
+            .bolt {
+                display: block;
+            }
+        }
+
+        .mustache {
+            @media (min-width: $breakpoint-small) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            .mustache {
+                display: block;
+            }
+        }
+
+        @media (min-width: $breakpoint-medium) {
+            transform: scale(1);
+            margin-top: 5%;
+
+            &:hover {
+                transform: scale(.9);
+            }
+        }
+
+        @media (min-width: $breakpoint-large) {
+            transform: scale(1.1);
+            margin-top: 15%;
+
+            &:hover {
+                transform: scale(1);
+            }
         }
 
         .lightning-one {
             position: absolute;
-            top: -15%;
+            top: -10%;
             left: -10%;
 
             transform: scale(1);
@@ -221,7 +263,7 @@ body {
 
         .lightning-two {
             position: absolute;
-            top: -15%;
+            top: -10%;
             right: -10%;
 
             transform: scale(1);
@@ -232,7 +274,7 @@ body {
 
         .lightning-three {
             position: absolute;
-            bottom: -17%;
+            bottom: -10%;
             left: -15%;
 
             transform: rotate(45deg);
@@ -243,7 +285,7 @@ body {
 
         .lightning-four {
             position: absolute;
-            bottom: -17%;
+            bottom: -10%;
             right: -10%;
             transform: scale(1);
             animation-name: right-finger-lightning;
@@ -258,15 +300,15 @@ body {
         left: 50%;
         margin-left: 1.5%;
         transform: translate(-50%, -50%) scale(1.2);
-        overflow: hidden;
-    }
 
-    .mustache {
-        display: block;
-        animation-name: mustache-rotate;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        transform-origin: center;
+        .mustache {
+            animation-name: mustache-rotate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transform-origin: center;
+        }
+
+
     }
 
     h3 {
@@ -323,14 +365,21 @@ section {
 
         background-color: rgb(10, 10, 10);
         position: relative;
-
+        text-align: center;
 
         h4 {
             font-family: $font-family-sans;
             color: rgb(245, 245, 245);
             font-weight: 300;
-            text-align: right;
-            margin-right: 20%;
+            text-align: center;
+            margin-right: 0;
+            font-size: 1.5em;
+
+            @media (min-width: $breakpoint-small) {
+                text-align: right;
+                margin-right: 25%;
+                font-size: 1.25em;
+            }
 
             span {
                 color: $color-accent;
@@ -340,16 +389,23 @@ section {
         }
 
         .button {
-            border: 1px solid rgb(10, 10, 10);
+            border: 1px solid rgb(245, 245, 245);
             font-family: $font-family-sans;
             font-weight: 300;
             letter-spacing: 3px;
-            font-size: .6em;
-            color: rgb(10, 10, 10);
+            font-size: .9em;
+            color: rgb(245, 245, 245);
             overflow: hidden;
             position: relative;
-            margin-left: 20%;
-            padding-top: 15px;
+            padding-top: 16px;
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                border: 1px solid rgb(10, 10, 10);
+                font-size: .6em;
+                padding-top: 15px;
+            }
 
             &:hover {
                 color: rgb(245, 245, 245);
@@ -384,12 +440,20 @@ section {
 
     #section-2 {
         position: relative;
-        background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        background-color: rgb(245, 245, 245);
+
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
 
         .oldcamera {
             animation-name: camera;
             animation-duration: 2s;
             animation-iteration-count: infinite;
+
+            @media (min-width: $breakpoint-small) {
+                margin-top: 0;
+            }
 
         }
 
@@ -397,6 +461,11 @@ section {
             animation-name: computer;
             animation-duration: 2s;
             animation-iteration-count: infinite;
+            margin-top: 30%;
+
+            @media (min-width: $breakpoint-small) {
+                margin-top: 0;
+            }
 
         }
 
@@ -404,15 +473,29 @@ section {
             animation-name: shapes;
             animation-duration: 5s;
             animation-iteration-count: infinite;
+            margin-top: 30%;
+            margin-bottom: 5%;
+
+            @media (min-width: $breakpoint-small) {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
         }
 
         h1 {
-            color: rgb(245, 245, 245);
+            color: rgb(10, 10, 10);
             padding: 2;
             font-family: $font-family-serif;
             font-weight: 100;
-            font-size: 2em;
+            font-size: 3em;
             letter-spacing: 3px;
+            text-align: center;
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(245, 245, 245);
+            }
+
+
 
 
 
@@ -432,8 +515,12 @@ section {
 
             a {
                 text-decoration: none;
-                color: rgb(245, 245, 245);
                 transition: .5s ease;
+                color: rgb(10, 10, 10);
+
+                @media (min-width: $breakpoint-small) {
+                    color: rgb(245, 245, 245);
+                }
 
                 &:hover {
                     color: $color-accent;
@@ -518,9 +605,6 @@ section {
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         position: relative;
 
-        .black {
-            color: rgb(10, 10, 10);
-        }
 
         ul {
             list-style: none;
@@ -671,10 +755,24 @@ section {
             font-size: 4em;
             font-weight: 300;
             border-radius: 50%;
-            animation-name: red-button;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
+            // animation-name: red-button;
+            // animation-duration: 3s;
+            // animation-iteration-count: infinite;
             z-index: 100;
+            box-shadow: inset 0 -8px 6px rgb(97, 32, 32);
+
+            &:hover {
+                transform: scale(.95);
+                box-shadow: inset 0 -2px 6px rgb(97, 32, 32);
+
+                .bolt {
+                    display: block;
+                }
+            }
+
+            .bolt {
+                display: none;
+            }
 
             .lightning-one {
                 position: absolute;
@@ -1330,6 +1428,165 @@ section {
     }
 }
 
+// OLYMPIC PICTOGRAM SUBPAGE
+
+.EPdesign_subpage {
+    overflow: hidden;
+
+    #logo {
+        background-color: rgb(10, 10, 10);
+
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+            text-align: left;
+        }
+
+        img.ammanlogo {
+            padding-right: 0;
+            padding-top: 3em;
+
+            @media (min-width: $breakpoint-small) {
+                padding-right: 3em;
+                transition: 250ms ease;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+
+        }
+
+        iframe {
+            @media (min-width: $breakpoint-small) {
+                max-width: 80%;
+            }
+
+            max-width: 100%;
+        }
+
+        h1 {
+            font-family: $font-family-serif;
+            font-weight: 300;
+            letter-spacing: 5px;
+            color: rgb(245, 245, 245);
+            // border-bottom: 2px solid rgb(255, 206, 83);
+            padding-top: 0;
+            margin: auto;
+            margin-left: 0;
+            line-height: .9;
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 30px;
+            }
+
+
+            span {
+                color: $color-accent;
+            }
+        }
+
+        h4 {
+            font-family: $font-family-sans;
+            font-weight: 300;
+            color: $color-accent;
+            text-align: left;
+            margin-top: 6%;
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 30px;
+            }
+        }
+
+        h6 {
+            font-family: $font-family-sans;
+            font-weight: 300;
+            color: $color-accent;
+            margin-left: 0;
+            margin-bottom: -1%;
+            margin-top: 15%;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 30px;
+            }
+        }
+
+        p {
+            margin-left: 0;
+            color: rgb(245, 245, 245);
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 30px;
+            }
+        }
+
+        .yellow_arrow {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+            bottom: 1%;
+
+            img {
+                @media (max-width: $breakpoint-small) {
+                    display: none;
+                }
+
+                animation-name: arrow-scale;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+
+    #process {
+        background-color: rgb(10, 10, 10);
+
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        h2 {
+            color: rgb(245, 245, 245);
+            font-family: $font-family-serif;
+            font-weight: 100;
+            text-align: left;
+            margin-right: 10%;
+
+            @media (min-width: $breakpoint-small) {
+                text-align: right;
+            }
+        }
+
+        .amman_sketch {
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 7%;
+            }
+        }
+
+        .black {
+            margin-right: 0;
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 7%;
+                text-align: left;
+            }
+        }
+
+        .textiles {
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: -10%;
+            }
+        }
+    }
+}
+
 // TOOLS OF THE TIRADE SUBPAGE
 
 .tott_subpage {
@@ -1703,15 +1960,25 @@ section {
 
 // SLIDE STYLING 
 
+
 .slide-box {
-    // background-color: rgba(209, 0, 0, .3);
-    // border: 1px solid rgb(209, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &.swap {
         flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 767px) {
+    .slide-box {
+        // display: block;
+        flex-direction: column-reverse;
+
+        &.swap {
+            flex-direction: column-reverse;
+        }
     }
 }
 
@@ -1726,6 +1993,10 @@ section {
             text-decoration: none;
 
         }
+    }
+
+    .black li a {
+        color: rgb(10, 10, 10);
     }
 }
 
