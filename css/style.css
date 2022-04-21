@@ -520,6 +520,34 @@ body {
             transform: scale(1);
   }
 }
+@-webkit-keyframes image-scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes image-scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 @-webkit-keyframes camera {
   0% {
     -webkit-transform: translatey(-5px);
@@ -640,6 +668,10 @@ body {
     min-height: 100vh;
     margin-left: 0;
   }
+}
+.hero #square {
+  position: absolute;
+  bottom: 0;
 }
 .hero .hero-container {
   display: block;
@@ -1852,20 +1884,84 @@ section {
     text-align: left;
   }
 }
-.EPdesign_subpage #logo img.ammanlogo {
-  padding-right: 0;
-  padding-top: 3em;
+.EPdesign_subpage #logo .left {
+  text-align: center;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #logo img.ammanlogo {
-    padding-right: 3em;
+  .EPdesign_subpage #logo .left {
+    margin-bottom: 15%;
+  }
+}
+.EPdesign_subpage #logo .copyright {
+  margin-top: 20%;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage #logo .copyright {
+    margin-right: 7%;
+    margin-top: 0;
     -webkit-transition: 250ms ease;
     transition: 250ms ease;
   }
-  .EPdesign_subpage #logo img.ammanlogo:hover {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
+}
+.EPdesign_subpage #logo .button {
+  border: 1px solid whitesmoke;
+  font-family: calmetta, sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 0.9em;
+  color: whitesmoke;
+  overflow: hidden;
+  position: relative;
+  padding-top: 16px;
+  margin-left: 0;
+  z-index: 2;
+  -webkit-animation-name: image-scale;
+          animation-name: image-scale;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage #logo .button {
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    font-size: 0.8em;
+    padding-top: 15px;
+    margin-right: 7%;
   }
+}
+.EPdesign_subpage #logo .button:hover {
+  color: #0a0a0a;
+}
+.EPdesign_subpage #logo .button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 190%;
+  width: 100%;
+  background-color: whitesmoke;
+  -webkit-transform: translatey(4em);
+          transform: translatey(4em);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.EPdesign_subpage #logo .button:hover::after {
+  -webkit-transform: translatey(0);
+          transform: translatey(0);
+}
+.EPdesign_subpage #logo .button a {
+  text-decoration: none;
+  z-index: 2;
+}
+.EPdesign_subpage #logo .logo {
+  max-width: 60%;
+  margin-top: 15%;
+  margin-left: 18%;
 }
 .EPdesign_subpage #logo iframe {
   max-width: 100%;
@@ -1930,8 +2026,25 @@ section {
     margin-left: 30px;
   }
 }
+.EPdesign_subpage #logo li {
+  list-style: none;
+  color: whitesmoke;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage #logo li {
+    color: #0a0a0a;
+  }
+}
+.EPdesign_subpage #logo li::before {
+  content: "•";
+  color: #E52B50;
+  display: inline-block;
+  font-weight: bold;
+  width: 1em;
+  margin-left: -1em;
+}
 .EPdesign_subpage #logo .yellow_arrow {
-  position: absolute;
+  position: fixed;
   left: 50%;
   -webkit-transform: translatex(-50%);
           transform: translatex(-50%);
@@ -1955,9 +2068,25 @@ section {
 }
 @media (min-width: 768px) {
   .EPdesign_subpage #process {
+    padding-top: 0;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0a0a0a), color-stop(50%, whitesmoke));
     background: linear-gradient(90deg, #0a0a0a 50%, whitesmoke 50%);
   }
+}
+.EPdesign_subpage #process .yellow_arrow {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+  bottom: 0;
+}
+.EPdesign_subpage #process .yellow_arrow img {
+  -webkit-animation-name: arrow-scale;
+          animation-name: arrow-scale;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .EPdesign_subpage #process h2 {
   color: whitesmoke;
@@ -1969,6 +2098,38 @@ section {
 @media (min-width: 768px) {
   .EPdesign_subpage #process h2 {
     text-align: right;
+  }
+}
+.EPdesign_subpage #process .left p {
+  color: whitesmoke;
+  max-width: 90%;
+}
+.EPdesign_subpage #process .left h4 {
+  color: #E52B50;
+  font-family: calmetta, sans-serif;
+  font-weight: 300;
+  text-align: left;
+}
+.EPdesign_subpage #process .right p {
+  color: whitesmoke;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage #process .right p {
+    margin-left: 7%;
+    color: #0a0a0a;
+  }
+}
+.EPdesign_subpage #process .right h4 {
+  color: #E52B50;
+  font-family: calmetta, sans-serif;
+  font-weight: 300;
+  text-align: left;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage #process .right h4 {
+    margin-left: 7%;
   }
 }
 .EPdesign_subpage #process .amman_sketch {
@@ -1989,12 +2150,12 @@ section {
     text-align: left;
   }
 }
-.EPdesign_subpage #process .textiles {
+.EPdesign_subpage #process .matchbox {
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process .textiles {
-    margin-left: -10%;
+  .EPdesign_subpage #process .matchbox {
+    max-width: 90%;
   }
 }
 
@@ -2596,6 +2757,17 @@ section {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.animate-scale-out,
+[data-sectionstate=inactive] .animate-scale-out {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+
+[data-sectionstate=active] .animate-scale-out {
+  opacity: 0;
 }
 
 .animate-slide-up,
