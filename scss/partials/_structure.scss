@@ -1,8 +1,14 @@
 /* SITE STRUCTURE */
 
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+}
+
 body {
     background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
-    ;
+    animation: opacity 1s ease-in-out;
 }
 
 .site-header {
@@ -10,6 +16,8 @@ body {
     padding: 1em;
     width: 100%;
     align-items: center;
+    z-index: 5;
+
 
     a {
         color: rgb(10, 10, 10);
@@ -30,6 +38,8 @@ body {
         max-width: 50px;
     }
 }
+
+
 
 /* ANIMATIONS */
 
@@ -181,7 +191,7 @@ body {
 
 @keyframes mustache-rotate {
     0% {
-        transform: rotate(-5deg);
+        transform: rotate(-2deg);
     }
 
     50% {
@@ -189,7 +199,7 @@ body {
     }
 
     100% {
-        transform: rotate(-5deg);
+        transform: rotate(-2deg);
     }
 }
 
@@ -197,12 +207,15 @@ body {
     @media (min-width: $breakpoint-small) {
         min-height: 100vh;
         margin-left: 0;
+
+        .lottie {
+            position: fixed;
+            left: 50%;
+            z-index: -1;
+            transform: translate(-50%) rotate(90deg) scale(4);
+        }
     }
 
-    #square {
-        position: absolute;
-        bottom: 0;
-    }
 
     background-repeat: no-repeat;
     background-size: contain;
@@ -224,10 +237,14 @@ body {
         z-index: 20;
         // max-width: 90%;
         // min-width: 50vw;
-        transition: 200ms ease;
+        transition: 500ms ease;
         margin-top: 20%;
 
         .bolt {
+            display: none;
+        }
+
+        .sunglasses-wrapper {
             display: none;
         }
 
@@ -235,10 +252,16 @@ body {
         &:hover {
             transform: scale(1.05);
 
+            .sunglasses-wrapper {
+                display: block;
+            }
+
             .bolt {
                 display: block;
             }
         }
+
+
 
         .mustache {
             @media (min-width: $breakpoint-small) {
@@ -314,14 +337,23 @@ body {
         }
     }
 
+    .sunglasses-wrapper {
+        position: absolute;
+        top: 26%;
+        left: 7%;
+        transform: rotate(6deg) scale(.7);
+
+    }
+
     .mustache-wrapper {
         position: absolute;
-        top: 51%;
+        top: 50%;
         left: 50%;
         margin-left: 1.5%;
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(.9);
 
         .mustache {
+            transform: rotate(7deg);
             animation-name: mustache-rotate;
             animation-duration: 3s;
             animation-iteration-count: infinite;
@@ -460,39 +492,31 @@ section {
 
     #section-2 {
         position: relative;
-        background-color: rgb(245, 245, 245);
+        background-color: rgb(10, 10, 10);
 
         @media (min-width: $breakpoint-small) {
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         }
 
-        .oldcamera {
-            animation-name: camera;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
 
+        #camera {
+
+
+            @media (min-width: $breakpoint-small) {
+                max-width: 80%;
+                margin-left: 8%;
+            }
+
+        }
+
+        .web {
             @media (min-width: $breakpoint-small) {
                 margin-top: 0;
             }
 
         }
 
-        .oldcomputer {
-            animation-name: computer;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            margin-top: 30%;
-
-            @media (min-width: $breakpoint-small) {
-                margin-top: 0;
-            }
-
-        }
-
-        .shapes {
-            animation-name: shapes;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
+        .design {
             margin-top: 30%;
             margin-bottom: 5%;
 
@@ -502,6 +526,10 @@ section {
             }
         }
 
+        // .up {
+        //     transform: translatey(-45%);
+        // }
+
         h1 {
             color: rgb(10, 10, 10);
             padding: 2;
@@ -510,10 +538,12 @@ section {
             font-size: 3em;
             letter-spacing: 3px;
             text-align: center;
+            transform: scale(4em);
 
             @media (min-width: $breakpoint-small) {
                 color: rgb(245, 245, 245);
             }
+
 
 
 
@@ -618,6 +648,8 @@ section {
     }
 
     #section-pad {
+        position: relative;
+        z-index: -2;
         background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
     }
 
@@ -789,6 +821,8 @@ section {
                     display: block;
                 }
             }
+
+
 
             .bolt {
                 display: none;
@@ -1291,8 +1325,10 @@ section {
 
 // OLYMPIC PICTOGRAM SUBPAGE
 
+
 .olympic_subpage {
     overflow: hidden;
+
 
     #logo {
         background-color: rgb(10, 10, 10);
@@ -1300,7 +1336,33 @@ section {
         @media (min-width: $breakpoint-small) {
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
             text-align: left;
+
+
+
         }
+
+        li {
+            color: rgb(245, 245, 245);
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+            }
+
+            &::before {
+
+
+
+                content: "\2022";
+                color: $color-accent;
+                display: inline-block;
+                font-weight: bold;
+                width: 1em;
+                margin-left: -1em;
+
+            }
+        }
+
+
 
         img.ammanlogo {
             padding-right: 0;
@@ -1384,7 +1446,7 @@ section {
         }
 
         .yellow_arrow {
-            position: absolute;
+            position: fixed;
             left: 50%;
             transform: translatex(-50%);
             bottom: 1%;
@@ -1460,6 +1522,8 @@ section {
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
             text-align: left;
         }
+
+
 
         .left {
             text-align: center;
@@ -2168,6 +2232,16 @@ section {
     position: relative;
     max-width: 70%;
     height: 100%;
+    overflow: hidden;
+
+
+}
+
+.info {
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+    font-family: $font-family-sans;
 }
 
 .slide {
@@ -2176,6 +2250,8 @@ section {
     left: 0;
     width: 100%;
     display: none;
+    // opacity: 0;
+    transition: all .5s linear;
 }
 
 .slide img {
@@ -2187,6 +2263,7 @@ section {
 [data-currentslide="slide2"] .slide:nth-child(2),
 [data-currentslide="slide3"] .slide:nth-child(3) {
     display: block;
+    // opacity: 1;
 }
 
 [data-currentslide="slide1"] .slide-nav li:nth-child(1) a,

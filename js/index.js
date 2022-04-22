@@ -1,9 +1,10 @@
-// WELCOME ANIMATION
+// CAMERA ANIMATION
 
 lottie.loadAnimation({
-    container: square, // the dom element that will contain the animation
+    container: camera, // the dom element that will contain the animation
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'js/square/data.json' // the path to the animation json
+    path: 'js/portfolio_camera_animation/data.json' // the path to the animation json
 });
+

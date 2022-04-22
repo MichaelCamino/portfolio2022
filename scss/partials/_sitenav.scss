@@ -1,7 +1,25 @@
 /* SITE-HEADER SITE-NAV */
 
 .site-header {
+  padding-bottom: 2.8em;
   background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+  position: relative;
+  z-index: 20;
+
+  @media (min-width: $breakpoint-small) {
+    padding-bottom: 0;
+  }
+
+
+  .blob {
+    position: absolute;
+    transform: rotate(180deg) scale(2);
+    transform-origin: top;
+    z-index: 1;
+    right: 0;
+    top: 20;
+  }
+
 
 
 
@@ -12,9 +30,15 @@
     z-index: 10;
     transform: translatex(-50%);
     margin-top: 5px;
+    z-index: 20;
   }
 
   .site-nav {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 20;
+
 
     ul,
     li {

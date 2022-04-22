@@ -38,6 +38,8 @@ document.querySelectorAll('.animate-on-scroll').forEach((section) => {
 const slideBox = document.querySelectorAll('.slide-box');
 for (let i = 0, len = slideBox.length; i < len; i++) {
 
+    // const slideDuration = 5000;
+
     let slideNavItems = slideBox[i].querySelectorAll('.slide-nav a');
     for (let j = 0, len = slideNavItems.length; j < len; j++) {
         console.log(slideNavItems[j]);

@@ -11,17 +11,23 @@
 
     <link rel="stylesheet" href="https://use.typekit.net/byy8qrx.css">
 
+    <!-- FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/32613632b2.js" crossorigin="anonymous"></script>
+
+    <!-- LOCOMOTIVE CSS -->
+    <link rel="stylesheet" href="locomotive/locomotive-scroll.css">
+
+
     <!-- MAIN CSS STYLES -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- FONT AWESOME-->
-    <script src="https://kit.fontawesome.com/32613632b2.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
 
     <header class="site-header">
-
         <div class="site-id">
             <div class="logo">
                 <a href="#top"><img src="img/mylogo2.svg" alt="Site Logo" height="100px" width="100px"></a>
@@ -39,7 +45,9 @@
 
     <main class="site-main">
         <section class="hero animate-on-scroll">
-            <div id="square"></div>
+
+            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_cbdw87po.json" class="lottie"
+                background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
             <div class="hero-container">
 
                 <h3>BE <span class="yellow">WHO</span> <span class="black">YOU</span><br />WANT
@@ -59,9 +67,12 @@
                         <img src="img/lightning_four.png" alt="">
                     </div>
                     <img src="img/head.png" alt="statue head" class="statue">
-                    <div class="mustache-wrapper">
-                        <img src="img/mustache.png" class="mustache" alt="mustache">
+                    <div class="sunglasses-wrapper">
+                        <img src="img/bluesunglasses.png" class="sunglasses" alt="Statue Sunglasses">
                     </div>
+                    <!-- <div class="mustache-wrapper">
+                        <img src="img/mustache.png" class="mustache" alt="mustache">
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -69,7 +80,8 @@
             <div class="container">
                 <div class="row">
                     <div class="one-half">
-                        <h4>I'm <span>Michael</span>, a designer, programmer<br>and filmmaker living in Honolulu.</h4>
+                        <h4>I'm <span>Michael</span>, a designer, programmer<br>and filmmaker
+                            living in Honolulu.</h4>
                     </div>
                     <div class="one-half"> <a href="./aboot/index.html" class="button animate-scale-in">DEEP DIVE</a>
                     </div>
@@ -80,22 +92,24 @@
             <div class="container">
                 <div class="row">
                     <div class="one-third">
-                        <img src="img/camera.png" alt="" class="oldcamera">
-                        <h1>
-                            <a href="#film">FILM</a>
-                        </h1>
+                        <h1 class="up">DESIGN</h1>
+                        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_2wtlov5a.json"
+                            class="lottie design" background="transparent" speed="1"
+                            style="width: 300px; height: 300px;" loop autoplay>
+                        </lottie-player>
+                        <!-- <img src="img/camera.png" alt="" class="oldcamera"> -->
                     </div>
                     <div class="one-third">
-                        <img src="img/shapes.png" alt="" class="shapes">
-                        <h1>
-                            <a href="#design">DES<span>IGN</span></a>
-                        </h1>
+                        <h1>FIL<span>M</span></h1>
+                        <div id="camera"></div>
                     </div>
                     <div class="one-third">
-                        <img src="img/computer.png" alt="" class="oldcomputer">
-                        <h1>
-                            <a href="#web"><span>WEB</span></a>
-                        </h1>
+                        <!-- <img src="img/computer.png" alt="" class="oldcomputer"> -->
+                        <h1 class="up"><span>WEB</span></h1>
+                        <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_jlbrnpgn.json"
+                            class="lottie web" background="transparent" speed="1" style="width: 300px; height: 300px;"
+                            loop autoplay>
+                        </lottie-player>
                     </div>
                 </div>
             </div>
@@ -115,15 +129,18 @@
                         <div class="slide-one slide">
                             <a href="cohort/index.html"><img src="video/cohort.gif" width="1920" height="1080"
                                     alt="placeholder"></a>
+
                         </div>
                         <div class="slide-two slide">
                             <a href="tott/index.html"><img src="video/tott.gif" width="1920" height="1080"
-                                    alt="placeholder"></a>
+                                    alt="placeholder">
+                                <h3>PROCESS VIDEO - 2020</h3>
+                            </a>
+
                         </div>
                         <div class="slide-three slide"></div>
                         <a href="podcastvideo/index.html"><img src="video/podcastvideo.gif" width="1920" height="1080"
                                 alt="placeholder"></a>
-
                     </div>
                 </div>
             </div>
@@ -186,6 +203,7 @@
         </section>
         <section id="section-pad"></section>
         <section id="section-6" class="animate-on-scroll">
+
             <div class="container">
                 <div class="row">
                     <div class="one-whole centered animate-slide-dwon">
@@ -193,10 +211,12 @@
                     </div>
                 </div>
                 <div class="row">
+
                     <div class="one-third">
                         <img src="img/left_hand.png" class="left-hand" alt="Left Hand Pointing">
                     </div>
                     <div class="one-third">
+
                         <a href="./werks/index.html">
                             <div class="button">
                                 <div class="lightning-one bolt">
@@ -211,6 +231,7 @@
                                 <div class="lightning-four bolt">
                                     <img src="img/lightning_four.png" alt="lightning icon">
                                 </div>
+
                             </div>
                         </a>
                     </div>
@@ -243,6 +264,18 @@
         });
     </script>
 
+    <!-- LOCOMOTIVE JS -->
+    <script src="locomotive/locomotive-scroll.min.js"></script>
+    <!-- <script>
+        // (function () {
+        //     var scroll = new LocomotiveScroll();
+        // })();
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+        });
+    </script> -->
+
     <!-- MAIN JS-->
 
     <script src="js/script.js"></script>
@@ -255,6 +288,9 @@
 
 
     <script src="js/index.js"></script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
 </body>
 
