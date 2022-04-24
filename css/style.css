@@ -3057,8 +3057,8 @@ section {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   opacity: 0;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
 }
 
 [data-sectionstate=active] .animate-scale-in {
