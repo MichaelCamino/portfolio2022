@@ -102,6 +102,34 @@ body {
     }
 }
 
+@keyframes touch-right {
+    0% {
+        transform: translate(0, 0) scale(.8);
+    }
+
+    50% {
+        transform: translate(-50px, 50px) scale(.8);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(.8);
+    }
+}
+
+@keyframes touch-left {
+    0% {
+        transform: translate(0, 0) scale(.8);
+    }
+
+    50% {
+        transform: translate(50px, -50px) scale(.8);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(.8);
+    }
+}
+
 @keyframes left-finger-lightning {
 
     0% {
@@ -203,20 +231,6 @@ body {
 
 /* HERO */
 
-@keyframes mustache-rotate {
-    0% {
-        transform: rotate(-2deg);
-    }
-
-    50% {
-        transform: rotate(5deg);
-    }
-
-    100% {
-        transform: rotate(-2deg);
-    }
-}
-
 .hero {
     background-repeat: no-repeat;
     background-size: contain;
@@ -247,7 +261,7 @@ body {
 
     #scrolling {
         position: fixed;
-        bottom: 0;
+        bottom: -3%;
         transform: scale(1.7);
         transform-origin: bottom;
         margin-right: 15%;
@@ -256,6 +270,7 @@ body {
         @media (min-width: $breakpoint-small) {
             transform: scale(1);
             margin-right: 0;
+            bottom: 0;
         }
     }
 
@@ -533,7 +548,7 @@ section {
         h4 {
             font-family: $font-family-sans;
             color: rgb(245, 245, 245);
-            font-weight: 200;
+            font-weight: 100;
             text-align: right;
             margin-right: 0;
             font-size: 1.5em;
@@ -1009,9 +1024,15 @@ section {
     }
 
     #section-pad {
-        position: relative;
-        z-index: -2;
-        background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        @media (min-width: $breakpoint-small) {
+            position: relative;
+            z-index: -2;
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+            display: block;
+        }
+
+        display: none;
+
     }
 
     #design {
@@ -1161,41 +1182,81 @@ section {
 
 
     #section-6 {
-        background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
-        text-align: center;
+        @media (min-width: $breakpoint-small) {
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        background-color: rgb(10, 10, 10);
         position: relative;
 
+        h1 {
+            @media (min-width: $breakpoint-small) {
+                margin-right: -2.2%;
+            }
+
+            color: rgb(245, 245, 245);
+            font-size: 7em;
+            text-align: right;
+            margin-right: 0;
+            line-height: .9;
+
+            span {
+                color: $color-accent;
+
+                @media (min-width: $breakpoint-small) {
+                    color: rgb(245, 245, 245);
+                }
+            }
+        }
+
         h2 {
-            text-align: center;
-            font-size: 3em;
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                padding-top: 65%;
+                margin-left: -4.2%;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            text-align: left;
+            font-size: 6em;
             font-family: $font-family-serif;
             font-weight: 300;
             color: rgb(245, 245, 245);
-            margin-left: 1.5%;
+            padding-top: 0;
+            margin-left: 0;
+            line-height: .9;
+            margin-top: -14%;
+            margin-bottom: 0;
 
             span {
-                color: rgb(10, 10, 10);
-                font-weight: 400;
-                margin-left: 1%;
+                color: $color-accent;
+
+                @media (min-width: $breakpoint-small) {
+                    color: rgb(10, 10, 10);
+                }
             }
         }
 
         .button {
             @media (min-width: $breakpoint-small) {
-                transform: scale(1);
+                bottom: 10%;
+                font-size: 5em;
             }
 
-            transform: scale(1.4);
-            position: relative;
+            left: 50%;
+            bottom: 33%;
+            transform: translate(-50%);
+            transform-origin: center;
+            position: absolute;
             background-image: radial-gradient(circle, rgb(255, 51, 0), rgb(209, 0, 0));
-            font-size: 4em;
-            font-weight: 300;
+            font-size: 5em;
             border-radius: 50%;
             z-index: 100;
             box-shadow: inset 0 -8px 6px rgb(97, 32, 32);
 
             &:hover {
-                transform: scale(.95);
+                font-size: 4.8em;
                 box-shadow: inset 0 -2px 6px rgb(97, 32, 32);
 
                 .bolt {
@@ -1262,6 +1323,19 @@ section {
             display: none;
         }
 
+        .left-hand-down {
+            @media (min-width: $breakpoint-small) {
+                display: none;
+            }
+
+
+            animation-name: touch-right;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            margin-top: 30%;
+            display: block;
+        }
+
         .right-hand {
             @media (min-width: $breakpoint-small) {
                 display: block;
@@ -1272,6 +1346,18 @@ section {
             animation-iteration-count: infinite;
             margin-top: 30%;
             display: none;
+        }
+
+        .right-hand-up {
+            @media (min-width: $breakpoint-small) {
+                display: none;
+            }
+
+            animation-name: touch-left;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            margin-top: 30%;
+            display: block;
         }
 
 
