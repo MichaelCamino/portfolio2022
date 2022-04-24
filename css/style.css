@@ -937,7 +937,6 @@ section {
 .site-main #section-1 {
   background-color: #0a0a0a;
   position: relative;
-  text-align: center;
 }
 @media (min-width: 768px) {
   .site-main #section-1 {
@@ -949,12 +948,20 @@ section {
 .site-main #section-1 h1 {
   color: whitesmoke;
   font-family: ivypresto-display, serif;
-  text-align: right;
-  font-size: 8em;
+  text-align: center;
+  font-size: 6.9em;
   margin-bottom: 0;
   line-height: 0.2;
-  margin-left: 2%;
+  margin-left: 0;
   position: relative;
+}
+@media (min-width: 768px) {
+  .site-main #section-1 h1 {
+    font-size: 8em;
+    text-align: right;
+    margin-left: 2%;
+    line-height: 0.2;
+  }
 }
 .site-main #section-1 h1::before {
   content: "";
@@ -968,15 +975,29 @@ section {
   left: -30%;
 }
 .site-main #section-1 h1 span {
-  color: #0a0a0a;
+  color: whitesmoke;
+}
+@media (min-width: 768px) {
+  .site-main #section-1 h1 span {
+    color: #0a0a0a;
+  }
 }
 .site-main #section-1 h2 {
   color: whitesmoke;
   font-family: ivypresto-display, serif;
   font-weight: 100;
-  text-align: right;
-  font-size: 7em;
-  margin-left: 1%;
+  text-align: center;
+  font-size: 7.5em;
+  margin-left: 0;
+  margin-top: -2%;
+}
+@media (min-width: 768px) {
+  .site-main #section-1 h2 {
+    font-size: 7em;
+    text-align: right;
+    margin-left: 1%;
+    margin-top: 0;
+  }
 }
 .site-main #section-1 .right {
   margin-top: 34%;
@@ -984,10 +1005,15 @@ section {
 .site-main #section-1 h4 {
   font-family: calmetta, sans-serif;
   color: whitesmoke;
-  font-weight: 300;
-  text-align: center;
+  font-weight: 200;
+  text-align: right;
   margin-right: 0;
   font-size: 1.5em;
+  margin-top: -23%;
+  margin-right: 11%;
+  line-height: 1;
+  padding: 0;
+  font-size: 2.2em;
 }
 @media (min-width: 768px) {
   .site-main #section-1 h4 {
@@ -995,6 +1021,7 @@ section {
     color: #0a0a0a;
     font-size: 2em;
     line-height: 0.7;
+    font-weight: 300;
   }
 }
 .site-main #section-1 h4 span {
@@ -1003,8 +1030,13 @@ section {
   font-weight: 100;
 }
 .site-main #section-1 .border {
-  border-bottom: 2px solid #E52B50;
-  padding-bottom: 5%;
+  border-bottom: 0;
+}
+@media (min-width: 768px) {
+  .site-main #section-1 .border {
+    padding-bottom: 5%;
+    border-bottom: 2px solid #E52B50;
+  }
 }
 .site-main #section-1 .button {
   border: 1px solid whitesmoke;
