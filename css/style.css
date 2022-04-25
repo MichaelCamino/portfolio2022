@@ -762,6 +762,7 @@ body {
   margin-right: 15%;
   -webkit-transform: scale(3);
           transform: scale(3);
+  display: none;
 }
 @media (min-width: 768px) {
   .hero #scrolling {
@@ -769,6 +770,7 @@ body {
             transform: scale(1);
     margin-right: 0;
     bottom: 0;
+    display: block;
   }
 }
 .hero .hero-container {
@@ -935,13 +937,14 @@ body {
   font-family: ivypresto-display, serif;
   font-weight: 100;
   font-style: normal;
-  font-size: 18vw;
+  font-size: 17vw;
   line-height: 0.9;
   letter-spacing: 3px;
 }
 @media (min-width: 768px) {
   .hero h3 {
     top: 50%;
+    font-size: 18vw;
   }
 }
 .hero h3 span {
@@ -1381,9 +1384,6 @@ section {
   .site-main #section-3 h2 span {
     color: #0a0a0a;
   }
-}
-.site-main #section-3 h2 span:hover {
-  color: #E52B50;
 }
 .site-main #section-3 h2 .black_web {
   color: #0a0a0a;

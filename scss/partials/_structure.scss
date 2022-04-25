@@ -266,11 +266,13 @@ body {
         transform-origin: bottom;
         margin-right: 15%;
         transform: scale(3);
+        display: none;
 
         @media (min-width: $breakpoint-small) {
             transform: scale(1);
             margin-right: 0;
             bottom: 0;
+            display: block;
         }
     }
 
@@ -433,12 +435,13 @@ body {
         font-family: $font-family-serif;
         font-weight: 100;
         font-style: normal;
-        font-size: 18vw;
+        font-size: 17vw;
         line-height: .9;
         letter-spacing: 3px;
 
         @media (min-width: $breakpoint-small) {
             top: 50%;
+            font-size: 18vw;
         }
 
         span {
@@ -900,11 +903,6 @@ section {
 
                 transition: .5s ease;
                 color: rgb(245, 245, 245);
-
-                &:hover {
-                    color: $color-accent;
-                }
-
             }
 
             .black_web {
