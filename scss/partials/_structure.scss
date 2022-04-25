@@ -2741,6 +2741,7 @@ section {
     width: 100%;
     // display: none;
     opacity: 0;
+    z-index: -10;
     transition: all .5s linear;
 }
 
@@ -2753,6 +2754,7 @@ section {
 [data-currentslide="slide2"] .slide:nth-child(2),
 [data-currentslide="slide3"] .slide:nth-child(3) {
     // display: block;
+    z-index: 10;
     opacity: 1;
 }
 
