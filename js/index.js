@@ -17,6 +17,3 @@ lottie.loadAnimation({
     autoplay: true,
     path: 'js/portfolio_scroll_animation/data.json' // the path to the animation json
 });
-
-// EP ANIMATION
-
