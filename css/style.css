@@ -1951,7 +1951,7 @@ section {
     color: whitesmoke;
     margin-right: -1.5%;
     text-align: right;
-    line-height: 0.2;
+    line-height: 0.9;
   }
 }
 .aboot_subpage h2 {
@@ -1959,7 +1959,7 @@ section {
   color: whitesmoke;
   text-align: right;
   font-weight: 100;
-  line-height: 0.1;
+  line-height: 0.3;
 }
 @media (min-width: 768px) {
   .aboot_subpage h2 {
@@ -3160,19 +3160,157 @@ section {
   }
 }
 
+.extras_subpage {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .extras_subpage #extras-intro {
+    text-align: left;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0a0a0a), color-stop(50%, whitesmoke));
+    background: linear-gradient(90deg, #0a0a0a 50%, whitesmoke 50%);
+  }
+}
+.extras_subpage #extras-intro .yellow_arrow {
+  position: fixed;
+  left: 50%;
+  bottom: 1%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.extras_subpage #extras-intro .yellow_arrow img {
+  -webkit-animation-name: arrow-scale;
+          animation-name: arrow-scale;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@media (max-width: 768px) {
+  .extras_subpage #extras-intro .yellow_arrow img {
+    display: none;
+  }
+}
+.extras_subpage #extras-intro img {
+  border-radius: 50%;
+  margin-top: 3em;
+  margin-left: 10%;
+  margin-right: auto;
+}
 .extras_subpage #extras-intro h1 {
-  text-align: right;
-  font-size: 3em;
+  font-family: ivypresto-display, serif;
+  font-weight: 900;
+  font-size: 1.5em;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2%;
+  margin-top: 5%;
   color: whitesmoke;
-  margin: 1%;
+}
+@media (min-width: 768px) {
+  .extras_subpage #extras-intro h1 {
+    font-family: ivypresto-display, serif;
+    max-width: 100%;
+    font-size: 5em;
+    color: whitesmoke;
+    margin-right: -1.5%;
+    text-align: right;
+    line-height: 0.9;
+  }
 }
 .extras_subpage #extras-intro h1 span {
   color: #E52B50;
-  font-size: 1.4em;
 }
 .extras_subpage #extras-intro h2 {
+  font-family: ivypresto-display, serif;
+  color: whitesmoke;
+  text-align: right;
+  font-weight: 100;
+  line-height: 0.8;
+}
+@media (min-width: 768px) {
+  .extras_subpage #extras-intro h2 {
+    margin-left: -3.95%;
+    margin-bottom: 0;
+    margin-top: 25%;
+    font-size: 4em;
+    text-align: left;
+    color: #0a0a0a;
+  }
+}
+.extras_subpage #extras-intro h2 span {
+  color: #E52B50;
+}
+.extras_subpage #extras-intro h4 {
+  font-family: calmetta, sans-serif;
+  color: #0a0a0a;
+  text-align: right;
+  max-width: 60%;
+  font-weight: 300;
+  padding-top: 4em;
+  padding-bottom: 1em;
+  font-size: 1.4em;
+  margin-left: 35%;
+}
+.extras_subpage #extras-intro li {
+  color: whitesmoke;
+  font-size: 1.2em;
+  line-height: 1;
+  font-weight: 300;
+  list-style: none;
+  margin-left: auto;
+  margin-left: -16%;
+  padding-bottom: 2%;
+}
+@media (min-width: 768px) {
+  .extras_subpage #extras-intro li {
+    margin-right: 6%;
+    text-align: right;
+  }
+}
+.extras_subpage #extras-intro li::before {
+  display: none;
+}
+@media (min-width: 768px) {
+  .extras_subpage #extras-intro li::before {
+    content: "•";
+    color: #E52B50;
+    display: inline-block;
+    font-weight: bold;
+    width: 1em;
+    margin-right: 1em;
+  }
+}
+.extras_subpage #extras .yellow_arrow {
+  position: fixed;
+  left: 50%;
+  bottom: 1%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+.extras_subpage #extras .yellow_arrow img {
+  -webkit-animation-name: arrow-scale;
+          animation-name: arrow-scale;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@media (max-width: 768px) {
+  .extras_subpage #extras .yellow_arrow img {
+    display: none;
+  }
+}
+.extras_subpage #extras h4 {
   text-align: left;
-  max-width: 100%;
+  font-family: calmetta, sans-serif;
+  color: #E52B50;
+  font-weight: 100;
+  margin-left: auto;
+  margin-right: auto;
+}
+.extras_subpage #extras p {
+  text-align: left;
 }
 
 @-webkit-keyframes index {

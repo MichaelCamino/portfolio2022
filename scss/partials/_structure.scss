@@ -1454,7 +1454,7 @@ section {
             color: rgb(245, 245, 245);
             margin-right: -1.5%;
             text-align: right;
-            line-height: .2;
+            line-height: .9;
         }
 
         font-family: $font-family-serif;
@@ -1475,7 +1475,7 @@ section {
         color: rgb(245, 245, 245);
         text-align: right;
         font-weight: 100;
-        line-height: .1;
+        line-height: .3;
 
         @media (min-width: $breakpoint-small) {
             margin-right: -1.5%;
@@ -2754,24 +2754,168 @@ section {
     }
 }
 
+// EXTRAS SUBPAGE
+
 .extras_subpage {
+    text-align: center;
+
     #extras-intro {
 
-        h1 {
-            text-align: right;
-            font-size: 3em;
-            color: rgb(245, 245, 245);
-            margin: 1%;
+        @media (min-width: $breakpoint-small) {
+            text-align: left;
+            background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
 
-            span {
-                color: $color-accent;
-                font-size: 1.4em;
+        .yellow_arrow {
+            position: fixed;
+            left: 50%;
+            bottom: 1%;
+            transform: translate(-50%);
+
+            img {
+                @media (max-width: $breakpoint-small) {
+                    display: none;
+                }
+
+                animation-name: arrow-scale;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+
+
             }
         }
 
-        h2 {
-            text-align: left;
+        img {
+            border-radius: 50%;
+            margin-top: 3em;
+            margin-left: 10%;
+            margin-right: auto;
+        }
+
+        h1 {
+
+            @media (min-width: $breakpoint-small) {
+                font-family: $font-family-serif;
+                max-width: 100%;
+                font-size: 5em;
+                color: rgb(245, 245, 245);
+                margin-right: -1.5%;
+                text-align: right;
+                line-height: .9;
+            }
+
+            font-family: $font-family-serif;
+            font-weight: 900;
+            font-size: 1.5em;
             max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 2%;
+            margin-top: 5%;
+            color: rgb(245, 245, 245);
+
+            span {
+                color: $color-accent;
+            }
+
+
+        }
+
+        h2 {
+            font-family: $font-family-serif;
+            color: rgb(245, 245, 245);
+            text-align: right;
+            font-weight: 100;
+            line-height: .8;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: -3.95%;
+                margin-bottom: 0;
+                margin-top: 25%;
+                font-size: 4em;
+                text-align: left;
+                color: rgb(10, 10, 10);
+            }
+
+            span {
+                color: $color-accent;
+            }
+        }
+
+        h4 {
+            font-family: $font-family-sans;
+            color: rgb(10, 10, 10);
+            text-align: right;
+            max-width: 60%;
+            font-weight: 300;
+            padding-top: 4em;
+            padding-bottom: 1em;
+            font-size: 1.4em;
+            margin-left: 35%;
+        }
+
+        li {
+            color: rgb(245, 245, 245);
+            font-size: 1.2em;
+            line-height: 1;
+            font-weight: 300;
+            list-style: none;
+            margin-left: auto;
+            margin-left: -16%;
+            padding-bottom: 2%;
+
+            @media (min-width: $breakpoint-small) {
+                margin-right: 6%;
+                text-align: right;
+            }
+
+            &::before {
+                display: none;
+
+                @media (min-width: $breakpoint-small) {
+                    content: "\2022";
+                    color: $color-accent;
+                    display: inline-block;
+                    font-weight: bold;
+                    width: 1em;
+                    margin-right: 1em;
+                }
+            }
+        }
+    }
+
+    #extras {
+
+        .yellow_arrow {
+            position: fixed;
+            left: 50%;
+            bottom: 1%;
+            transform: translate(-50%);
+
+            img {
+                @media (max-width: $breakpoint-small) {
+                    display: none;
+                }
+
+                animation-name: arrow-scale;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+
+
+            }
+        }
+
+        h4 {
+            text-align: left;
+            font-family: $font-family-sans;
+            color: $color-accent;
+            font-weight: 100;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            text-align: left;
         }
     }
 }
