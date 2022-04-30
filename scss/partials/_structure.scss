@@ -1113,6 +1113,22 @@ section {
             }
         }
 
+        video {
+            display: none;
+
+            @media (min-width: $breakpoint-small) {
+                display: block;
+            }
+        }
+
+        .display-mobile {
+            display: block;
+
+            @media (min-width: $breakpoint-small) {
+                display: none;
+            }
+        }
+
         ul {
             list-style: none;
             margin: 0;
@@ -3469,9 +3485,9 @@ section {
         }
     }
 
-    .black li a {
-        color: rgb(10, 10, 10);
-    }
+    // .black li a {
+    //     color: rgb(10, 10, 10);
+    // }
 }
 
 .slide-wrapper {
@@ -3480,7 +3496,6 @@ section {
     height: 100%;
 
     // overflow: hidden;
-
 }
 
 .info {

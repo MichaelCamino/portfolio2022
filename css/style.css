@@ -1606,6 +1606,22 @@ section {
     margin-top: 0;
   }
 }
+.site-main #video video {
+  display: none;
+}
+@media (min-width: 768px) {
+  .site-main #video video {
+    display: block;
+  }
+}
+.site-main #video .display-mobile {
+  display: block;
+}
+@media (min-width: 768px) {
+  .site-main #video .display-mobile {
+    display: none;
+  }
+}
 .site-main #video ul {
   list-style: none;
   margin: 0;
@@ -3835,9 +3851,6 @@ section {
 }
 .slide-nav li a {
   text-decoration: none;
-}
-.slide-nav .black li a {
-  color: #0a0a0a;
 }
 
 .slide-wrapper {
