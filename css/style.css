@@ -1102,15 +1102,6 @@ section {
   font-family: ivypresto-display, serif;
   font-weight: 100;
 }
-.site-main #section-1 .border {
-  border-bottom: 0;
-}
-@media (min-width: 768px) {
-  .site-main #section-1 .border {
-    padding-bottom: 5%;
-    border-bottom: 2px solid #E52B50;
-  }
-}
 .site-main #section-1 .button {
   border: 1px solid whitesmoke;
   font-family: calmetta, sans-serif;
@@ -2245,6 +2236,7 @@ section {
   letter-spacing: 3px;
   font-size: 0.9em;
   color: whitesmoke;
+  background-color: #0a0a0a;
   overflow: hidden;
   position: relative;
   padding-top: 16px;
@@ -2260,6 +2252,7 @@ section {
     -webkit-transition: 500ms ease;
     transition: 500ms ease;
     margin-top: 20%;
+    background-color: whitesmoke;
   }
 }
 .site-main #contact .button:hover {
@@ -2789,19 +2782,20 @@ section {
   width: 1em;
   margin-left: -1em;
 }
-.olympic_subpage #logo img.ammanlogo {
+.olympic_subpage #logo .image-box {
+  display: inline-block;
+  overflow: hidden;
+}
+.olympic_subpage #logo .image-box img.olympiclogo {
   padding-right: 0;
   padding-top: 3em;
 }
 @media (min-width: 768px) {
-  .olympic_subpage #logo img.ammanlogo {
+  .olympic_subpage #logo .image-box img.olympiclogo {
     padding-right: 3em;
     -webkit-transition: 250ms ease;
     transition: 250ms ease;
-  }
-  .olympic_subpage #logo img.ammanlogo:hover {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
+    display: block;
   }
 }
 .olympic_subpage #logo iframe {

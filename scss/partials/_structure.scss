@@ -590,16 +590,6 @@ section {
             }
         }
 
-        .border {
-            @media (min-width: $breakpoint-small) {
-                padding-bottom: 5%;
-                border-bottom: 2px solid $color-accent;
-            }
-
-            border-bottom: 0;
-
-        }
-
         .button {
             border: 1px solid rgb(245, 245, 245);
             font-family: $font-family-sans;
@@ -1720,6 +1710,7 @@ section {
             letter-spacing: 3px;
             font-size: .9em;
             color: rgb(245, 245, 245);
+            background-color: rgb(10, 10, 10);
             overflow: hidden;
             position: relative;
             padding-top: 16px;
@@ -1733,6 +1724,7 @@ section {
                 padding-top: 15px;
                 transition: 500ms ease;
                 margin-top: 20%;
+                background-color: rgb(245, 245, 245);
             }
 
             &:hover {
@@ -2299,21 +2291,26 @@ section {
             }
         }
 
+        .image-box {
 
+            display: inline-block;
+            overflow: hidden;
 
-        img.ammanlogo {
-            padding-right: 0;
-            padding-top: 3em;
+            img.olympiclogo {
+                padding-right: 0;
+                padding-top: 3em;
 
-            @media (min-width: $breakpoint-small) {
-                padding-right: 3em;
-                transition: 250ms ease;
+                @media (min-width: $breakpoint-small) {
+                    padding-right: 3em;
+                    transition: 250ms ease;
+                    display: block;
 
-                &:hover {
-                    transform: scale(1.03);
+                    // &:hover {
+                    //     transform: scale(1.1);
+                    //     transform-origin: center;
+                    // }
                 }
             }
-
         }
 
         iframe {
