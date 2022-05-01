@@ -926,12 +926,13 @@ section {
 
     #design {
         @media (min-width: $breakpoint-small) {
+            padding-bottom: 20%;
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         }
 
         background-color: rgb(10, 10, 10);
         position: relative;
-        padding-bottom: 30%;
+        padding-bottom: 40%;
 
         img {
             margin-top: 5%;
@@ -1088,12 +1089,14 @@ section {
 
     #video {
         @media (min-width: $breakpoint-small) {
+            padding-bottom: 20%;
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         }
 
         background-color: rgb(10, 10, 10);
+        padding-top: 0;
         position: relative;
-        padding-bottom: 30%;
+        padding-bottom: 40%;
 
         img {
             margin-top: 5%;
@@ -1258,9 +1261,10 @@ section {
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         }
 
+        padding-top: 0;
         background-color: rgb(10, 10, 10);
         position: relative;
-        padding-bottom: 30%;
+        padding-bottom: 50%;
 
         img {
             margin-top: 5%;

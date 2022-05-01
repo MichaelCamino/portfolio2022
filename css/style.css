@@ -1420,10 +1420,11 @@ section {
 .site-main #design {
   background-color: #0a0a0a;
   position: relative;
-  padding-bottom: 30%;
+  padding-bottom: 40%;
 }
 @media (min-width: 768px) {
   .site-main #design {
+    padding-bottom: 20%;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0a0a0a), color-stop(50%, whitesmoke));
     background: linear-gradient(90deg, #0a0a0a 50%, whitesmoke 50%);
   }
@@ -1581,11 +1582,13 @@ section {
 }
 .site-main #video {
   background-color: #0a0a0a;
+  padding-top: 0;
   position: relative;
-  padding-bottom: 30%;
+  padding-bottom: 40%;
 }
 @media (min-width: 768px) {
   .site-main #video {
+    padding-bottom: 20%;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0a0a0a), color-stop(50%, whitesmoke));
     background: linear-gradient(90deg, #0a0a0a 50%, whitesmoke 50%);
   }
@@ -1746,9 +1749,10 @@ section {
   }
 }
 .site-main #web {
+  padding-top: 0;
   background-color: #0a0a0a;
   position: relative;
-  padding-bottom: 30%;
+  padding-bottom: 50%;
 }
 @media (min-width: 768px) {
   .site-main #web {
