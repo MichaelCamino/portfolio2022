@@ -167,6 +167,7 @@ button {
   transition: 250ms ease;
   border-radius: 0.5em;
   margin: 1em 0;
+  cursor: pointer;
 }
 
 /* RESPONSIVE IMAGES */
