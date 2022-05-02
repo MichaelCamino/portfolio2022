@@ -1420,7 +1420,7 @@ section {
 .site-main #design {
   background-color: #0a0a0a;
   position: relative;
-  padding-bottom: 40%;
+  padding-bottom: 50%;
 }
 @media (min-width: 768px) {
   .site-main #design {
