@@ -28,6 +28,9 @@
     z-index: 10;
     transform: translatex(-50%) scale(1.2);
     z-index: 50;
+  }
+
+  .site-opacity {
     animation-name: opacity;
     animation-duration: 2s;
     animation-delay: 3s;

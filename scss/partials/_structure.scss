@@ -224,6 +224,18 @@ body {
     }
 }
 
+@keyframes infinite-rotate {
+    from {
+        transform: rotate(0);
+        transform-origin: center;
+    }
+
+    to {
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+
 @keyframes opacity {
     from {
         opacity: 0;
@@ -294,7 +306,7 @@ body {
         position: relative;
         z-index: 20;
         max-width: 70%;
-        transition: 500ms ease;
+        transition: 600ms ease-in-out;
         margin-top: 5%;
         margin-left: 10%;
 
@@ -312,9 +324,14 @@ body {
             display: none;
         }
 
+        .momtattoo {
+            display: none;
+        }
+
 
         &:hover {
             transform: scale(1.05);
+            transition: 500ms ease;
 
             .sunglasses-wrapper {
                 display: block;
@@ -414,16 +431,8 @@ body {
         top: 66%;
         left: 32%;
         margin-left: 1.5%;
-        opacity: .75;
-        transform: translate(-50%, -50%) scale(.40) rotate(10deg);
-
-        .momtattoo {
-            transform: rotate(7deg);
-            animation-name: mustache-rotate;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            transform-origin: center;
-        }
+        opacity: .6;
+        transform: translate(-50%, -50%) scale(.40) rotate(17deg);
     }
 
     h3 {
@@ -737,6 +746,15 @@ section {
             margin-top: 75%;
             font-weight: 300;
             margin-bottom: -50%;
+
+            .red-triangle {
+                position: absolute;
+                animation-name: infinite-rotate;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                z-index: -1;
+                top: 0;
+            }
         }
     }
 
@@ -1801,9 +1819,10 @@ section {
         text-decoration: none;
         padding: 1em;
         font-size: 2em;
+        transition: all 350ms ease-in-out;
 
         &:hover {
-            transform: scale(1.1);
+            color: $color-accent;
         }
     }
 
@@ -1816,14 +1835,6 @@ section {
         list-style: none;
         display: flex;
         padding: .5em;
-
-        li {
-            transition: 300ms ease;
-
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
     }
 
 

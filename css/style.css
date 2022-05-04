@@ -736,6 +736,34 @@ body {
             transform: rotate(360deg);
   }
 }
+@-webkit-keyframes infinite-rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+@keyframes infinite-rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
 @-webkit-keyframes opacity {
   from {
     opacity: 0;
@@ -816,8 +844,8 @@ body {
   position: relative;
   z-index: 20;
   max-width: 70%;
-  -webkit-transition: 500ms ease;
-  transition: 500ms ease;
+  -webkit-transition: 600ms ease-in-out;
+  transition: 600ms ease-in-out;
   margin-top: 5%;
   margin-left: 10%;
 }
@@ -834,9 +862,14 @@ body {
 .hero .statue-wrapper .sunglasses-wrapper {
   display: none;
 }
+.hero .statue-wrapper .momtattoo {
+  display: none;
+}
 .hero .statue-wrapper:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
 }
 .hero .statue-wrapper:hover .sunglasses-wrapper {
   display: block;
@@ -938,21 +971,9 @@ body {
   top: 66%;
   left: 32%;
   margin-left: 1.5%;
-  opacity: 0.75;
-  -webkit-transform: translate(-50%, -50%) scale(0.4) rotate(10deg);
-          transform: translate(-50%, -50%) scale(0.4) rotate(10deg);
-}
-.hero .tattoo-wrapper .momtattoo {
-  -webkit-transform: rotate(7deg);
-          transform: rotate(7deg);
-  -webkit-animation-name: mustache-rotate;
-          animation-name: mustache-rotate;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  opacity: 0.6;
+  -webkit-transform: translate(-50%, -50%) scale(0.4) rotate(17deg);
+          transform: translate(-50%, -50%) scale(0.4) rotate(17deg);
 }
 .hero h3 {
   position: fixed;
@@ -1245,6 +1266,17 @@ section {
     margin-top: 20%;
     margin-left: -3.6%;
   }
+}
+.site-main #section-2 h4 .red-triangle {
+  position: absolute;
+  -webkit-animation-name: infinite-rotate;
+          animation-name: infinite-rotate;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  z-index: -1;
+  top: 0;
 }
 .site-main #section-3 {
   position: relative;
@@ -2328,10 +2360,11 @@ section {
   text-decoration: none;
   padding: 1em;
   font-size: 2em;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
 .site-footer a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  color: #E52B50;
 }
 .site-footer .black_icon {
   color: #0a0a0a;
@@ -2343,14 +2376,6 @@ section {
   display: -ms-flexbox;
   display: flex;
   padding: 0.5em;
-}
-.site-footer ul li {
-  -webkit-transition: 300ms ease;
-  transition: 300ms ease;
-}
-.site-footer ul li:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .aboot_subpage #contact {
@@ -4047,6 +4072,8 @@ section {
   -webkit-transform: translatex(-50%) scale(1.2);
           transform: translatex(-50%) scale(1.2);
   z-index: 50;
+}
+.site-header .site-opacity {
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 2s;
