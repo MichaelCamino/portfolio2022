@@ -977,8 +977,10 @@ body {
 }
 @media (min-width: 768px) {
   .hero .tattoo-wrapper {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(0.9) rotate(19deg);
+            transform: scale(0.9) rotate(19deg);
+    left: 17%;
+    top: 59%;
   }
 }
 .hero h3 {

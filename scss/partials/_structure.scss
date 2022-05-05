@@ -435,7 +435,9 @@ body {
         transform: translate(-50%, -50%) scale(.6) rotate(19deg);
 
         @media (min-width: $breakpoint-small) {
-            transform: scale(1);
+            transform: scale(.9) rotate(19deg);
+            left: 17%;
+            top: 59%;
         }
 
     }
