@@ -972,8 +972,8 @@ body {
   left: 32%;
   margin-left: 1.5%;
   opacity: 0.6;
-  -webkit-transform: translate(-50%, -50%) scale(0.4) rotate(17deg);
-          transform: translate(-50%, -50%) scale(0.4) rotate(17deg);
+  -webkit-transform: translate(-50%, -50%) scale(1) rotate(17deg);
+          transform: translate(-50%, -50%) scale(1) rotate(17deg);
 }
 .hero h3 {
   position: fixed;
@@ -4109,15 +4109,15 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .site-header .site-nav ul li:nth-child(1) {
-  margin-right: 90px;
+  margin-right: 80px;
 }
 .site-header .site-nav ul li:nth-child(2) {
-  margin-left: 90px;
+  margin-left: 80px;
 }
 .site-header .site-nav a {
   color: whitesmoke;
