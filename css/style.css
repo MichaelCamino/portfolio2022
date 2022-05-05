@@ -969,11 +969,17 @@ body {
 .hero .tattoo-wrapper {
   position: absolute;
   top: 66%;
-  left: 32%;
+  left: 31%;
   margin-left: 1.5%;
   opacity: 0.6;
-  -webkit-transform: translate(-50%, -50%) scale(1) rotate(17deg);
-          transform: translate(-50%, -50%) scale(1) rotate(17deg);
+  -webkit-transform: translate(-50%, -50%) scale(0.6) rotate(19deg);
+          transform: translate(-50%, -50%) scale(0.6) rotate(19deg);
+}
+@media (min-width: 768px) {
+  .hero .tattoo-wrapper {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 .hero h3 {
   position: fixed;

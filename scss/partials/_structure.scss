@@ -429,10 +429,15 @@ body {
     .tattoo-wrapper {
         position: absolute;
         top: 66%;
-        left: 32%;
+        left: 31%;
         margin-left: 1.5%;
         opacity: .6;
-        transform: translate(-50%, -50%) scale(1) rotate(17deg);
+        transform: translate(-50%, -50%) scale(.6) rotate(19deg);
+
+        @media (min-width: $breakpoint-small) {
+            transform: scale(1);
+        }
+
     }
 
     h3 {
