@@ -30,6 +30,23 @@
     z-index: 50;
   }
 
+  .logo-red {
+    display: block;
+
+    @media (min-width: $breakpoint-small) {
+      display: none;
+    }
+  }
+
+  .logo-black {
+    display: none;
+
+    @media (min-width: $breakpoint-small) {
+      display: block;
+    }
+
+  }
+
   .site-opacity {
     animation-name: opacity;
     animation-duration: 2s;

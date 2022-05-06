@@ -793,7 +793,7 @@ body {
 }
 .hero .lottie {
   position: fixed;
-  left: 50%;
+  left: 41%;
   z-index: -1;
   -webkit-transform: translate(-50%) scale(3);
           transform: translate(-50%) scale(3);
@@ -826,8 +826,8 @@ body {
 }
 @media (min-width: 768px) {
   .hero #scrolling {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
     margin-right: 0;
     bottom: 0;
     display: block;
@@ -1255,6 +1255,7 @@ section {
 }
 .site-main #section-2 h3 span {
   color: #E52B50;
+  font-weight: 500;
 }
 .site-main #section-2 h4 {
   color: whitesmoke;
@@ -1301,8 +1302,13 @@ section {
 }
 @media (min-width: 768px) {
   .site-main #section-3 .lower {
-    margin-top: 70%;
+    margin-top: 0;
+    padding-bottom: 10%;
   }
+}
+.site-main #section-3 .lottie {
+  margin-top: -12%;
+  margin-left: 2%;
 }
 .site-main #section-3 .light {
   display: block;
@@ -1315,22 +1321,27 @@ section {
 }
 .site-main #section-3 .design-work {
   margin-right: 22%;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .site-main #section-3 .design-work {
-    margin-right: 16%;
+    margin-right: 14%;
+    margin-bottom: 0;
   }
 }
 .site-main #section-3 .video-work {
   margin-right: 28%;
+  font-weight: 300;
 }
 @media (min-width: 768px) {
   .site-main #section-3 .video-work {
-    margin-right: 24%;
+    margin-right: 23%;
   }
 }
 .site-main #section-3 .web-work {
   margin-right: 35%;
+  margin-bottom: 0;
+  font-weight: 300;
 }
 .site-main #section-3 .dark {
   display: none;
@@ -1338,7 +1349,7 @@ section {
 @media (min-width: 768px) {
   .site-main #section-3 .dark {
     display: block;
-    margin-left: 0%;
+    margin-right: -5%;
   }
 }
 .site-main #section-3 #camera {
@@ -1379,7 +1390,33 @@ section {
   .site-main #section-3 .design {
     margin-bottom: -6%;
     margin-top: 0;
+    margin-left: 5%;
   }
+}
+.site-main #section-3 .lottie.design {
+  margin-top: -7%;
+  padding-bottom: 10%;
+}
+@media (min-width: 768px) {
+  .site-main #section-3 .lottie.design {
+    margin-top: 0;
+  }
+}
+.site-main #section-3 .lottie.light {
+  margin-top: -7%;
+  padding-bottom: 10%;
+}
+@media (min-width: 768px) {
+  .site-main #section-3 .lottie.light {
+    margin-top: 0;
+  }
+}
+.site-main #section-3 .lottie.video {
+  margin-top: -9%;
+  padding-bottom: 10%;
+  max-width: 80%;
+  margin: auto;
+  margin-top: -9%;
 }
 .site-main #section-3 .up {
   margin-right: 15%;
@@ -2817,6 +2854,9 @@ section {
     margin-left: 30px;
   }
 }
+.amman_subpage #logo ol {
+  margin-left: 4%;
+}
 .amman_subpage #process {
   background-color: #0a0a0a;
 }
@@ -3574,6 +3614,7 @@ section {
   .crimecast_subpage #section-2 #silver {
     margin-top: 0;
     margin-bottom: 8%;
+    margin-left: -2%;
   }
 }
 .crimecast_subpage #section-2 #silver h2 {
@@ -4081,6 +4122,22 @@ section {
           transform: translatex(-50%) scale(1.2);
   z-index: 50;
 }
+.site-header .logo-red {
+  display: block;
+}
+@media (min-width: 768px) {
+  .site-header .logo-red {
+    display: none;
+  }
+}
+.site-header .logo-black {
+  display: none;
+}
+@media (min-width: 768px) {
+  .site-header .logo-black {
+    display: block;
+  }
+}
 .site-header .site-opacity {
   -webkit-animation-name: opacity;
           animation-name: opacity;
@@ -4467,28 +4524,28 @@ section {
 }
 .animate-drop-in-with-delay-michael *:nth-child(4),
 [data-sectionstate=inactive] .animate-drop-in-with-delay-michael *:nth-child(4) {
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
+  -webkit-transition-delay: 1.6s;
+          transition-delay: 1.6s;
 }
 .animate-drop-in-with-delay-michael *:nth-child(5),
 [data-sectionstate=inactive] .animate-drop-in-with-delay-michael *:nth-child(5) {
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: 1.8s;
+          transition-delay: 1.8s;
 }
 .animate-drop-in-with-delay-michael *:nth-child(6),
 [data-sectionstate=inactive] .animate-drop-in-with-delay-michael *:nth-child(6) {
-  -webkit-transition-delay: 1.2s;
-          transition-delay: 1.2s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
 }
 .animate-drop-in-with-delay-michael *:nth-child(7),
 [data-sectionstate=inactive] .animate-drop-in-with-delay-michael *:nth-child(7) {
-  -webkit-transition-delay: 1.4s;
-          transition-delay: 1.4s;
+  -webkit-transition-delay: 2.2s;
+          transition-delay: 2.2s;
 }
 .animate-drop-in-with-delay-michael *:nth-child(8),
 [data-sectionstate=inactive] .animate-drop-in-with-delay-michael *:nth-child(8) {
-  -webkit-transition-delay: 1.6s;
-          transition-delay: 1.6s;
+  -webkit-transition-delay: 2.4s;
+          transition-delay: 2.4s;
 }
 
 [data-sectionstate=active] .animate-drop-in-with-delay-michael * {
