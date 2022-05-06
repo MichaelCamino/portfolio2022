@@ -1681,10 +1681,12 @@ section {
 }
 .site-main #video img {
   margin-top: 5%;
+  display: block;
 }
 @media (min-width: 768px) {
   .site-main #video img {
     margin-top: 0;
+    display: none;
   }
 }
 .site-main #video video {
