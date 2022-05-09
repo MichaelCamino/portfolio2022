@@ -27,3 +27,13 @@ lottie.loadAnimation({
     autoplay: true,
     path: 'js/portfolio_cog_animation/data.json' // the path to the animation json
 });
+
+// BIO ANIMATION
+
+lottie.loadAnimation({
+    container: bio, // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'js/portfolio_bio_animation/data.json' // the path to the animation json
+});

@@ -1046,14 +1046,33 @@ section {
   }
 }
 .site-main #section-1 #cog {
+  right: 60%;
+  top: -10%;
   position: absolute;
   z-index: -1;
-  left: -40%;
-  top: -800%;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+@media (min-width: 768px) {
+  .site-main #section-1 #cog {
+    left: 15%;
+    top: -400%;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+}
+.site-main #section-1 #bio {
+  display: none;
+}
+@media (min-width: 768px) {
+  .site-main #section-1 #bio {
+    margin-left: -3%;
+    margin-top: -37%;
+    max-width: 80%;
+    display: block;
+  }
 }
 .site-main #section-1 h1 {
   color: whitesmoke;
@@ -1062,14 +1081,15 @@ section {
   font-size: 6.9em;
   margin-bottom: 0;
   line-height: 0.2;
-  margin-left: 0;
+  margin-right: 0;
+  left: 0;
   position: relative;
 }
 @media (min-width: 768px) {
   .site-main #section-1 h1 {
     font-size: 8em;
     text-align: right;
-    margin-left: 2%;
+    margin-right: -32%;
     line-height: 0.2;
   }
 }
@@ -1096,7 +1116,7 @@ section {
   .site-main #section-1 h2 {
     font-size: 7em;
     text-align: right;
-    margin-left: 1%;
+    margin-right: -2%;
     margin-top: 0;
   }
 }
@@ -1119,10 +1139,7 @@ section {
   line-height: 1;
   padding: 0;
   font-size: 2.2em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: block;
 }
 @media (min-width: 768px) {
   .site-main #section-1 h4 {
@@ -1133,6 +1150,7 @@ section {
     font-weight: 300;
     margin-top: 0;
     margin-left: -3%;
+    display: none;
   }
 }
 .site-main #section-1 h4 span {
@@ -1312,7 +1330,7 @@ section {
 }
 .site-main #section-3 .light {
   display: block;
-  margin-left: 9%;
+  margin-left: 7%;
 }
 @media (min-width: 768px) {
   .site-main #section-3 .light {
@@ -1384,7 +1402,7 @@ section {
 .site-main #section-3 .design {
   margin-top: 5%;
   margin-bottom: 5%;
-  margin-left: 9%;
+  margin-left: 6%;
 }
 @media (min-width: 768px) {
   .site-main #section-3 .design {
@@ -1689,11 +1707,11 @@ section {
     display: none;
   }
 }
-.site-main #video video {
+.site-main #video .gif {
   display: none;
 }
 @media (min-width: 768px) {
-  .site-main #video video {
+  .site-main #video .gif {
     display: block;
   }
 }
@@ -3938,6 +3956,9 @@ section {
   .extras_subpage #extras .yellow_arrow img {
     display: none;
   }
+}
+.extras_subpage #extras .row {
+  padding-bottom: 15%;
 }
 .extras_subpage #extras iframe {
   max-width: 100%;
