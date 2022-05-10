@@ -305,9 +305,9 @@ body {
 
         position: relative;
         z-index: 20;
-        max-width: 70%;
+        max-width: 80%;
         transition: 600ms ease-in-out;
-        margin-top: 5%;
+        margin-top: 0;
         margin-left: 10%;
 
         @media (min-width:$breakpoint-small) {

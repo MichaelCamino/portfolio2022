@@ -227,3 +227,32 @@ button {
 .mylink a:hover {
     opacity: 1
 }
+
+.previous {
+    color: rgb(245, 245, 245);
+    font-family: $font-family-sans;
+    font-weight: 100;
+    font-size: 20px;
+    position: absolute;
+    bottom: -24%;
+    left: 3.5%;
+
+    @media (min-width: $breakpoint-small) {
+        display: none;
+    }
+}
+
+.next {
+    color: rgb(245, 245, 245);
+    font-family: $font-family-sans;
+    font-weight: 100;
+    font-size: 20px;
+    position: absolute;
+    bottom: -24%;
+    right: 11%;
+    display: block;
+
+    @media (min-width: $breakpoint-small) {
+        display: none;
+    }
+}
