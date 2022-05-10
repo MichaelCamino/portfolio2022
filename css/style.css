@@ -1121,11 +1121,11 @@ body {
 .hero .statue-wrapper {
   position: relative;
   z-index: 20;
-  max-width: 80%;
+  max-width: 90%;
   -webkit-transition: 600ms ease-in-out;
   transition: 600ms ease-in-out;
   margin-top: 0;
-  margin-left: 10%;
+  margin-left: 0;
 }
 @media (min-width: 768px) {
   .hero .statue-wrapper {
