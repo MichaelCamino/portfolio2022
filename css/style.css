@@ -1187,7 +1187,7 @@ body {
 }
 .hero .statue-wrapper .lightning-one {
   position: absolute;
-  top: -10%;
+  top: 0;
   left: -10%;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1198,9 +1198,14 @@ body {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
+@media (min-width: 768px) {
+  .hero .statue-wrapper .lightning-one {
+    top: -10%;
+  }
+}
 .hero .statue-wrapper .lightning-two {
   position: absolute;
-  top: -10%;
+  top: 0;
   right: -10%;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1210,6 +1215,11 @@ body {
           animation-duration: 0.2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+@media (min-width: 768px) {
+  .hero .statue-wrapper .lightning-two {
+    top: -10%;
+  }
 }
 .hero .statue-wrapper .lightning-three {
   position: absolute;
@@ -1227,7 +1237,7 @@ body {
 .hero .statue-wrapper .lightning-four {
   position: absolute;
   bottom: -10%;
-  right: -10%;
+  right: -5%;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-animation-name: right-finger-lightning;
@@ -1236,6 +1246,11 @@ body {
           animation-duration: 0.2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+@media (min-width: 768px) {
+  .hero .statue-wrapper .lightning-four {
+    right: -10%;
+  }
 }
 .hero .sunglasses-wrapper {
   position: absolute;

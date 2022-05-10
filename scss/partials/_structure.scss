@@ -376,24 +376,32 @@ body {
 
         .lightning-one {
             position: absolute;
-            top: -10%;
+            top: 0;
             left: -10%;
 
             transform: scale(1);
             animation-name: left-finger-lightning;
             animation-duration: .2s;
             animation-iteration-count: infinite;
+
+            @media (min-width: $breakpoint-small) {
+                top: -10%;
+            }
         }
 
         .lightning-two {
             position: absolute;
-            top: -10%;
+            top: 0;
             right: -10%;
 
             transform: scale(1);
             animation-name: right-finger-lightning;
             animation-duration: .2s;
             animation-iteration-count: infinite;
+
+            @media (min-width: $breakpoint-small) {
+                top: -10%;
+            }
         }
 
         .lightning-three {
@@ -410,11 +418,15 @@ body {
         .lightning-four {
             position: absolute;
             bottom: -10%;
-            right: -10%;
+            right: -5%;
             transform: scale(1);
             animation-name: right-finger-lightning;
             animation-duration: .2s;
             animation-iteration-count: infinite;
+
+            @media (min-width: $breakpoint-small) {
+                right: -10%;
+            }
         }
     }
 
