@@ -115,12 +115,12 @@ button {
 }
 
 .round .content:hover .title {
-    transform: translate(75px, -50%);
+    transform: translate(-50%, 90px);
     opacity: 1;
 }
 
 .round .content.reversed:hover .title {
-    transform: translate(-150px, -50%);
+    transform: translate(-50%, 90px);
 }
 
 .round .content:before {
