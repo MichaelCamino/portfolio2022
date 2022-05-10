@@ -1121,7 +1121,7 @@ body {
 .hero .statue-wrapper {
   position: relative;
   z-index: 20;
-  max-width: 82%;
+  max-width: 83%;
   -webkit-transition: 600ms ease-in-out;
   transition: 600ms ease-in-out;
   margin-top: -10%;
@@ -1130,7 +1130,7 @@ body {
 @media (min-width: 768px) {
   .hero .statue-wrapper {
     margin-top: 20%;
-    max-width: 100%;
+    max-width: 95%;
     margin-left: auto;
   }
 }
@@ -1270,10 +1270,10 @@ body {
 }
 @media (min-width: 768px) {
   .hero .tattoo-wrapper {
-    -webkit-transform: scale(0.9) rotate(19deg);
-            transform: scale(0.9) rotate(19deg);
-    left: 17%;
-    top: 59%;
+    -webkit-transform: scale(0.7) rotate(21deg);
+            transform: scale(0.7) rotate(21deg);
+    left: 15%;
+    top: 57%;
   }
 }
 .hero h3 {
@@ -1507,6 +1507,9 @@ section {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0a0a0a), color-stop(50%, whitesmoke));
     background: linear-gradient(90deg, #0a0a0a 50%, whitesmoke 50%);
   }
+}
+.site-main #section-2 #heroanimation {
+  position: absolute;
 }
 @media (min-width: 768px) {
   .site-main #section-2 #camera {

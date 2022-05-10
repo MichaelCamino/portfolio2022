@@ -305,14 +305,14 @@ body {
 
         position: relative;
         z-index: 20;
-        max-width: 82%;
+        max-width: 83%;
         transition: 600ms ease-in-out;
         margin-top: -10%;
         margin-left: 5%;
 
         @media (min-width:$breakpoint-small) {
             margin-top: 20%;
-            max-width: 100%;
+            max-width: 95%;
             margin-left: auto;
         }
 
@@ -447,9 +447,9 @@ body {
         transform: translate(-50%, -50%) scale(.6) rotate(19deg);
 
         @media (min-width: $breakpoint-small) {
-            transform: scale(.9) rotate(19deg);
-            left: 17%;
-            top: 59%;
+            transform: scale(.7) rotate(21deg);
+            left: 15%;
+            top: 57%;
         }
 
     }
@@ -701,6 +701,10 @@ section {
 
         @media (min-width: $breakpoint-small) {
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
+        }
+
+        #heroanimation {
+            position: absolute;
         }
 
         #camera {

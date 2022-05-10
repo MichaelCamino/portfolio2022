@@ -53,3 +53,7 @@ for (let i = 0, len = slideBox.length; i < len; i++) {
 
 };
 
+// FLIP ANIMATION
+
+
+
