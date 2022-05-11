@@ -2977,7 +2977,7 @@ section {
         }
     }
 
-    #process {
+    .process {
         background-color: rgb(10, 10, 10);
 
         @media (min-width: $breakpoint-small) {
@@ -2985,7 +2985,17 @@ section {
             background: linear-gradient(90deg, rgb(10, 10, 10) 50%, rgb(245, 245, 245) 50%);
         }
 
+        h2 {
+            color: rgb(245, 245, 245);
+            font-family: $font-family-serif;
+            font-weight: 100;
+            text-align: left;
+            margin-right: 10%;
 
+            @media (min-width: $breakpoint-small) {
+                text-align: right;
+            }
+        }
 
         .yellow_arrow {
             position: fixed;
@@ -3006,17 +3016,7 @@ section {
             }
         }
 
-        h2 {
-            color: rgb(245, 245, 245);
-            font-family: $font-family-serif;
-            font-weight: 100;
-            text-align: left;
-            margin-right: 10%;
 
-            @media (min-width: $breakpoint-small) {
-                text-align: right;
-            }
-        }
 
         .left {
             p {
@@ -3036,10 +3036,12 @@ section {
             p {
                 color: rgb(245, 245, 245);
                 margin-left: 0;
+                text-align: center;
 
                 @media (min-width: $breakpoint-small) {
                     margin-left: 7%;
                     color: rgb(10, 10, 10);
+                    text-align: left;
                 }
             }
 
@@ -3047,11 +3049,12 @@ section {
                 color: $color-accent;
                 font-family: $font-family-sans;
                 font-weight: 300;
-                text-align: left;
+                text-align: center;
                 margin-left: 0;
 
                 @media (min-width: $breakpoint-small) {
                     margin-left: 7%;
+                    text-align: left;
                 }
             }
 
@@ -3100,6 +3103,103 @@ section {
             }
         }
     }
+
+    .more {
+        h1 {
+            color: rgb(245, 245, 245);
+            text-align: right;
+            font-size: 6em;
+            margin-right: -2%;
+        }
+
+        h3 {
+            font-size: 4em;
+            font-weight: 100;
+            margin-left: -4.3%;
+            margin-top: 24%;
+            color: rgb(245, 245, 245);
+
+            span {
+                color: $color-accent;
+            }
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+            }
+        }
+
+        h4 {
+            color: $color-accent;
+            text-align: left;
+            font-family: $font-family-sans;
+            font-weight: 100;
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 7%;
+            }
+        }
+
+        p {
+            margin-left: 0;
+            color: rgb(245, 245, 245);
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: 7%;
+                color: rgb(10, 10, 10);
+            }
+        }
+
+        .left {
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                margin-left: -7%;
+            }
+        }
+
+    }
+
+    .lofi {
+        margin-right: -5%;
+
+        @media (min-width: $breakpoint-small) {
+            margin-left: 5%;
+        }
+    }
+
+    #white {
+        color: rgb(245, 245, 245);
+    }
+
+    .pad {
+        padding: 6em 0;
+    }
+
+    .abs {
+
+        text-align: left;
+        background-color: rgb(10, 10, 10);
+        margin-bottom: 5%;
+        margin-top: 10%;
+
+
+
+
+
+        h4 {
+
+            font-family: $font-family-sans;
+            font-weight: 100;
+            color: $color-accent;
+        }
+
+        p {
+            color: rgb(245, 245, 245);
+        }
+    }
+
+
 }
 
 // TOOLS OF THE TIRADE SUBPAGE

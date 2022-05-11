@@ -3645,17 +3645,29 @@ section {
     display: none;
   }
 }
-.EPdesign_subpage #process {
+.EPdesign_subpage .process {
   background-color: #0a0a0a;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process {
+  .EPdesign_subpage .process {
     padding-top: 0;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0a0a0a), color-stop(50%, whitesmoke));
     background: linear-gradient(90deg, #0a0a0a 50%, whitesmoke 50%);
   }
 }
-.EPdesign_subpage #process .yellow_arrow {
+.EPdesign_subpage .process h2 {
+  color: whitesmoke;
+  font-family: ivypresto-display, serif;
+  font-weight: 100;
+  text-align: left;
+  margin-right: 10%;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage .process h2 {
+    text-align: right;
+  }
+}
+.EPdesign_subpage .process .yellow_arrow {
   position: fixed;
   left: 50%;
   -webkit-transform: translatex(-50%);
@@ -3664,11 +3676,11 @@ section {
   display: none;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process .yellow_arrow {
+  .EPdesign_subpage .process .yellow_arrow {
     display: block;
   }
 }
-.EPdesign_subpage #process .yellow_arrow img {
+.EPdesign_subpage .process .yellow_arrow img {
   -webkit-animation-name: arrow-scale;
           animation-name: arrow-scale;
   -webkit-animation-duration: 2s;
@@ -3676,91 +3688,161 @@ section {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-.EPdesign_subpage #process h2 {
-  color: whitesmoke;
-  font-family: ivypresto-display, serif;
-  font-weight: 100;
-  text-align: left;
-  margin-right: 10%;
-}
-@media (min-width: 768px) {
-  .EPdesign_subpage #process h2 {
-    text-align: right;
-  }
-}
-.EPdesign_subpage #process .left p {
+.EPdesign_subpage .process .left p {
   color: whitesmoke;
   max-width: 90%;
 }
-.EPdesign_subpage #process .left h4 {
+.EPdesign_subpage .process .left h4 {
   color: #E52B50;
   font-family: calmetta, sans-serif;
   font-weight: 300;
   text-align: left;
 }
-.EPdesign_subpage #process .right p {
+.EPdesign_subpage .process .right p {
   color: whitesmoke;
   margin-left: 0;
+  text-align: center;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process .right p {
+  .EPdesign_subpage .process .right p {
     margin-left: 7%;
     color: #0a0a0a;
+    text-align: left;
   }
 }
-.EPdesign_subpage #process .right h4 {
+.EPdesign_subpage .process .right h4 {
   color: #E52B50;
   font-family: calmetta, sans-serif;
   font-weight: 300;
-  text-align: left;
+  text-align: center;
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process .right h4 {
+  .EPdesign_subpage .process .right h4 {
     margin-left: 7%;
+    text-align: left;
   }
 }
-.EPdesign_subpage #process .pattern {
+.EPdesign_subpage .process .pattern {
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process .pattern {
+  .EPdesign_subpage .process .pattern {
     margin-left: 5%;
   }
 }
-.EPdesign_subpage #process .black {
+.EPdesign_subpage .process .black {
   margin-right: 0;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process .black {
+  .EPdesign_subpage .process .black {
     color: #0a0a0a;
     margin-left: 7%;
     text-align: left;
   }
 }
-.EPdesign_subpage #process .matchbox {
+.EPdesign_subpage .process .matchbox {
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process .matchbox {
+  .EPdesign_subpage .process .matchbox {
     margin-left: -7%;
   }
 }
-.EPdesign_subpage #process .stamp {
+.EPdesign_subpage .process .stamp {
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process .stamp {
+  .EPdesign_subpage .process .stamp {
     margin-left: 4.5%;
   }
 }
-.EPdesign_subpage #process .menu {
+.EPdesign_subpage .process .menu {
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #process .menu {
+  .EPdesign_subpage .process .menu {
     margin-left: -7%;
   }
+}
+.EPdesign_subpage .more h1 {
+  color: whitesmoke;
+  text-align: right;
+  font-size: 6em;
+  margin-right: -2%;
+}
+.EPdesign_subpage .more h3 {
+  font-size: 4em;
+  font-weight: 100;
+  margin-left: -4.3%;
+  margin-top: 24%;
+  color: whitesmoke;
+}
+.EPdesign_subpage .more h3 span {
+  color: #E52B50;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage .more h3 {
+    color: #0a0a0a;
+  }
+}
+.EPdesign_subpage .more h4 {
+  color: #E52B50;
+  text-align: left;
+  font-family: calmetta, sans-serif;
+  font-weight: 100;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage .more h4 {
+    margin-left: 7%;
+  }
+}
+.EPdesign_subpage .more p {
+  margin-left: 0;
+  color: whitesmoke;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage .more p {
+    margin-left: 7%;
+    color: #0a0a0a;
+  }
+}
+.EPdesign_subpage .more .left {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage .more .left {
+    margin-left: -7%;
+  }
+}
+.EPdesign_subpage .lofi {
+  margin-right: -5%;
+}
+@media (min-width: 768px) {
+  .EPdesign_subpage .lofi {
+    margin-left: 5%;
+  }
+}
+.EPdesign_subpage #white {
+  color: whitesmoke;
+}
+.EPdesign_subpage .pad {
+  padding: 6em 0;
+}
+.EPdesign_subpage .abs {
+  text-align: left;
+  background-color: #0a0a0a;
+  margin-bottom: 5%;
+  margin-top: 10%;
+}
+.EPdesign_subpage .abs h4 {
+  font-family: calmetta, sans-serif;
+  font-weight: 100;
+  color: #E52B50;
+}
+.EPdesign_subpage .abs p {
+  color: whitesmoke;
 }
 
 .tott_subpage #section-1 {
