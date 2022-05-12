@@ -742,6 +742,34 @@ body {
             transform: translate(0, 0);
   }
 }
+@-webkit-keyframes right-moving-small {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-20px, 0);
+            transform: translate(-20px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@keyframes right-moving-small {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-20px, 0);
+            transform: translate(-20px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
 @-webkit-keyframes right-moving {
   0% {
     -webkit-transform: translate(0, 0);
@@ -1362,7 +1390,7 @@ section {
 @media (min-width: 768px) {
   .site-main #section-1 #bio {
     margin-left: -3%;
-    margin-top: -33%;
+    margin-top: -32%;
     max-width: 80%;
     display: block;
   }
@@ -1416,11 +1444,6 @@ section {
 .site-main #section-1 .right {
   margin-top: 0;
 }
-@media (min-width: 768px) {
-  .site-main #section-1 .right {
-    margin-top: 34%;
-  }
-}
 .site-main #section-1 h4 {
   font-family: calmetta, sans-serif;
   color: whitesmoke;
@@ -1454,21 +1477,26 @@ section {
 .site-main #section-1 .button {
   border: 1px solid whitesmoke;
   font-family: calmetta, sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   letter-spacing: 3px;
   font-size: 0.9em;
   color: whitesmoke;
   overflow: hidden;
   position: relative;
   padding-top: 16px;
-  margin-left: 0;
+  margin-left: 60%;
+  text-align: right;
+  margin-top: 13%;
 }
 @media (min-width: 768px) {
   .site-main #section-1 .button {
     color: #0a0a0a;
-    border: 1px solid #0a0a0a;
+    border: 2px solid #0a0a0a;
     font-size: 0.6em;
     padding-top: 15px;
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+    margin-left: -1%;
   }
 }
 .site-main #section-1 .button:hover {
@@ -3722,6 +3750,95 @@ section {
     margin-left: 7%;
     text-align: left;
   }
+}
+.EPdesign_subpage .process .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right;
+  place-content: center;
+}
+.EPdesign_subpage .process .btn img {
+  display: none;
+}
+@media (min-width: 1050px) {
+  .EPdesign_subpage .process .btn img {
+    display: block;
+    margin: 5%;
+  }
+}
+.EPdesign_subpage .process .btn .lefty {
+  -webkit-animation: left-moving-small;
+          animation: left-moving-small;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.EPdesign_subpage .process .btn .righty {
+  -webkit-animation: right-moving-small;
+          animation: right-moving-small;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.EPdesign_subpage .process .btn .button {
+  border: 1px solid whitesmoke;
+  font-family: calmetta, sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 0.9em;
+  color: whitesmoke;
+  overflow: hidden;
+  position: relative;
+  padding-top: 16px;
+  margin-left: 0;
+  z-index: 2;
+}
+@media (min-width: 1050px) {
+  .EPdesign_subpage .process .btn .button {
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    font-size: 0.6em;
+    padding-top: 15px;
+    margin-right: 0;
+    margin-bottom: 16%;
+    -webkit-animation-name: image-scale;
+            animation-name: image-scale;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+}
+.EPdesign_subpage .process .btn .button:hover {
+  color: #0a0a0a;
+}
+.EPdesign_subpage .process .btn .button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 190%;
+  width: 100%;
+  background-color: whitesmoke;
+  -webkit-transform: translatey(4em);
+          transform: translatey(4em);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.EPdesign_subpage .process .btn .button:hover::after {
+  -webkit-transform: translatey(0);
+          transform: translatey(0);
+}
+.EPdesign_subpage .process .btn .button a {
+  text-decoration: none;
+  z-index: 2;
+}
+.EPdesign_subpage .process .marge {
+  margin-top: 15%;
 }
 .EPdesign_subpage .process .pattern {
   margin-left: 0;

@@ -83,6 +83,20 @@ body {
     }
 }
 
+@keyframes right-moving-small {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-20px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
 @keyframes right-moving {
     0% {
         transform: translate(0, 0);
@@ -535,7 +549,7 @@ section {
 
             @media (min-width: $breakpoint-small) {
                 margin-left: -3%;
-                margin-top: -33%;
+                margin-top: -32%;
                 max-width: 80%;
                 display: block;
             }
@@ -607,10 +621,6 @@ section {
 
         .right {
             margin-top: 0;
-
-            @media (min-width: $breakpoint-small) {
-                margin-top: 34%;
-            }
         }
 
         h4 {
@@ -648,20 +658,24 @@ section {
         .button {
             border: 1px solid rgb(245, 245, 245);
             font-family: $font-family-sans;
-            font-weight: 300;
+            font-weight: 700;
             letter-spacing: 3px;
             font-size: .9em;
             color: rgb(245, 245, 245);
             overflow: hidden;
             position: relative;
             padding-top: 16px;
-            margin-left: 0;
+            margin-left: 60%;
+            text-align: right;
+            margin-top: 13%;
 
             @media (min-width: $breakpoint-small) {
                 color: rgb(10, 10, 10);
-                border: 1px solid rgb(10, 10, 10);
+                border: 2px solid rgb(10, 10, 10);
                 font-size: .6em;
                 padding-top: 15px;
+                transition: 300ms ease;
+                margin-left: -1%;
             }
 
             &:hover {
@@ -2869,6 +2883,8 @@ section {
         }
 
 
+
+
         .logo {
             max-width: 60%;
             margin-top: 15%;
@@ -3060,6 +3076,90 @@ section {
 
         }
 
+        .btn {
+            display: flex;
+            text-align: right;
+            place-content: center;
+
+            img {
+                display: none;
+
+                @media (min-width: $breakpoint-medium) {
+                    display: block;
+                    margin: 5%;
+                }
+            }
+
+            .lefty {
+                animation: left-moving-small;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            .righty {
+                animation: right-moving-small;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+
+            .button {
+                border: 1px solid rgb(245, 245, 245);
+                font-family: $font-family-sans;
+                font-weight: 500;
+                letter-spacing: 3px;
+                font-size: .9em;
+                color: rgb(245, 245, 245);
+                overflow: hidden;
+                position: relative;
+                padding-top: 16px;
+                margin-left: 0;
+                z-index: 2;
+
+                @media (min-width: $breakpoint-medium) {
+                    color: rgb(245, 245, 245);
+                    border: 1px solid rgb(245, 245, 245);
+                    font-size: .6em;
+                    padding-top: 15px;
+                    margin-right: 0;
+                    margin-bottom: 16%;
+                    animation-name: image-scale;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                }
+
+                &:hover {
+                    color: rgb(10, 10, 10);
+
+                }
+
+                &::after {
+                    content: "";
+                    z-index: -1;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 190%;
+                    width: 100%;
+                    background-color: rgb(245, 245, 245);
+                    transform: translatey(4em);
+                    transition: 300ms ease;
+                }
+
+                &:hover::after {
+                    transform: translatey(0);
+                }
+
+                a {
+                    text-decoration: none;
+                    z-index: 2;
+                }
+            }
+        }
+
+        .marge {
+            margin-top: 15%;
+        }
 
         .pattern {
             margin-left: 0;
