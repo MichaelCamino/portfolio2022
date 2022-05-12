@@ -546,10 +546,11 @@ section {
 
         #bio {
             display: none;
+            margin-top: -32%;
 
             @media (min-width: $breakpoint-small) {
                 margin-left: -3%;
-                margin-top: -32%;
+                margin-top: 55%;
                 max-width: 80%;
                 display: block;
             }
@@ -671,11 +672,13 @@ section {
 
             @media (min-width: $breakpoint-small) {
                 color: rgb(10, 10, 10);
-                border: 2px solid rgb(10, 10, 10);
-                font-size: .6em;
-                padding-top: 15px;
+                border: 1px solid rgb(10, 10, 10);
+                font-size: .8em;
+                padding-top: 16px;
                 transition: 300ms ease;
                 margin-left: -1%;
+                font-weight: 900;
+                margin-top: 4%;
             }
 
             &:hover {
