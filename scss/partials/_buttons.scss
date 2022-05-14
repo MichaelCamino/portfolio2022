@@ -184,19 +184,26 @@ button {
 }
 
 .round .title {
-    font-family: $font-family-sans;
-    font-weight: 100;
-    font-size: 20px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform ease-out .5s,
-        opacity ease-out .5s;
-    opacity: 0;
-    z-index: 3;
-    color: rgb(245, 245, 245);
-    text-align: center;
+    display: none;
+
+    @media (min-width: $breakpoint-small) {
+        font-family: $font-family-sans;
+        font-weight: 100;
+        font-size: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform ease-out .5s,
+            opacity ease-out .5s;
+        opacity: 0;
+        z-index: 3;
+        color: rgb(245, 245, 245);
+        text-align: center;
+        display: block;
+    }
+
+
 }
 
 .round .reversed .title {

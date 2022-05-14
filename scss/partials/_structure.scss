@@ -2354,6 +2354,14 @@ section {
             }
         }
 
+        li {
+            color: rgb(245, 245, 245);
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+            }
+        }
+
 
     }
 
@@ -2382,6 +2390,8 @@ section {
 
             }
         }
+
+
 
         h2 {
             @media (min-width: $breakpoint-small) {
@@ -2499,8 +2509,15 @@ section {
             }
         }
 
-        ol {
-            margin-left: 4%;
+        ol,
+        li {
+            color: rgb(245, 245, 245);
+            margin-left: 0;
+
+            @media (min-width: $breakpoint-small) {
+                color: rgb(10, 10, 10);
+                margin-left: 4%;
+            }
         }
 
 
@@ -3528,7 +3545,7 @@ section {
                 font-family: $font-family-sans;
                 font-weight: 100;
                 font-size: 1.8em;
-                margin-top: 6%;
+                margin-top: 3%;
                 font-weight: 100;
                 line-height: 1;
 

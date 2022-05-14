@@ -369,22 +369,28 @@ button {
 }
 
 .round .title {
-  font-family: calmetta, sans-serif;
-  font-weight: 100;
-  font-size: 20px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: opacity ease-out 0.5s, -webkit-transform ease-out 0.5s;
-  transition: opacity ease-out 0.5s, -webkit-transform ease-out 0.5s;
-  transition: transform ease-out 0.5s, opacity ease-out 0.5s;
-  transition: transform ease-out 0.5s, opacity ease-out 0.5s, -webkit-transform ease-out 0.5s;
-  opacity: 0;
-  z-index: 3;
-  color: whitesmoke;
-  text-align: center;
+  display: none;
+}
+@media (min-width: 768px) {
+  .round .title {
+    font-family: calmetta, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: opacity ease-out 0.5s, -webkit-transform ease-out 0.5s;
+    transition: opacity ease-out 0.5s, -webkit-transform ease-out 0.5s;
+    transition: transform ease-out 0.5s, opacity ease-out 0.5s;
+    transition: transform ease-out 0.5s, opacity ease-out 0.5s, -webkit-transform ease-out 0.5s;
+    opacity: 0;
+    z-index: 3;
+    color: whitesmoke;
+    text-align: center;
+    display: block;
+  }
 }
 
 .round .reversed .title {
@@ -3062,6 +3068,14 @@ section {
     margin-left: 30px;
   }
 }
+.sharkseek_subpage #mockup li {
+  color: whitesmoke;
+}
+@media (min-width: 768px) {
+  .sharkseek_subpage #mockup li {
+    color: #0a0a0a;
+  }
+}
 .sharkseek_subpage #demo {
   background-color: #0a0a0a;
 }
@@ -3201,8 +3215,17 @@ section {
     margin-left: 30px;
   }
 }
-.amman_subpage #logo ol {
-  margin-left: 4%;
+.amman_subpage #logo ol,
+.amman_subpage #logo li {
+  color: whitesmoke;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .amman_subpage #logo ol,
+.amman_subpage #logo li {
+    color: #0a0a0a;
+    margin-left: 4%;
+  }
 }
 .amman_subpage #process {
   background-color: #0a0a0a;
@@ -4173,7 +4196,7 @@ section {
   font-family: calmetta, sans-serif;
   font-weight: 100;
   font-size: 1.8em;
-  margin-top: 6%;
+  margin-top: 3%;
   font-weight: 100;
   line-height: 1;
 }
