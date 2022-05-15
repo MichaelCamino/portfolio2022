@@ -4024,26 +4024,6 @@ section {
     height: 630px;
   }
 }
-.tott_subpage #section-1 .yellow_arrow {
-  position: fixed;
-  bottom: 1%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-}
-.tott_subpage #section-1 .yellow_arrow img {
-  -webkit-animation-name: arrow-scale;
-          animation-name: arrow-scale;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-@media (max-width: 768px) {
-  .tott_subpage #section-1 .yellow_arrow img {
-    display: none;
-  }
-}
 .tott_subpage #section-2 {
   background-color: #0a0a0a;
 }
@@ -4064,6 +4044,26 @@ section {
   font-weight: bold;
   width: 1em;
   margin-left: -1em;
+}
+.tott_subpage #section-2 .yellow_arrow {
+  position: fixed;
+  bottom: 1%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.tott_subpage #section-2 .yellow_arrow img {
+  -webkit-animation-name: arrow-scale;
+          animation-name: arrow-scale;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@media (max-width: 768px) {
+  .tott_subpage #section-2 .yellow_arrow img {
+    display: none;
+  }
 }
 .tott_subpage #section-2 h1 {
   font-family: ivypresto-display, serif;

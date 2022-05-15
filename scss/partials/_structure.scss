@@ -3367,23 +3367,7 @@ section {
 
         }
 
-        .yellow_arrow {
-            position: fixed;
-            bottom: 1%;
-            left: 50%;
-            transform: translate(-50%);
 
-            img {
-                @media (max-width: $breakpoint-small) {
-                    display: none;
-                }
-
-                animation-name: arrow-scale;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-
-            }
-        }
     }
 
     #section-2 {
@@ -3404,6 +3388,24 @@ section {
                 font-weight: bold;
                 width: 1em;
                 margin-left: -1em;
+            }
+        }
+
+        .yellow_arrow {
+            position: fixed;
+            bottom: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            img {
+                @media (max-width: $breakpoint-small) {
+                    display: none;
+                }
+
+                animation-name: arrow-scale;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+
             }
         }
 
