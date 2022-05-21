@@ -3,5 +3,5 @@ lottie.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '../js/portfolio_goldribbon_animation/data.json' // the path to the animation json
+    path: '../js/portfolio_bis_ribbon_animation/data.json' // the path to the animation json
 });
