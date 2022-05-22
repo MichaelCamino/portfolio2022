@@ -3613,7 +3613,7 @@ section {
 .EPdesign_subpage {
   overflow: hidden;
 }
-.EPdesign_subpage #gold {
+.EPdesign_subpage #bis {
   max-width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3626,13 +3626,13 @@ section {
   margin-top: 8%;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #gold {
+  .EPdesign_subpage #bis {
     margin-top: 5%;
     margin-bottom: -12%;
     margin-left: 4%;
   }
 }
-.EPdesign_subpage #gold h2 {
+.EPdesign_subpage #bis h2 {
   color: whitesmoke;
   font-family: calmetta, sans-serif;
   font-size: 1.6em;
@@ -3641,7 +3641,7 @@ section {
   line-height: 1;
 }
 @media (min-width: 768px) {
-  .EPdesign_subpage #gold h2 {
+  .EPdesign_subpage #bis h2 {
     color: #0a0a0a;
     margin-top: 14%;
   }
